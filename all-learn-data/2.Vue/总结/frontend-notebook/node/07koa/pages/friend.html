@@ -1,0 +1,23 @@
+{{ extend './common/template.html'}}
+<!-- extend语句必须写在第一行 -->
+{{block 'title'}}朋友{{/block}}
+{{block "content"}}
+    
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>1</th>
+                <th>1</th>
+                <th>1</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+    
+{{/block}}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 插值表达式 js的语法 -->
+        {{msg.slice(0,3)}}
+    </div>
+    <script>
+        /* 1.new一个vue的实例 */
+        new Vue({
+            /* 2.将vue实例挂载到app这个元素上 */
+            el:"#app",
+            /* 3.就是实例可以使用的数据 */
+            data:{
+                msg:"hello world"
+            }
+        })
+    </script>
+</body>
+</html>

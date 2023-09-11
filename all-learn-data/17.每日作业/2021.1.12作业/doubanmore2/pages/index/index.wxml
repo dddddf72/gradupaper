@@ -1,0 +1,13 @@
+<view wx:for="{{lists}}" wx:key="index">
+  <v-title keyword="{{index}}" 
+  title="{{item.title}}"></v-title>
+  
+  <view class="container">
+    <v-item wx:for="{{item.res}}" 
+    movie="{{value}}" 
+    wx:key="id"
+    wx:for-item="value">
+  
+    </v-item>
+  </view>
+</view>

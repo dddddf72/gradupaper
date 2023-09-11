@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //* 深拷贝和浅拷贝的问题 */
+        // 浅拷贝，两个对象都改变
+        // 深拷贝，创建新的对象进行赋值  （数组套对象不可行）
+        var arr = [1,2,3];
+        var sum = [...arr];
+        console.log(sum)    //[1,2,3]
+        arr.push(4)
+        console.log(sum)    //[1,2,3,4]
+
+        var arr1 = [1,2,3]
+        var sum1 =[].concat(arr1);
+        console.log(sum1)   //[1,2,3]
+        arr1.push(4);
+        console.log(sum1)   //[1,2,3,4]
+
+        var arr2 = [1,2,3];
+        var sum2 = arr2.slice(0);
+        console.log(sum2)   //[1,2,3]
+        arr2.push(4)
+        console.log(sum2)   //[1,2,3,4]
+    </script>
+</body>
+</html>

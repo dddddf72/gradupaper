@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container" bindtap="handleClick">
+   <!-- 插值表达式  可以在里面使用变量,可以在里面写js表达式 -->
+   {{msg}}
+</view>
+<!-- focus的值为true就会自动获取焦点 -->
+<form  bind:submit="handleSubmit" >
+   <input type="text"  name="keyword" placeholder="请搜索"/>
+   <button form-type="submit">搜索</button>
+</form>
+<view wx:for="{{arr}}" >
+   {{item.name}}
+</view>
+<image class="music" 
+bindtap="handleMusic"
+src="{{isPlay?'/images/play.png':'/images/pause.png'}}">
+   
+</image>

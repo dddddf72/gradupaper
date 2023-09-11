@@ -1,0 +1,22 @@
+var http = "https:192.168.4.18?limit=20&offset=0"
+        // 需求：[{limit:20},{offset:0}]
+    //    var a = http.split("?")[1].split("&");
+    //    console.log(a)
+    // //    map方法改变数组的每一项(将数组中的每一项转变为对象)
+    // var  b  = a.map(item=>{
+    //         var obj = {};
+    //         obj[item.split("=")[0]]= item.split("=")[1]
+    //         return obj;
+    // });
+    // console.log(b)
+
+    // 需求2：{limit:20,offset:0}
+    var a = http.split("?")[1].split("&")
+    console.log(a)
+    var obj ={};
+    var b = a.map(item=>{
+        obj[item.split("=")[0]]=item.split("=")[1]
+    })
+    console.log(obj)
+    
+

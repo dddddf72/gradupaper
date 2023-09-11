@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <h3>正在进行中 <span>{{doingLists.length}}</span></h3>  
+        <div v-for="item of doingLists" :key="item.name">
+            <input type="checkbox" v-model="item.state">{{item.name}}
+        </div>
+        <h3>已经完成</h3>
+        <div v-for="item of finishedLists" :key="item.name">
+            <input type="checkbox" v-model="item.state">{{item.name}}
+        </div>
+    </div>
+    <!-- 数据持久化 自己先实现  
+        1.作业
+     -->
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                lists: [{
+                        name: "html",
+                        state: false
+                    },
+                    {
+                        name: "css",
+                        state: false
+                    },
+                    {
+                        name: "js",
+                        state: false
+                    }
+                ]
+            },
+            computed: {
+                finishedLists() {
+                    console.log("true")
+                    return this.lists.filter(item => item.state == true)
+                },
+                doingLists() {
+                    return this.lists.filter(item => item.state == false)
+                },
+
+            }
+        })
+    </script>
+</body>
+
+</html>

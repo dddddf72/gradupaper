@@ -1,0 +1,21 @@
+小组的成员管理列表
+database frontend
+collection members
+
+member
+{
+	name:'陈文'，
+	age:18,
+	avatar:'xxx.png',
+	like:'xxx',
+	friend:true
+}
+
+路由模块：增加，删除，修改，查询
+后台管理  --art-template
+api
+
+1.安装依赖 koa koa-router koa2-cors koa-bodyparser koa-art-template art-template koa-multer koa-static mongoose
+2.配置项目(路由自动加载)
+3.配置art-template
+4.

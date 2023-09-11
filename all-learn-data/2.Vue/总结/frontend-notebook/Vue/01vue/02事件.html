@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!-- 
+        v-on:click
+        @click 推荐使用新的写法
+     -->
+    <div id="app" @click="handleClick">
+        <!-- 插值表达式 js的语法 -->
+        {{msg.slice(0,3)}}
+    </div>
+    <script>
+        /* 1.new一个vue的实例 */
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                msg:"hello world"
+            },
+            methods:{
+                handleClick(){
+                    /* vue中获取data中的数据 直接获取,不需要加data*/
+                    // console.log(this.$data.msg)  //不推荐使用的
+                    console.log(this.data)
+                }
+            }
+        })
+
+        console.log(vm.$data.msg)
+    </script>
+</body>
+</html>

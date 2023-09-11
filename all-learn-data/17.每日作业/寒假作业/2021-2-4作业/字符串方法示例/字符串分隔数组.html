@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 需求：字符串分隔成数组，使用数组方法反转，再拼接成字符串 -->
+    <!--
+        var str = "hello";
+        // 需求"olleh"
+        // 1.[h,e,l,l,o]  split
+        // 2.[o,l,l,e,h]  reverse
+        // 3.olleh   join
+     -->
+     <script>
+         var str = "hello"
+        //  需求"olleh"
+        var arr = str.split("")
+        var a = arr.reverse()
+        var result = a.join("")
+        console.log(result)
+     </script>
+</body>
+</html>

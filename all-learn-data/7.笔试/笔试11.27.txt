@@ -1,0 +1,82 @@
+#### 1-1-1 选择题
+
+```
+1、在 css 选择器当中，优先级排序正确的是（）
+A、id选择器>标签选择器>类选择器
+B、标签选择器>类选择器>id选择器
+C、类选择器>标签选择器>id选择器
+D、id选择器>类选择器>标签选择器
+
+2、下列定义的 css 中，哪个权重是最低的？（ ）
+A、#game .name
+B、#game .name span
+C、#game div
+D、#game div.name
+
+
+3、问一份标准的HTML文档有哪几个必须的HTML标签？（ ）多选题
+A、<html>
+
+B、<head>
+
+C、<title>
+
+D、<body>
+
+4、JavaScript中window对象的子对象不包含以下哪个对象？（ ）
+A. document   B. screen   C. history   D. message
+选D
+5、var arr = [];typeof arr 的结果是（ ）
+A、array
+B、function
+C、object
+D、undefined
+
+6、以下js操作Array的方法中不能添加元素的是：（ ）
+A、push
+B、pop
+C、unshift
+D、splice
+
+7、下列哪些会返回false（ ）
+A、null
+B、undefined
+C、0
+D、"0"
+
+8、js数组的方法中，哪些方法不能改变自身数组（ ）
+A、splice
+B、concat
+C、sort
+D、pop
+```
+
+#### 1-1-2 简答题
+
+```
+1.简述web标准以及w3c规范
+2.js中有哪些事件
+3.数组常用的方法有哪些
+4.什么是声明提前
+5.js有哪几种情况为false
+6.字符串常用的方法有哪些
+```
+
+```
+var a = true;
+var c = true-"13"+"false";
+console.log(c)
+function go(x,y){
+  console.log(x+y)
+}
+go(1);
+var name = "window";
+var obj = {
+  name:"chengchao",
+  age:18,
+  sayName(){
+    console.log(this.name);
+  }
+}
+obj.sayName();
+```

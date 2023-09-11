@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "*.wxml": "html",
+        "*.wxss": "css",
+        "*.cjson": "jsonc",
+        "*.wxs": "javascript"
+    },
+    "emmet.includeLanguages": {
+        "wxml": "html"
+    },
+    "minapp-vscode.disableAutoConfig": true,
+    "files.autoSave": "afterDelay",
+    "px-to-rem.px-per-rem": 108,
+    "workbench.iconTheme": "vs-seti",
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "px2vw.width": 1080
+}

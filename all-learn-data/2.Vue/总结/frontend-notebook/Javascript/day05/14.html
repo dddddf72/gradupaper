@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 使用arguments模拟重载 */
+        function go(){
+            if(arguments.length ==1){
+                console.log(arguments[0])
+            }else if(arguments.length == 2){
+                console.log(arguments[0]+arguments[1])
+            }
+        }
+        go(1)
+        go(10,20)
+    </script>
+</body>
+</html>

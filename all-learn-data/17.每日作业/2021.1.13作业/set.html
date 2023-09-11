@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 特点1：不重复；特点2：不是有序列的集合 */
+        // size属性获取长度
+        //add可以添加数据
+        //clear清空数据
+        // delete删除对应值
+        // forEach执行遍历
+        // has 返回boolean值判断是否存在某个值  includes
+        //entries
+        // keys
+        // values
+        var arr = [1,2,3,1];
+        var s = new Set([...arr])
+        // s.clear()
+        // s.add(4)
+        s.delete(2)
+        s.forEach((item)=>{
+            console.log(item)
+        })
+        console.log(s.has(3))
+        console.log(s.entries())
+        console.log(s.keys())
+        console.log(s.values())
+        console.log(s)
+    </script>
+</body>
+</html>

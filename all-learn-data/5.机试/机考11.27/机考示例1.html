@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>机考示例1</title>
+</head>
+<body>
+  <!-- todolist  -->
+   <input type="text">
+   <ul></ul>
+   <script>
+     var txt = document.getElementsByTagName("input")[0];
+     var ul = document.getElementsByTagName("ul")[0];
+     var arr = [];
+     txt.onkeydown = function(){
+       if(event.keyCode==13){
+        if(arr.indexOf(this.value)==-1 &&this.value !=""){
+          arr.push(this.value);
+          var li = document.createElement("li");
+          li.innerHTML = this.value;
+          ul.append(li);
+        }
+     }
+    }
+   </script>
+</body>
+</html>

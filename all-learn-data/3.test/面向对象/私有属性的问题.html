@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{ //constructor函数--构造一个对象的函数
+            skill = "javascript";  //等同于this.skill = skill ;
+            // skill写在外部实际还是挂在constructor内
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            sayName(){
+                console.log(this.name);
+            }
+        }
+        var  p = new Person("su",18)
+        console.log(p)
+    </script>
+</body>
+</html>

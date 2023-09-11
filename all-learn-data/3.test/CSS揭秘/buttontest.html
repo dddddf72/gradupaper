@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+        body{
+            background-color: gray;
+        }
+        
+        .one{
+            width: 120px;
+            height: 30px;
+            line-height: 30px;
+            padding: 6px 16px;
+            text-align: center;
+            border: 1px solid #446d88;
+            background: #58a linear-gradient(#77a0bb,#58a);
+            border-radius: 4px;
+            box-shadow: 0 1px 5px gray;
+            color: white;
+            text-shadow: 0 -1px 1px #335166;
+            font-size: 20px;
+        }
+        .two{
+            margin-top: 50px;
+            font-size: 150%;
+            line-height: 1.5;
+            width: 6em;
+            height: 1.5em;
+            padding: .3em .8em;
+            text-align: center;
+            /* 边框不会随按钮大小改变大小 */
+            border: 1px solid rgba(0,0,0,.1);  
+            /* 设置透明色使用hsla比较好相对于rgba */
+            background: #58a linear-gradient(hsla(0,0%,100%,.2),transparent);
+            border-radius: .2em;
+            box-shadow: 0 .05em .25em rgba(0, 0, 0, .5);
+            color: white;
+            text-shadow: 0 -.05em .05em #335166;
+            /* 假设父级字号是16px,125%=20px */
+        }
+        .one1{
+            background-color: #c00;
+        }
+        .two1{
+            background-color: #6b0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="one one1">YES!</div>
+    <div class="two two1">YES!</div>
+</body>
+</html>

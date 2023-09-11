@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [1,2,3,4,5,6];
+        // 需求[[1,2],[3,4],[5,6]]
+        var res = [];
+        for(var i = 0 ; i < arr.length;i+=2){
+            var str = arr.slice(i,i+2);
+            res.push(str)
+        }
+        console.log(res)
+    </script>
+</body>
+</html>

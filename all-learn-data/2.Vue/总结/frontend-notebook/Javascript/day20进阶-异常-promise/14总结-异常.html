@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 1.异常的处理 */
+        // (async () => {
+        //     var p = Promise.reject("err");
+        //     try {
+        //         let res = await p;
+        //         console.log(res)
+        //     }catch(err){
+        //         console.log(err)
+        //     }
+
+        // })()
+        Promise.reject("err").catch((err)=>{
+            console.log(err)
+        })
+    </script>
+</body>
+
+</html>

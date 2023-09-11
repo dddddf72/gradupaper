@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function go(){
+            show();
+        }
+        function show(){
+            console.log("1")
+        }
+        var obj = [{name:"zhang",age:18},{name:"li",age:17}]
+
+        obj.forEach(item=>{
+            item.age = 50;
+        })
+        console.log(obj)
+        // 将两个数组变成一个数组
+        
+    </script>
+</body>
+</html>

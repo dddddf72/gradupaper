@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        img {
+            width: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/bm/doEdit" method="post" role="form" enctype="multipart/form-data">
+        <legend>修改成员</legend>
+        <input type="hidden" value="{{@data._id}}" name="id">
+        <div class="form-group">
+            <label for="">预览图片</label>
+            <img src="{{data.pic}}" alt="">
+            <input type="file" name="pic" value="{{data.pic}}">
+        </div>
+        <div class="form-group">
+            <label for="">书名</label>
+            <input type="text" name="name" value="{{data.name}}" class="form-control" id="" placeholder="请输入书的名字">
+        </div>
+        <div class="form-group">
+            <label for="">作者</label>
+            <input type="text" name="author" value="{{data.author}}" class="form-control" id="" placeholder="作者">
+        </div>
+        <div class="form-group">
+            <label for="">描述</label>
+            <input type="text" name="description" value="{{data.description}}" class="form-control" id="" placeholder="作者">
+        </div>
+        <div class="form-group">
+            <label for="">价格</label>
+            <input type="text" name="price" value="{{data.price}}" class="form-control" id="" placeholder="价格">
+        </div>
+        <div class="form-group">
+            <label for="">收藏</label>
+            {{if data.like}}
+            <input type="checkbox" name="like" checked="{{data.like}}">
+            {{else}}
+            <input type="checkbox" name="like">
+            {{/if}}
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+
+</html>

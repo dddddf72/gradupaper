@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 什么是构造函数：构造一个类的函数 或者 构造一个对象的函数 
+        类就是抽象的对象  */
+        /* 构造函数的特点：1.首字母大写 2.函数内部使用this关键字，谁New(谁实例化)就指向谁
+         3.使用this关键字给对象添加属性
+        4.必须使用New关键字生成对象*/
+        /* NEW出来的对象就是实例 */
+        function Person(name,age){
+            this.name = name; 
+            this.age = age;
+        }
+        var  p = new Person("cheng",18)
+        console.log(p)
+        console.log(Person.prototype)
+        console.log(Person("cheng",18)) //undifined
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // js中没有栈，可以使用数组模拟栈
+        class Stack{
+            constructor(){
+                this.items = [];
+            }
+            push(value){
+                this.items.push(value);
+            }
+            pop(){
+                return this.items.pop();
+            }
+            peek(){
+                return this.items[this.items.length-1]
+            }
+            isEmpty(){
+                return this.items.length==0;
+            }
+            size(){
+                return this.items.length;
+            }
+        }
+        var s = new Stack();
+        // 入栈
+s.push(8) 
+s.push(9)  
+console.log(s)   // array(2)  {8,9}
+
+        // 出栈
+    // console.log(s.pop())  //9
+
+        //peek栈顶数据
+        console.log(s.peek())   //8
+
+        // 判断栈是否为空
+        console.log(s.isEmpty()) //false
+
+        // size()返回栈的长度
+        console.log(s.size()) //1
+    </script>
+</body>
+</html>

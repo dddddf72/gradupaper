@@ -1,0 +1,26 @@
+.app{
+    width:1040px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.left{
+    flex:3;
+}
+.left .item{
+    display: flex;
+    font-size: 14px;
+}
+.item img{
+    width:100px;
+    height: 150px;
+}
+.right{
+    flex:1;
+    height: 300px;
+    border:1px solid #333;
+}
+.item{
+    border-bottom: 1px dotted  #333;
+    padding:20px;
+}

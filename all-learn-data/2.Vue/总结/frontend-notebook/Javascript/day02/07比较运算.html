@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // "",NaN,0-->false
+        // >,<,==  返回的是boolean
+        // 先将两边的值转为number,再比较
+        // NaN和任何值做计算,结果一定是NaN
+        var a = true;
+        var b = "10";
+        var c = "hello"
+        console.log(a>b); //Number(a)>Number(b);
+        console.log(a>c); //Number(a)>Number(c);
+        console.log(Boolean(NaN)) //false
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<view
+
+class="item" wx:for="{{movie}}"  wx:key="index">
+    <view class="title"><text>{{item.title}}</text> <text
+        class="more" data-title="{{item.title}}" data-mkey="{{index}}" bindtap="handleMore">更多></text></view>
+        <v-movie index="{{index}}"
+        wx:key="_id"
+         data="{{item}}"></v-movie>
+</view>

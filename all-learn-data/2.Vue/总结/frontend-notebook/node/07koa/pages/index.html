@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="referrer" content="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>首页</p>
+    {{each arr}}
+       <div>{{$value.title}}</div>
+       <img src={{$value.pic}} alt="">
+    {{/each}}
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var value = "html"
+        // var arr = [{name:"li",state:false},{name:"zhang",state:false}]
+        // // 判断数组中的每一项是否包含某个值
+        // // var res = arr.every(item=>item.name!=value)
+        // // console.log(res)
+        // var res = arr.filter(item=>item.name!=value);
+        // console.log(res)
+        // // 如何将对象的Key放到一个数组中
+        // var keys = Object.keys(arr);
+        // console.log(keys)
+        // var obj ={
+        //     A:[{name:"html"},{name:"ctc"}],
+        //     B:[{name:"vue"},{name:"js"}],
+        //     C:[{name:"vue1"},{name:"js1"}]
+        // }
+        // var keyword = "v" ;
+        // // var arr = Object.values(obj)
+        // // var res = [];
+        // // arr.forEach(item=>{
+        // //     console.log(item)
+        // //     res.push(...item)
+        // // })
+        // // console.log(res)
+        // var str = [];
+        // for(let key in obj){
+        //     console.log(obj[key])
+        //     obj[key].forEach(item=>{
+        //         if(item.name.includes(keyword)){
+        //             str.push(item)
+        //         }
+        //     })
+        // }
+        // console.log(str)
+
+        // setTimeout(() => {
+        //     console.log("onLaunch")
+        // }, 1000);
+        // console.log("onLoad")
+        // 回调解决优先顺序问题
+        setTimeout(() => {
+            console.log(callback)
+            if(callback){
+                console.log("onLaunch")
+                callback();
+            }
+        }, 1000);
+        callback =()=>{
+            console.log("onLoad")
+        }
+    </script>
+</body>
+</html>

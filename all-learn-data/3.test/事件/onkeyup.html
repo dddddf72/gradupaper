@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name">
+    <script>
+        var input = document.getElementById("name");
+        input.onkeydown =function(){
+             //获取按下的键盘对应的值  event.key
+            //  event.keyCode  获取对应的ASCII码
+            // console.log(event.key);
+            console.log(event.keyCode);
+        }
+        input.onkeypress = function(){
+            console.log("press")
+        }
+        input.onkeyup = function(){
+            console.log("放下")
+        }
+    </script>
+</body>
+</html>

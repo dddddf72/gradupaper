@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.先封装promise对象
+
+        
+        var a = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+            resolve(1)
+        },1000)
+        })
+        
+        var b = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+            resolve(2)
+        },2000)
+        })
+// 触发方式1  then函数
+        // a.then(res=>{
+        //     console.log(res)
+        // })
+        // b.then(res=>{
+        //     console.log(res)
+        // })
+
+
+// 触发方式2
+// async await (异步转同步)
+
+async function go(){
+    var res = await a;
+    console.log(res)
+    var sum = await b;
+    console.log(sum)
+}
+go();
+
+        // 函数前面加上async，函数返回值变为Promise对象
+        //1. then 方法调用
+    // async function show(){
+    //     return 10;
+    // }
+    // show().then(res=>{
+    //     console.log(res)
+    // })
+    
+    // // 2.await关键字调用
+    // async function st(){
+    //     var res = await show();
+    //     console.log(res)
+    // }
+    // st()
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+<van-button bindtap="jumpcity" type="primary" size="normal">{{city}}</van-button>

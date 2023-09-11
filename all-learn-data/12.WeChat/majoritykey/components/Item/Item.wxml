@@ -1,0 +1,8 @@
+<wxs src="../../utils/utils.wxs" module="tools"></wxs>
+<view class="container">
+	<image class="{{movie?'movie-img':'music-img'}}" src="{{data.coverImgUrl}}" bindtap="handleclick"></image>
+	<text>{{data.name}}</text>
+	<slot name = "playcount"></slot>
+	<slot name = "rating"></slot>
+</view>
+

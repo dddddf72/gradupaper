@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <style>
+        .item{
+            width: 100px;
+            height: 100px;
+            margin-left: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="item"></div>
+    <script>
+        var width=$(".item").offset().left;
+        console.log(width)
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 静态方法和普通方法直接的关系 -->
+    <script>
+        /* 1.在普通方法中能调用静态方法 */
+        /* 2.在静态方法中不能调用普通方法 */
+        class Person{
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            sayAge(){
+                Person.sayName();
+                console.log(this.age);
+            }
+            static sayName(){
+                this.sayAge();
+                console.log("name")
+            }
+        }
+        var p = new Person("name",18)
+        Person.sayName();
+    </script>
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易云音乐11.12</title>
+    <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2149345_pfnsapvsjr.css">
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script src="lib/index.js"></script>
+    <script src="lib/render.js"></script>
+    
+    <style>
+        .icon-jiantou{
+            color: red;
+            font-size: 14px;
+        }
+/* 底部音乐开始 */
+       #volet_clos {
+        top: 755px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        } 
+
+    .volet {
+        
+        width: 250px;
+        padding: 10px;
+        background:linear-gradient(to bottom,rgb(55,55,55),rgb(35,35,35));
+         color: #fff;
+         width: 100%;
+         }
+    /* 初始定位 */
+    .volet {
+        position: absolute;
+        left: 0px;
+        top: -35px;
+        /* 应为705px */
+        transition: all .5s ease-in;
+        }   
+
+        /* #volet a.fermer {
+            display: none;
+            } */
+
+    /* #volet:hover a.fermer {
+        display: block;
+        }
+    #volet:hover a.ouvrir {
+        display: none;
+        } */
+
+
+        /* 设置弹出到哪个位置 */
+    #volet_clos:hover .volet {
+        left: 0px;
+        top: -5.8594vw;
+        }
+
+
+    .volet a.ouvrir,.volet a.fermer{
+        position: absolute;
+        right: 0;
+        top: -40px;
+        padding: 0.651vw 1.6276vw;
+        background: #555; 
+        color: #fff; 
+        text-decoration: none;
+        text-align: center;
+        width: 7.8125vw;
+          }
+
+          .current{
+              top: -5.8594vw;
+          }
+
+          .icon-yduixiayiqu{
+            margin-left: 0.651vw;
+            font-size: 1.6276vw;
+            color: gray;
+            cursor: pointer;
+          }
+
+          .icon-yduixiayiqu:hover{
+              /* border-radius: 50%; */
+                color: #fff;
+                filter: blur(.5px);
+          }
+
+          .icon-yduishangyiqu{
+            font-size: 25px;
+            color: gray;
+            cursor: pointer;
+          }
+
+          .icon-yduishangyiqu:hover{
+            /* border-radius: 50%; */
+                color: #fff;
+                filter: blur(.5px);
+          }
+
+          #bofang{
+            cursor: pointer;
+              margin-left: 10px;
+            font-size: 25px;
+            color: #fff;
+          }
+
+          #bofang:hover{
+              color: #fff;
+            filter: blur(.5px);
+          }
+
+          .volet-center{
+              position: relative;
+              width: 1000px;
+              height: 40px;
+              line-height: 40px;
+              margin-left: auto;
+              margin-right: auto;
+              
+          }
+
+          .yinle{
+              overflow: hidden;
+              cursor: pointer;
+              position: absolute;
+              top: 50%;
+              left: 120px;
+              transform: translate(0,-50%);
+              display: inline-block;
+              width: 40px;
+              height: 40px;
+              background: url(images/音乐.png) no-repeat;
+              background-size: cover;
+              border: 2px solid #000000;
+              border-radius: 3px;
+            padding-top: 5px;
+          }
+
+          .yinle img{
+            display: inline-block;
+            position: absolute;
+            top: -17px;
+            left: -22px;
+            transform: rotate(29deg);
+          }
+
+          .icon-wenjianjia{
+            cursor: pointer;
+              margin-left: 600px;
+            font-size: 25px;
+            color: gray;
+          }
+
+          .icon-wenjianjia:hover{
+            color: #fff;
+            filter: blur(.5px);
+          }
+
+          .icon-fenxiang{
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 25px;
+            color: gray;
+          }
+
+          .icon-fenxiang:hover{
+            color: #fff;
+            filter: blur(.5px);
+          }
+
+          .icon-laba{
+            cursor: pointer;
+              margin-left: 40px;
+            font-size: 25px;
+            color: gray;
+            cursor: pointer;
+          }
+
+          .icon-laba:hover{
+            color: #fff;
+            filter: blur(.5px);
+          }
+
+          .icon-xunhuan{
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 25px;
+            color: gray;
+          }
+
+          .icon-xunhuan:hover{
+            color: #fff;
+            filter: blur(.5px);
+          }
+
+          
+
+          .icon-wj-bflb:hover{
+            color: #fff;
+            filter: blur(.5px);
+          }
+
+          .musicplaycircle{
+              display: inline-block;
+              position: relative;
+              width: 18px;
+              height: 18px;
+              border-radius: 50%;
+              background-color: #fff;
+              bottom: -10px;
+              left: 60px;
+              z-index: 2;
+          }
+
+          .musicplaycircle:hover{
+              color: #ffffff;
+              box-shadow: 0 0 5px rgb(255, 255, 255);
+          }
+
+          .musicplaycirclein{
+            display: inline-block;
+              position: absolute;
+              border-radius: 50%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%);
+              width: 8px;
+              height: 8px;
+              background-color: rgb(194, 12, 12);
+          }
+          .musicplaytip{
+            position: absolute;
+            bottom: 5px;
+            left: 181px;
+            width: 400px;
+            height: 9px;
+            background-color: #000000;
+            border-bottom: 1px solid gray;
+            border-radius: 4px;
+          }
+
+          .musictime{
+            position: absolute;
+            display: inline-block;
+            left: 590px;
+            bottom: -10px;
+            font-size: 10px;
+            color: gray;
+          }
+
+          .icon-wj-bflb{
+              width: 30px;
+              height: 40px;
+              /* border: 1px solid red; */
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 25px;
+            color: gray;
+            /* background-color: red; */
+            z-index: 2;
+            transform: rotate(-180deg);
+          }
+
+          .wj-bflb-tip{
+              display: inline-block;
+              position: absolute;
+              width: 40px;
+              height: 18px;
+              background-color: #333;
+              box-shadow: 0 0 5px rgb(0,0,0) inset;
+              text-align: center;
+              line-height: 18px;
+              font-size: 10px;
+              color: gray;
+              border-top-right-radius: 20px;
+              border-bottom-right-radius: 20px;
+              top: 51%;
+              right: 3px;
+              transform: translate(0,-50%);
+          }
+
+    </style>
+</head>
+<body>
+    <div class="Blackbanner">
+
+        <div class="Blackbanner-center">
+
+            <div id="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+
+            <div class="Blackbanner-center-item">
+                <a href="#" class="currentbg1 currentbg" id="itemone">发现音乐</a>
+                <a href="#" class="currentbg1" id="itemtwo">我的音乐</a>
+                <a href="#" class="currentbg1" id="itemthree">朋友</a>
+                <a href="#" class="currentbg1" id="itemfour">商城</a>
+                <a href="#" class="currentbg1" id="itemfive">音乐人</a>
+                <a href="#" class="currentbg1" id="itemsix">下载客户端</a>
+                <div class="hot">HOT</div>
+                <div class="triangleone"></div>
+                <div class="triangletwo"></div>
+                <div class="trianglethree"></div>
+                <div class="trianglefour"></div>
+            </div>
+
+            <div class="Blackbanner-center-login">
+                <input type="text" id="logintext" placeholder="音乐/视频/电台/用户" >
+                <input type="button" id="glass">
+                <input type="button" id="chuangzuozhe" value="创作者中心">
+                <a href="#" id="bannerlogin">登录</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="bannerTip">
+
+        <div class="bannerTip-center">
+        <a href="#" class="bannerTipcurrent">推荐</a>
+        <a href="#">排行榜</a>
+        <a href="#">歌单</a>
+        <a href="#">主播电台</a>
+        <a href="#">歌手</a>
+        <a href="#">新碟上架</a>
+        </div>
+
+    </div>
+
+    <!-- 导航结束 -->
+
+<!-- 中间开始 -->
+
+
+
+</div>
+
+<!-- 中间结束 -->
+
+
+
+<!-- 底部开始 -->
+<div class="footer">
+
+    <div class="footer-center">
+
+        <div class="footer-center-left">
+            <p><a href="#">服务条款</a> | <a href="#"> 隐私政策</a> | <a href="#">儿童隐私政策</a> | <a href="#"> 版权投诉指引</a> | <a href="#">意见反馈</a> |</p>
+            <p>网易公司版权所有©1997-2020杭州乐读科技有限公司运营：<span id="clickone" style="display:inline;">浙网文[2018]3506-263号</span></p>
+            <p>违法和不良信息举报电话：0571-89853516 举报邮箱：<span id="clickone" style="display:inline;">ncm5990@163.com</span></p>
+            <p>粤B2-20090191-18工业和信息化部备案管理系统网站 <span id="clickone" ><span id="PICfooter"></span>浙公网安备 33010902002564号</span></p>
+        </div>
+        
+        <div class="footer-center-right">
+            
+                <img src="images/footer1.png" alt="">
+                <img src="images/footer2.png" alt="">
+                <img src="images/footer3.png" alt="">
+                <img src="images/footer4.png" alt="">
+                <img src="images/footer5.png" alt="">
+            
+        </div>
+
+        
+
+    </div>
+<!-- 底部播放器开始 -->
+    <div id="volet_clos">
+    <div class="volet">
+        <div class="volet-center">
+        <span class="iconfont icon-yduishangyiqu"></span>
+        <span class="iconfont icon-bofang" id="bofang" ></span>
+        <span class="iconfont icon-yduixiayiqu"></span>
+        <span class="yinle"><img src="images/white.bmp" style="opacity: .3;width:45px;height:70px;;border-bottom-right-radius: 100%;" alt=""></span>
+        <span class="musicplaycircle"><span class="musicplaycirclein"></span></span>
+        <span class="musicplaytip"></span>
+        <span class="musictime"><span style="color: rgb(173, 173, 173);">00:00</span> / 00:00</span>
+        <span class="iconfont icon-wenjianjia"></span>
+        <span class="iconfont icon-fenxiang"></span>
+        <span class="iconfont icon-laba"></span>
+        <span class="iconfont icon-xunhuan"></span>
+        <span class="iconfont icon-wj-bflb"></span>
+        <span class="wj-bflb-tip">0</span>
+    </div>
+
+        <a href=".volet"  aria-hidden="true" class="ouvrir iconfont icon-jiesuo" style="font-size: 20px;"></a>
+        <a href="#volet_clos" aria-hidden="true" class="fermer iconfont icon-jiesuo" style="font-size: 20px;"></a>
+        
+    </div>
+</div>
+<!-- 底部播放器结束 -->
+</div>
+
+<div class="Top iconfont icon-top" style="font-size: 25px;text-align: center;line-height: 48px;">
+
+</div>
+
+
+
+
+
+
+
+
+
+    <!-- 搜索开始 -->
+    <script>
+        var logintext = document.getElementById("logintext");
+        logintext.onkeydown = function(){
+            if(event.keyCode==13){
+                var value = logintext.value;
+              
+                location.href=`html/search.html?${value}`;
+            }
+        }
+    </script>
+    <!-- 搜索结束 -->
+
+    
+</body>
+</html>

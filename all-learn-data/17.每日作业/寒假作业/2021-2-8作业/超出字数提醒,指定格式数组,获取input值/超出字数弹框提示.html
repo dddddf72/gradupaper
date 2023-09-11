@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>还可以输入<em id="em" style="color:red;">0</em>/30</p>
+    <textarea name="" id="txt" cols="30" rows="10"></textarea>
+    <script>
+        var txt = document.getElementById("txt");
+        var em = document.getElementById("em");
+        txt.onkeydown=function(){
+            var length = this.value.length;
+            if(length<=30){
+                em.innerHTML = this.value.length;
+            }else{
+                alert("只能输入30个字符")
+            }
+        }
+    </script>
+</body>
+</html>

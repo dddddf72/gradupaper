@@ -1,0 +1,16 @@
+<wxs src="../../utils/utils.wxs" module="tools"></wxs>
+<view class="container">
+	<view
+	data-id="{{item.id}}"
+	 class="content"
+	 wx:for="{{playlists}}"
+	 wx:key="item"
+	 bindtap="Toggle"
+	>
+		<image src="{{item.coverImgUrl}}"></image>
+		<view>{{tools.handleplay(item.playCount)}}</view>
+		<text>{{tools.handlename(item.name)}}</text>
+	</view>
+
+</view>
+

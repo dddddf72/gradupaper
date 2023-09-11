@@ -1,0 +1,33 @@
+function handleTitle(value) {
+    if (value.length > 4) {
+        return value.slice(0, 4) + "..."
+    }
+    return value;
+}
+
+function sum(arr) {
+    if (arr.length > 0) {
+        var res = arr.filter(function (item) {
+          return item.isSelected == true;
+        })
+        var sum = 0;
+        res.forEach(function(item) {
+          sum = sum + (item.productPrice * item.productCount)
+        })
+        return sum*100;
+      }
+
+}
+
+function allState(arr){
+    var res = arr.every(function(item){
+        return item.isSelected==true
+    });
+    return res;
+}
+
+module.exports = {
+    handleTitle: handleTitle,
+    sum: sum,
+    allState:allState
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易云首页</title>
+</head>
+<body>
+    <input type="text" id="input" value="你">
+    <!-- 
+        1.如何跳转到search
+        2.如何传值
+     -->
+     <script>
+         var input = document.getElementById("input");
+         input.onkeyup = function(event){
+             if(event.keyCode == 13){
+                 console.log(this.value);
+                 location.href = `search.html?s=${this.value}`
+             }
+         }
+     </script>
+</body>
+</html>

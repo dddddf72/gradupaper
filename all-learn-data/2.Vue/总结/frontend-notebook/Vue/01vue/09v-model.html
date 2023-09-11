@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+         <input type="number" min="1" v-model.number="msg">
+         <input type="text" v-model.trim="str">
+    </div>
+    <script>
+        /* v-model可以实现双向数据绑定*/
+        /* 
+        v-model.number修饰符  --> 输入框内容的值只能是number
+        v-model.trim  -->去除input中字符前后的空格
+         */
+        new Vue({
+            el:"#app",
+            data:{
+                msg:1,
+                str:"hello"
+            }
+        })
+    </script>
+</body>
+</html>

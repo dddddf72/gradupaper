@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="app">
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
+    <script>
+        // 获取所有的元素节点  下课自己写一遍
+        var app =  document.getElementById("app");
+        var childs = app.childNodes;
+        var arr = [];
+        for(var i=0;i<childs.length;i++){
+            if(childs[i].nodeType == 1){
+                  arr.push(childs[i])
+            }
+        }
+        console.log(arr);
+    </script>
+</body>
+</html>

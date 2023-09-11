@@ -1,0 +1,7 @@
+image {
+    width: 200rpx;
+    height: 200rpx;
+  }
+  view {
+    font-size: 30rpx;
+  }

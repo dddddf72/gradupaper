@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //声明创建数组对象data
+        var data = {
+            country:"美国",
+            year:1994,
+            story:"犯罪"
+        }
+        //声明创建空数组
+        var arr = [];
+
+        // 需求 输出为 ：美国/1994/犯罪
+        // 使用for in方法循环遍历 data
+        for(var i in data){
+            // 使用push方法，将data中的值传入空数组arr中
+            arr.push(data[i])
+        }
+        //输出数组arr
+        console.log(arr) //输出为   Array(3) 数组内的内容为data中的内容
+        //声明创建变量str ,数组arr使用join()方法，添加分隔符"/"
+        var str = arr.join("/")
+        // 输出变量str
+        console.log(str);   //输出结为 美国/1994/犯罪
+    </script>
+</body>
+</html>

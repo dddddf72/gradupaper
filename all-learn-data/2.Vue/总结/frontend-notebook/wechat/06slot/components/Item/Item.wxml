@@ -1,0 +1,8 @@
+<view class="item" bindtap="handleClick" class="^ex-tag">
+    <image  class="{{movie?'movie-img':'music-img'}}" src="{{data.coverImgUrl}}"></image>
+    <view class="text">{{data.name}}</view>
+    <slot name="playCount"></slot>
+    <slot name="rating"></slot>
+
+</view>
+

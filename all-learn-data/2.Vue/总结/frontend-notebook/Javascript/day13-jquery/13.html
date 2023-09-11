@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <style>
+        body{
+            height: 2500px;
+        }
+        .head{
+            top:0;
+            left:0;
+            height: 50px;
+            position: fixed;
+        }
+        div{
+            width:100px;
+            height: 100px;
+            background-color: red;
+        }
+        #html{
+            margin-top: 500px;
+        }
+        #css{
+            margin-top: 500px;
+        }
+        #js{
+            margin-top: 500px;
+        }
+    </style>
+</head>
+<body>
+    <p class="head">
+        <a href="#html">html</a>
+        <a href="#css">css</a>
+        <a href="#js">javascript</a>
+    </p>
+    <div id="html">
+        html
+    </div>
+    <div id="css">
+        css
+    </div>
+    <div id="js">
+        javascript
+    </div>
+    <script>
+        /* 
+        $(element).attr(value)
+         */
+        $(".head a").click(function(){
+            var id = $(this).attr("href");
+            var offsetTop =  $(id).offset().top;
+            console.log(offsetTop)
+            $("html,body").animate({scrollTop:offsetTop})
+            return false;
+        })
+    </script>
+</body>
+</html>

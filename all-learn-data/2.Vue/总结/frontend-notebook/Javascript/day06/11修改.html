@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [1,2,3,4,5];  //[1,2,7,4,5]
+        // arr[2] = 7;
+        // 修改splice(index,howmany,value);
+        /* 
+        index  从哪个下标开始
+        howmany  删除多少个
+        value  插入的值(可以是多个值)
+         */
+        arr.splice(2,1,7);
+        console.log(arr);
+    </script>
+</body>
+</html>

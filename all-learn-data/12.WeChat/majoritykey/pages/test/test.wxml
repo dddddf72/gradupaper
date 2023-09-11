@@ -1,0 +1,2 @@
+<v-num bindtap="doadd" num="{{num}}">
+</v-num>

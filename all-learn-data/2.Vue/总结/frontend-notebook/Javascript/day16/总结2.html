@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        1.类
+        2.对象
+        3.原型对象
+         */
+        /* 构造函数的缺点 */
+        /* 共有的属性或者共有的方法我们可以放在原型对象上 */
+        function Person(name,age){
+             this.name =name;
+             this.age = age;
+         }
+         Person.prototype.eat = "水果"
+         var p =new Person("li",19)
+         var zhang =new Person("zhang",20)
+         console.log(p)
+         console.log(zhang)
+    </script>
+</body>
+</html>

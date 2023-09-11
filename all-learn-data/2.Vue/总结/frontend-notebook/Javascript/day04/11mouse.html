@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p">hello world</p>
+    <script>
+        /* 
+        mouseover  鼠标悬停在元素上的时候触发
+        mouseout  鼠标移开的时候触发
+         */
+        var p =  document.getElementById("p");
+        p.onmouseover = function(){
+            this.style.background = "red"
+        }
+        p.onmouseout =  function(){
+            this.style.background = "green"
+        }
+    </script>
+</body>
+</html>

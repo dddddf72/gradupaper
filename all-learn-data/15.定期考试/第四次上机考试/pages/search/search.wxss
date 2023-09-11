@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    position: relative;
+    margin-top: 20rpx;
+    align-items: center;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+  }
+  .str {
+    position: absolute;
+    right: 40rpx;
+    width: 100rpx;
+    height: 100rpx;
+  }

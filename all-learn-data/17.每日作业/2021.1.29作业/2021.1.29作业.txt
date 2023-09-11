@@ -1,0 +1,2 @@
+1.以组件的思维实现wechat/vue/react/angular 实现华语的接口
+2.画wechat,vue,react,angular如何创建组件，以及父子组件传值的脑图

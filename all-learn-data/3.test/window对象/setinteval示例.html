@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">停止定时器</button>
+    <script>
+        var btn = document.getElementById("btn");
+
+        var temp = setInterval(function(){
+            console.log("2")
+        },1000)
+        btn.onclick = function(){
+                clearInterval(temp);
+        }
+        console.log(temp)
+    </script>
+</body>
+</html>

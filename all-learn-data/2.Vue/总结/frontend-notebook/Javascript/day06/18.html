@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var students = [
+            {name:"zhang",age:20},
+            {name:"li",age:18},
+            {name:"wang",age:9},
+            {name:"chen",age:14},
+        ]
+        /* 
+        根据年龄升序
+        根据年龄降序
+         */
+         var result = students.sort((a,b)=>{
+             return a["age"]-b["age"]
+         })
+         console.log(result)
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .red{
+            background-color: red;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        v-for
+        :src 
+        双引号中可以直接使用变量的
+     -->
+    <div id='app'>
+        <img
+        :class="isState?'red':'yellow'"
+        @click="handleClick"
+         :src="imgUrl" alt="" 
+        >
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                isState:true,
+                imgUrl:"images/logo.png"
+            },
+            methods:{
+                handleClick(){
+                    this.isState = !this.isState;
+                    console.log(this.isState)
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

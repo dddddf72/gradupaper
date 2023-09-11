@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <style>
+        .item{
+            float: left;
+            border: 1px solid #eee;
+        }
+        .item img{
+            width: 240px;
+            vertical-align: bottom;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+    <script>
+        http();
+        $(window).scroll(function(){
+            if(isReachBottom){
+                http();
+            }
+        })
+        // 封装http请求
+        function http(){
+            $.get("http://192.168.4.18:8000/more",res=>{
+            res.forEach(item=>{
+                var template = `
+                    <div class = "item" >
+                    <img src = ${item.imageUrl}>
+                    </div>
+                `
+                $("#app").append(template)
+            })
+            setTimeout(sortBox,100)
+            sortBox()
+        })
+        }
+        
+        // 封装排序
+        function sortBox(){
+            // 1.获取一排能放几个
+            var ww = $(window).width();
+            var box = $(".item").width();
+            var num = Math.floor(ww/box);
+            var arr = [];
+            // 2.将第一排的高度放到一个数组中
+            $(".item").each((index,item)=>{
+                if(index<num){
+                    console.log(item)
+                    var height = $(item).outerHeight();
+                    console.log(height)
+                    arr.push(height)
+                }
+                else{
+                    // 获取最小高度
+                    var minHeight = Math.min(...arr);
+                    var index = arr.indexOf(minHeight);
+                    var offsetLeft = $(".item").eq(index).offset().left;
+                    $(item).css({position:"absolute",top:minHeight,left:offsetLeft})
+                    arr[index] = minHeight + $(item).outerHeight();
+                }
+            })
+        }
+        function isReachBottom(){
+            var scrollTop = $(window).scrollTop();
+            var availHeight = $(window).height();
+            var dh = $(document).height();
+            retrun (scrollTop+availHeight > dh-200)?true:false;
+        }
+    </script>
+</body>
+</html>

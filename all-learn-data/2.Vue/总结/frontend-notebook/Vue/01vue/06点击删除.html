@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- in/of都可以实现列表循环 推荐使用of -->
+       <div v-for="(item,index) of arr" 
+       @click="handleClick(index)">
+            {{item.name}} {{index}}
+       </div>
+    </div>
+    <script>
+       new Vue({
+           el:"#app",
+           data:{
+               arr:[
+                   {name:"html",id:1001},
+                   {name:"css",id:1002},
+                   {name:"js",id:1003}
+               ]
+           },
+           methods:{
+               handleClick(index){
+                   this.arr.splice(index,1)
+               }
+           }
+       })
+    </script>
+</body>
+</html>

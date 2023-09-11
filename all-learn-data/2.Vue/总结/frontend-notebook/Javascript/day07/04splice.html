@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  删除,修改,增加 
+        增加 再某个下标的前面去增加值
+        splice(index,0,...value);
+     -->
+    <script>
+        var arr = [1,2,3,4]; //[1,2,6,7,3,4];
+        arr.splice(2,0,6,7);
+        console.log(arr);
+    </script>
+</body>
+</html>

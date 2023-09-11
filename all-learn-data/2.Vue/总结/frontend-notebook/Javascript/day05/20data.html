@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj =[
+            {name:"cheng",age:18,skill:"vue"},
+            {name:"li",age:17,skill:"js"},
+            {name:"zhang",age:16,skill:"html"},
+        ]
+        /* arr=[{name:"xx",skill:"xx"},{name:"xx",skill:"xx"}] */
+        var  arr = [];
+        for(var i=0;i<obj.length;i++){
+            var name = obj[i].name;
+            var skill = obj[i].skill;
+            arr.push({
+                name:name,
+                skill:skill
+            })
+        }
+        console.log(arr);
+    </script>
+</body>
+</html>

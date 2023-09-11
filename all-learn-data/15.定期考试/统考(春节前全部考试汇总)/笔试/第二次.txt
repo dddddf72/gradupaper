@@ -1,0 +1,59 @@
+1.数组常用的方法
+增加：push  unshift concat splice
+删除：pop shift splice
+修改：splice
+查询：arr[index]  indexOf slice  includes
+遍历：forEach  of  map  some  evey findIndex find filter
+其他方法：join sort reverse reduce
+2.字符串常用的方法
+增加: concat
+查询：slice substr substring charAt includes indexOf search match str[index]
+其他方法： split replace trim
+3. 
+var arr  = "hello";
+//"l-l"
+/*方法一：*/
+var reg = /[^l]/g
+console.log(arr.replace(reg,"").split("").join("-"));
+/*方法二：*/
+var reg = /l/g
+console.log(arr.match(reg).join("-"))
+/*方法三：*/
+console.log(arr.slice(2,4).split("").join("-"))
+4.写一个简单的回调函数
+var show = function(res){
+  console.log(res);
+}
+function go(callback){
+  var a = 10;
+  callback(a)
+}
+go(show)
+5.什么是跨域,同源策略
+跨域: 协议,子域名,主域名,端口不同时候就叫跨域
+同源策略:javascript出于同源策略,不允许从一个域访问另一个域的对象。
+6.什么是同步异步
+同步：客户端向服务器端发送请求时，用户不能进行其他操作
+异步：客户端向服务器端发送请求时，用户可以进行其他操作
+7.实现原生的ajax
+var xhr = new XMLHttpRequest()
+xhr.open("get",url,true)
+xhr.send()
+xhr.onreadystatechange = function(){
+  if(xhr.readyState == 4 && xhr.status ==200){
+    var txt = xhr.responseText
+    var obj = JSON.parse(txt)
+    console.log(obj);
+  }
+}
+8.
+var arr = [1,2,3,4,6];
+//[1,3,6]
+//"1-3-6"
+var sum = [ ]
+for(var i=0;i<arr.length;i=i+2){
+  sum.push(arr[i])
+}
+var res = sum.join("-")
+console.log(sum)
+console.log(res)

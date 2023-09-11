@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="lib/http.js"></script> -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #app{
+            position: relative;
+        }
+        .container{
+            border-top: 1px dotted #666;
+            height: 160px;
+            width: 600px;
+            margin-left: 200px;
+            margin-top: 20px;
+            padding-top: 20px;
+            display: flex;
+            font-size: 13px;
+        }
+        .container img{
+            width: 100px;
+            height: 150px;
+            margin-right: 20px;
+        }
+        .container>span{
+            margin-right: 10px;
+        }
+        .title{
+            color: #336699;
+            margin-bottom: 17px;
+        }
+        .name,.labels{
+            color: #666;
+        }
+        .labels{
+            margin-bottom: 17px;
+        }
+        .score{
+            color: #E09015;
+            margin-right: 20px;
+        }
+        .comment{
+            color: #666;
+        }
+        .content .logo{
+            margin-top: 20px;
+            color: #666;
+        }
+        #right{
+            position: absolute;
+            width: 300px;
+            height: 450px;
+            margin-right: 180px;
+            top: 0;
+            right: 0;
+        }
+        .right-title{
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .erweima{
+            width: 80px;
+            height: 80px;
+            margin-top: 15px;
+        }
+        .right-bottom .logo{
+            margin-top: 4px;
+            width: 84px;
+            height: 95px;
+        }
+        .right-bottom>div{
+            float: right;
+            margin-top: 27px;
+            margin-right: 26px;
+        }
+        .right-bottom .title{
+            font-size: 18px;
+            color: black;
+            margin-bottom: 5px;
+        }
+        .title-content{
+            font-size: 15px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+       
+    </div>
+    <script>
+        axios.get("http://192.168.4.18:8000").then(res=>{
+                console.log(res); 
+               var arr = res.data.result;
+               /* console.log(arr) */
+               arr.forEach((item,index)=>{
+                    var html = `
+                    <div class="container">
+                        <span>${index+1}</span>
+                        <img src=${item.pic}>
+                        <div class="content">
+                            <p class="title">${item.title}</p>
+                            <p class="name">导演：弗兰克·德拉邦特 Frank Darabont   主演: 蒂姆·罗宾斯 Tim Robbins /...</p>
+                            <p class="labels">${item.labels.join("/")}</p>
+                            <p class="grade">
+                                <span class="score">${item.raiting}</span>
+                                <span class="comment">${item.evaluate}人评价</span>
+                            </p>
+                            <p class="logo">“  ${item.slogo}  ”</p>
+                        </div>
+                    </div>
+                    `
+                    $("#app").append(html)
+               })
+
+            })
+        
+            var url2 = 
+        axios.get("http://192.168.4.18:8000/ad").then(res=>{
+               var arr=res.data.result
+               //console.log(arr)
+                var html = `
+                <div id="right">
+                    <p class="right-title">${arr.title}</p>
+                    <img src=${arr.poster}>
+                    <div class="right-bottom">
+                        <img class="erweima" src=${arr.erweima}>
+                        <img class="logo" src=${arr.logo}>
+                        <div>
+                            <p class="title">${arr.labels[0]}</p>
+                            <p class="title-content">${arr.labels[1]}</p>
+                        </div>
+                    </div>
+                </div>
+                `
+                $("#app").append(html)
+            })
+        
+    </script>
+</body>
+</html>

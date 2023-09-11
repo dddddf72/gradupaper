@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 类：对某一个类具体事物的抽象
+        对象：某一个事物的具体实例
+        原型对象：是某一类对象的基类，所有创建的对象都会共享该原型对象(共享对象) -->
+        <script>
+            function Teacher(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            Teacher.prototype.sayname = function(){
+                console.log(this.name)
+            }
+            var T = new Teacher("lisi",20);
+            // 有没有sayname
+            // 为什么有sayname，
+            T.sayname()
+
+
+            /* 1.类
+                2.对象
+                3.原型对象
+                4.原型链
+                5.instanceof 判断某个对象是不是某个类的实例*/
+
+                /* es5中没有calss关键字
+                需求：新建一个类(使用构造函数的方式)
+                 */
+                function Person(name,age){
+                    this.name = name;
+                    this.age = age;
+                    this.eat = "水果";  //公有属性 ，造成不必要的内存开销，可定义在原型对象上共享避免资源浪费
+                }
+                var a = new Person("df",19);
+                var b = new person("st",20);
+                console.log(a)
+                console.log(b)
+                // 构造函数特点：1.函数名首字母大写，2.this关键字设置属性， 3.new关键字操作实例化
+                // 构造函数的缺点：公有属性造成资源浪费
+
+                    // array ,function
+                    // 构造数组的方法,字面量方式，构造函数方式
+                    var a = new Array(1,2,3);
+
+                    // 构造数组方式，Function，var,构造函数方式
+                    var go = new Function("a","b","alert(a*b)");
+                    go(2,3);
+
+        </script>
+
+</body>
+</html>

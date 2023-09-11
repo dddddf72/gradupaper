@@ -1,0 +1,16 @@
+{
+  "name": "01douban",
+  "version": "1.0.0",
+  "description": "```\r 1.node.js\r 2.配置cnpm\r npm install -g cnpm --registry=https://registry.npm.taobao.org\r # 如果输出不是内部或者外部命令配置一下环境变量的path路径\r ```",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "koa": "^2.13.0"
+  }
+}

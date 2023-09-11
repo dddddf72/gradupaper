@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+    <div>
+        div
+    </div>
+    <script>
+        // JQ对象转换为JS对象(加下标[0])，才能使用原生的方法
+        var div = $("div")[0];//加下标转换，JQ获取的是数组
+        var content = div.innerHTML
+        console.log(content)
+        // JS对象转换为JQ对象(加"$"符号)，使用JQ方法
+        var div = document.getElementsByTagName("div")[0]
+        console.log($(div).html())
+    </script>
+</body>
+</html>

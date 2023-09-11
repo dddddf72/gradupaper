@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="../http/index.js"></script>
+    <style>
+        img{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+    <script>
+        var id = location.search.split("=")[1];
+        console.log(id)
+        var url = `playlist/detail?id=${id}`;
+        ajax({
+            url,
+            success:res=>{
+                // console.log(res.playlist)
+                var {coverImgUrl,description,id,tracks} = res.playlist;
+                    var template = `
+                    <img src = "${coverImgUrl}">
+                    <p>${description}</p>
+<a href="../html/comment.html?id=${tracks[0].id}"><p>${tracks[0].name}</p></a>
+    <a href="../html/comment.html?id=${tracks[1].id}"><p>${tracks[1].name}</p></a>
+        <a href="../html/comment.html?id=${tracks[2].id}"><p>${tracks[2].name}</p></a> 
+                `
+                $("#app").append(template)
+            }
+        })
+        // console.log(id)
+
+    </script>
+</body>
+</html>

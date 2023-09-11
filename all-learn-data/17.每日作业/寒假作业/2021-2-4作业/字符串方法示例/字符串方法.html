@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- 需求：在输入框输入的时候，控制台返回与输入内容相匹配的数组，且数组内容超过三位的时候以...结尾 -->
+        <input type="text" id= "txt">
+        <script>
+            var arr = [
+            {name:"你是谁",id:1102},
+            {name:"圈住你",id:1102},
+            {name:"hello",id:1102},
+            {name:"怪你",id:1102},
+            {name:"world",id:1102}
+        ]
+        var txt = document.getElementById("txt");
+        txt.onkeydown= function(event){
+            if(event.keyCode==13){
+                var value = this.value;
+                if(value){
+                    var res = arr.filter(item=>{
+                        return item.name.includes(value);
+                    })
+                    res.map(item=>{
+                        if(item.name.length>3){
+                            return item.name = item.name.slice(0,3)+"..."
+                        }
+                    })
+                    console.log(res)
+                }
+            }
+        }
+        </script>
+</body>
+</html>

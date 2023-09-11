@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 声明对象
+        var obj = [
+            {name : "cheng" , age:18, skill: "vue"},
+            {name : "li" , age:20, skill: "js"},
+            {name : "zhang" , age:16, skill: "html"},
+        ]
+        // 创建空数组
+        var arr = [];
+        // 循环遍历
+        for(var i=0;i<obj.length;i++){
+            // console.log(obj[i])
+            // debugger;
+            // 声明变量.name
+            var name = obj[i].name;
+            // 声明变量 .skill 
+            var skill = obj[i].skill;
+            // 将获取的值及对应格式（只取name,skill）推入空数组中
+            arr.push({
+                name:name,
+                skill:skill
+            })
+        }
+        // 输出打印数组获取的值
+        console.log(arr);
+        // 需求arr = [{name:"xx",skill:"xx"},{name:"xx",skill:"xx"}]
+    </script>
+</body>
+</html>

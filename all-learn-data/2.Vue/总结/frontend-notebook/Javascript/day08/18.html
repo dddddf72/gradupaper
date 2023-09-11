@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* test() */
+        /* 
+        量词  规则字符出现的次数
+        {m}  只出现m次
+        {m,n}   m<reg<n
+        {m,}    reg>m
+          */
+        var pwd = "12115fdsfsd";  //  密码5-7num
+        var reg = /[0-9]{5,7}/;
+        console.log(reg.test(pwd));
+    </script>
+</body>
+</html>

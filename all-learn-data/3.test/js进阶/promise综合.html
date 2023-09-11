@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // then,catch
+        // 得到的结果都是Promise，正常情况下都是resolve状态
+        // 遇到错误状态，变成rejected
+
+        // 例题
+
+        // var  p = Promise.reject(100)
+        // console.log(p) //rejected
+        // p.then(res=>{       //只能触发resolve状态
+        //     console.log(res)
+        // })
+
+        var  p = Promise.reject(100).catch(res=>{
+            console.log(res)    //100
+        })
+        console.log(p)  //resolve状态
+        p.catch(()=>{
+            console.log(200)
+        }).then(()=>{
+            console.log(300)    //300
+            throw "err"
+        }).catch(()=>{
+            console.log(400)    
+        }).then(()=>{
+            console.log(500)
+        })
+        // 输出为100，300,400,500
+    </script>
+</body>
+</html>

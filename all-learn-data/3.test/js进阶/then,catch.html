@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- then,catch的返回值 -->
+    <!-- promise支持链式调用p.then().then() -->
+    <script>
+        // var p = new Promise((resolve,reject)=>{
+
+        // })
+        var p = Promise.resolve(100).then(res=>{
+            //then之后的返回值的状态为resolved,如果遇到错误，状态会变成rejected
+            console.log(res)
+            // throw "err" 
+        })
+        var a = p.then(()=>{
+            console.log(100)
+        })
+        console.log(p) //rejected
+    </script>
+</body>
+</html>

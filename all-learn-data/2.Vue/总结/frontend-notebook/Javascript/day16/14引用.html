@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 基本类型只传值,引用类型既传值也传址 */
+        /* 引用:既传值也传址 */
+        /* 地址,引用,指针 */
+        var obj ={name:"lisi"};
+        var str = obj; //引用类型赋值计算的时候传递的是引用或者说指针
+        console.log(str); //
+        str.age = 18;
+        console.log(obj);  //
+    </script>
+</body>
+</html>

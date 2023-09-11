@@ -1,0 +1,11 @@
+.item>image{
+    width:200rpx;
+    height: 270rpx;
+}
+.item .star{
+    width:20rpx;
+    height: 20rpx;
+}
+.item{
+    width:200rpx;
+}

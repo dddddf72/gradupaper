@@ -1,0 +1,10 @@
+<view class="title">
+    <view>
+        <image src="{{iconUrl}}"></image>
+    <text>{{title}}</text>
+    </view>
+
+
+        <button class="btn" size="mini" type="default" bindtap="jumpmore">更多></button>
+
+</view>

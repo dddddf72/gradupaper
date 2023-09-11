@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 需求：定时器运行的情况下，按下按钮停止定时器(clearsetInterval) -->
+    <button id="btn">停止定时器</button>
+    <script>
+        var btn = document.getElementById("btn")
+        var temp = setInterval(() => {
+            console.log("1")
+        }, 1000);
+        btn.onclick=function(){
+            clearInterval(temp)
+        }
+    </script>
+</body>
+</html>

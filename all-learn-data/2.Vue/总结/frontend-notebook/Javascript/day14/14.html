@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* promise,async,await */
+        var a = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(1)
+            }, 2000)
+        })
+        var b = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(2)
+            }, 1000)
+        })
+        /* async await */
+        /* 
+        promise函数执行
+        1.then
+        2.在async函数中,通过await语句去执行
+         */
+        function go(){
+           var res = await a;
+           console.log(res)
+           var sum = await b;
+           
+           console.log(sum);
+           
+        }
+        /* 在函数前面加上async
+        1.这个函数的返回值就是promise
+        2.可以在函数中使用await关键字
+         */
+        go()
+        /* 
+        await可以得到promise的执行结果,await语句后面只能是promise
+         */
+    </script>
+</body>
+</html>

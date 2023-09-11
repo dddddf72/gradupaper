@@ -1,0 +1,41 @@
+Arguments: 
+  D:\Software\Node.js\node.exe C:\Users\Prologue\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add koa koa-ourter koa2-cors koa-bodyparser koa-art-template art-template koa-multer mongoose koa-static
+
+PATH: 
+  C:\ProgramData\Oracle\Java\javapath;D:\Software\VMware\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Software\Microsoft Visual Studio Code\Microsoft VS Code\bin;D:\Software\Node.js\;C:\ProgramData\chocolatey\bin;D:\Software\Git\Git\cmd;D:\Software\Git\TortoiseGit\bin;C:\Users\Prologue\AppData\Local\Microsoft\WindowsApps;C:\Users\Prologue\AppData\Local\BypassRuntm;C:\Users\Prologue\AppData\Roaming\npm;D:\Software\JDK\bin;D:\Software\JDK\jre\bin;C:\Users\prologue\AppData\Local\Android\Sdk\platform-tools;C:\Users\prologue\AppData\Local\Android\Sdk\emulator;C:\Users\prologue\AppData\Local\Android\Sdk\tools;C:\Users\prologue\AppData\Local\Android\Sdk\tools\bin;D:\Software\mongoDBServer\bin;
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.15.4
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npm.taobao.org/koa-ourter: Not found
+      at Request.params.callback [as _callback] (e:\Users\Prologue\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
+      at Request.self.callback (e:\Users\Prologue\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (e:\Users\Prologue\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141634:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (e:\Users\Prologue\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141556:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+
+npm manifest: 
+  {
+    "name": "mongo-studnets",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

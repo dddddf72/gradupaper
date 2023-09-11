@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <ul id="app"></ul>
+    <script>
+        var arr = [];
+        var input = document.getElementById("input");
+        var app = document.getElementById("app");
+        input.onkeydown = function(event){
+            // console.log(event.keyCode)
+            if(event.keyCode==13){
+                if(arr.indexOf(this.value)==-1 && this.value !=""){
+                    arr.push(this.value);
+                    var li = document.createElement("li");
+                li.innerHTML = this.value;
+                app.append(li);
+                }
+                // console.log(arr);
+                // console.log(this.value)
+            }
+            
+        }
+    </script>
+</body>
+</html>

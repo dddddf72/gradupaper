@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .callout{
+            width: 350px;
+            height: 100px;
+            position: relative;
+            background:tan;
+            border: 1px solid rgb(255, 115, 0);
+        }
+        .callout::before{
+            content: "";
+        position: absolute;
+        bottom: -7px;
+        padding: .35em;
+        right: 5px;
+        border: inherit;
+        border-right: 0;
+        border-bottom: 0;
+        background: inherit;
+        transform: rotate(-136deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="callout">
+        <p>Only letters,numbers,underscores(_)and hyphens(-)allowed!</p>
+        
+    </div>
+</body>
+</html>

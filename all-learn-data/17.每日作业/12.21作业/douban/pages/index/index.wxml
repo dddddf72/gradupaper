@@ -1,0 +1,24 @@
+<!-- 导航部分开始 -->
+<view class="header">
+<text>豆瓣读书</text>
+<view class="txtbtn">
+<input type="text" class="searchtxt"  />
+<button class="searchbtn" style="margin:0;padding:0;width:30px;height:30px;margin-right: 15px;"></button>
+</view>
+</view>
+<image class="fdj" src="../../images/放大镜.png"></image>
+<!-- 导航部分结束 -->
+
+<!-- 内容部分开始 -->
+<view class="content" wx:for="{{result}}" wx:key="item">
+    <text class="xuhao">{{index+1}}</text>
+    <image class="contentimg" src="{{item.coverImage}}"></image>
+    <view class="contenttxt" style="align-self:start;">
+    <text class="title">{{item.title}}</text>
+    <text class="ratevaluate"><text class="rating">{{item.rating}}</text> ({{item.evaluate}}人评价)</text>
+    <text class="labels">{{item.labels}} / {{item.price}}元</text>
+    </view>
+</view>
+<!-- 内容部分结束 -->
+
+

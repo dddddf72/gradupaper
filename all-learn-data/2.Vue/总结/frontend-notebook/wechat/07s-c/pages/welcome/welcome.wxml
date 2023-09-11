@@ -1,0 +1,5 @@
+<!--pages/welcome/welcome.wxml-->
+<button 
+bind:tap="handleJump"
+type="primary">跳过{{num}}</button>
+

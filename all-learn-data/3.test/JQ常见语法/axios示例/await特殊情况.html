@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // await 阻塞线程，跳出程序
+        // async function show(){
+        //     console.log(1)
+        //     var res = await 100;
+        //     console.log(res)
+        // }
+        // show(); // 先执行1，遇到await跳出函数，执行2，最后执行100(效果：优先执行同步(一个或多个))
+        // console.log(2)
+        // setTimeout(() => {
+        //     console.log(3)
+        // }, 1000);
+
+
+        setTimeout(() => {  //级别最低，最后执行
+            console.log(4)
+        });
+        async function print(){
+            console.log("script-start")  
+            var res = await go(); 
+            console.log(res)    
+        }
+        async function go(){
+            return 1;
+        }
+        print();
+        
+      var  p =  new Promise((resolve,reject)=>{
+            console.log(2);   //输出2,同步代码
+            resolve(3);  //不执行，需要then，catch调用
+        })
+        p.then((res)=>{
+            console.log(res)  //输出3
+        })
+        
+        console.log("script-start");  //同步代码
+        // 判断执行流程
+        // 按顺序执行，遇到await跳出函数，执行同步代码
+        // 考点：Promise和定时器的执行顺序，await的作用(1.得到Promise执行结果，2.阻塞线程)
+    </script>
+</body>
+</html>

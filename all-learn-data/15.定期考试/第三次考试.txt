@@ -1,0 +1,7 @@
+1.下拉刷新
+2.瀑布流
+3.点击切换
+4.什么是回调地狱（回调函数嵌套回调函数）
+5.什么是promise,promise有几种状态，如何触发 ，手写简单的promise
+	3种状态（resolve,reject,--第三种状态不需要知道。。）
+6.promise封装JQuery-ajax

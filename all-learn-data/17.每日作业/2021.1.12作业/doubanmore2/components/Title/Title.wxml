@@ -1,0 +1,6 @@
+<view class="title">
+        <text>{{title}}</text>
+    <button class="btn" type="default" 
+    bind:tap="jumpMore"
+    size="mini">更多</button>
+</view>

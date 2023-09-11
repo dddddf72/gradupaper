@@ -1,0 +1,4 @@
+Tips:npm/cnpm/yarn一定要将仓库的镜像放到淘宝
+npm install cnpm -g --registry=https://registry.npm.taobao.org  (npm转cnpm)
+
+

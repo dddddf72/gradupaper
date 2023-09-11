@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt">
+    <script>
+        /* 
+        filter
+        includes
+        slice()
+         */
+        var arr = [
+            {name:"你是谁,他在那里",id:1102},
+            {name:"圈住你在那里",id:1102},
+            {name:"hello在那里",id:1102},
+            {name:"怪你",id:1102},
+            {name:"world",id:1102},
+        ]
+        /* 1.enter回车获取关键字
+           2.使用关键字,对数据查询,得到一个新的数组
+           3.name的字符超过3位以...结尾
+         */
+         /* 1.enter回车获取关键字 */
+        var txt = document.getElementById("txt");
+        txt.onkeydown =  function(event){
+            if(event.keyCode == 13){
+                var value = this.value;
+                /*  2.使用关键字,对数据查询,得到一个新的数组 */
+                if(value){
+                    // console.log(value)
+                    var res = arr.filter(item=>{
+                        return  item.name.includes(value);
+                    })
+                    /* 3.name的字符超过3位以...结尾 */
+                    res.map(item=>{
+                        if(item.name.length>3){
+                            return item.name = item.name.slice(0,3)+"..."
+                        }
+                    })
+                    console.log(res)
+                }
+            }
+        }
+    </script>
+</body>
+</html>

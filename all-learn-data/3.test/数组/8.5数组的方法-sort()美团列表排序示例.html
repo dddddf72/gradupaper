@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="like">
+        通过好评数排序
+    </button>
+    <button id="price">
+        通过价格排序
+    </button>
+    <script>
+        //声明变量like存储id为like的button按钮
+        var like =document.getElementById("like");
+        //声明变量price存储id为price的button按钮
+        var price =document.getElementById("price");
+        //声明创建数组对象sales
+        var sales = [
+            {name:"张三",like:60,distance:1000,price:100},
+            {name:"张三",like:30,distance:1000,price:60},
+            {name:"张三",like:20,distance:1000,price:10}
+        ]
+        // 升序
+        //创建addOrder函数，定义两个参数，arr为数组参数，value为数组属性参数
+        function addOrder(arr,value){
+            //判断arr变量是否为数组
+            if(Array.isArray(arr)){
+                //arr满足为数组的条件后，声明创建res变量，使用sort()方法的比较函数,比较arr数组的value属性即在arr数组中按value属性排序
+                var res = arr.sort((a,b)=>{
+                return a[value]-b[value];
+            })
+            //返回函数结果res(已排序)
+            return res;
+            }
+                // arr变量不满足为数组的条件，则执行else内的语句
+                else{
+                    // 返回空
+                    return null;
+                }
+        }
+        //函数创建完成
+
+        // 给id为like的按钮添加点击事件
+        like.onclick=function(){
+            // 输出调用addOrder()函数，addOrder函数创建时传入了两个参数
+            // 在此处传两个参数，arr为数组名，value为属性名，即按照value这个属性名进行排序
+            // 此处的arr == sales ,value == like
+            console.log(addOrder(sales,"like"));    //效果为：当点击id为like的按钮后，控制台内会将sales数组的内容按照like属性值的升序排列
+        }
+        // 给id为price的按钮添加点击事件
+        price.onclick=function(){
+            // 输出调用addOrder()函数，addOrder函数创建时传入了两个参数
+            // 在此处传两个参数，arr为数组名，value为属性名，即按照value这个属性名进行排序
+            // 此处的arr == sales ,value == price  ！！！！此处只改变了value值
+            console.log(addOrder(sales,"price"));   //效果为：当点击id为price的按钮后，控制台内会将sales数组的内容按照price属性值的升序排列
+        }
+    </script>
+</body>
+</html>

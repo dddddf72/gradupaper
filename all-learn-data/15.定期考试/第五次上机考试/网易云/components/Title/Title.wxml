@@ -1,0 +1,9 @@
+<view class="out">
+	<view class="inout">
+		<image src="{{iconUrl}}"></image>
+		<text>{{title}}</text>
+	</view>
+
+	<button class="btn" bindtap="jumpmore">更多 ></button>
+</view>
+

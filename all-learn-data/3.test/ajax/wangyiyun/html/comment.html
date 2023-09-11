@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="../http/index.js"></script>
+    <style>
+        .comment{
+            border-bottom: 1px solid red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+    <script>
+        var id = location.search.split("=")[1];
+        console.log(id)
+        var url = `comment/music?id=${id}&limit=1`;
+        ajax({
+            url,
+            success:res=>{
+                // console.log(res)
+                var arr = [];
+                // console.log(res.hotComments)
+                arr.push(res.hotComments);
+                console.log(arr)
+               for(var i = 0 ;i<arr[0].length;i++){
+                   var {user,content}=arr[0][i];
+                   var html = 
+                   `<div class="comment">
+                    <p>用户名：${user.nickname}</p>
+                    <p>评论：${content}</p>
+                    </div>
+                   `
+                   $("#app").append(html)
+               }
+            }
+        })
+                
+            
+        
+    </script>
+</body>
+</html>

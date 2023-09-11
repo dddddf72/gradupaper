@@ -1,0 +1,65 @@
+function handleplay(value) {
+    if (value > 100000000) {
+        value = Math.floor(value / 100000000) + "亿"
+    } else if (value > 10000) {
+        value = Math.floor(value / 10000) + "万"
+    }
+    return value;
+}
+
+function handlename(value) {
+    if (value.length > 6) {
+        value = value.slice(0, 6) + "..."
+    }
+    return value
+}
+function handle(value) {
+    if (value < 10) {
+        value = "0" + value
+    } else {
+        value = "" + value
+    }
+    return value
+}
+
+function handletime(value) {
+    var second = Math.floor(value / 1000);
+    var minute = handle(Math.floor(second / 60));
+    second = handle(Math.floor(second % 60));
+    var sum = minute + ":" + second;
+    return sum;
+}
+function sum(arr) {
+    if (arr.length > 0) {
+        var res = arr.filter(function (item) {
+            return item.isSelected == true;
+        })
+        var sum = 0;
+        res.forEach(function (item) {
+            sum += item.productPrice * item.productCount;
+
+        })
+        return sum * 100;
+    }
+}
+
+function state(arr) {
+    var res = arr.every(function (item) {
+        return item.isSelected == true;
+    })
+    return res;
+}
+
+function handnum(value) {
+    res = value.toFixed(2);
+    return res;
+}
+
+module.exports = {
+    handleplay: handleplay,
+    handlename: handlename,
+    handletime: handletime,
+    sum: sum,
+    state: state,
+    handnum: handnum
+}

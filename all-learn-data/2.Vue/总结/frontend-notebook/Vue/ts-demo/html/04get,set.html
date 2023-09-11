@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id='app'>
+        <input type="checkbox" v-model="myState">
+    </div>
+    <script>
+        /* computed中的值是依赖于data的 */
+        new Vue({
+            el:"#app",
+            data:{
+                state:true
+            },
+            computed:{
+                myState:{
+                    get(){
+                        console.log("state")
+                        return this.state;
+                    },
+                    set(value){
+                        console.log("set")
+                        this.state = value;
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

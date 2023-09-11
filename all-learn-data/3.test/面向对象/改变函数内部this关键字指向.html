@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 改变函数this关键字指向，call  , applay  , bind
+        // var name = "zhang"
+        // function show(){
+        //     console.log(this.name)
+        // }
+        // // 函数正常调用的时候this是指向window
+        // function go(){
+        //     var name = "lisi"
+        //     show(); //正常调用，指向window;输出为window.name = "zhang"
+        // }
+        // // 函数要有对象去调用，事件需要对象去执行
+        // go(); //==window.go(); //输出zhang
+        
+// 改变指向方法1：funNmae.call(value);value传谁，this指向谁
+        // var name = "wang"
+        // var obj = {
+        //     name:"lisi"
+        // }
+        // function go(){
+        //     console.log(this.name)
+        // }
+        // go(); //输出wang
+        // go.call(obj); //输出lisi
+
+// // 改变指向方法2：
+// var name = "wang"
+//         var obj = {
+//             name:"lisi"
+//         }
+//         function go(){
+//             console.log(this.name)
+//         }
+//         go(); //输出wang
+//         go.apply(obj); //输出lisi
+
+// bind绑定的函数不会马上执行，只是改变了函数上下文的执行环境
+// call,apply调用的时候马上执行
+// 改变指向方法3：bind
+        var name = "window"
+        var zhang = {
+            name:"zhang"
+        }
+       var show =  function(a,b){
+            console.log(this.name)
+            console.log(a+b)
+        }.bind(zhang);
+        show(2,3)  //zhang,5
+        
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+热门歌曲  url: ":4000/top/playlist/highquality"
+最新音乐 url: ":4000/related/playlist?id=1"
+主播电台  url: ":4000/top/playlist?cat=华语"
+
+playlist/detail?id=${id}
+
+song/url?id=${id}

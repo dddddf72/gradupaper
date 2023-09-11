@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        特点:1.不重复  2.不是一个有序列的集合
+         */
+        /* 
+        1. size 属性获取长度
+        2. add可以添加数据
+        3. clear()清除set中所有的数据
+        4. delete()执行删除   -->shift,pop,splice(index,howmany)
+        5. forEach
+        6. has  includes
+         */
+        var arr = [1,2,3,1];
+
+        var s = new Set(arr);
+        s.add(4);
+        // s.clear()
+        s.delete(2);
+        console.log(s.has(3))
+        console.log(s.entries())
+        console.log(s.keys())
+        console.log(s.values())
+        console.log(s)
+        
+    </script>
+</body>
+</html>

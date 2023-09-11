@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise的三种状态</title>
+</head>
+<body>
+    <script>
+        /* promise
+        三种  
+        1.pending  等待 冻结
+        2.fulfilled(resolved)  成功的状态  调用resolve函数,获取就是resolved状态
+        3.reject      调用reject(),获取reject的状态
+         */
+        var  p = new Promise((resolve,reject)=>{
+            reject(100)
+        })
+        console.log(p)
+    </script>
+</body>
+</html>

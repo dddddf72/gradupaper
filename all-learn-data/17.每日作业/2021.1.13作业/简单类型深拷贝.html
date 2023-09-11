@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 简单数据类型实现深拷贝
+        /* 如果对象中的属性是简单数据类型
+            1.展开语法实现深拷贝（数组/对象）
+            2.forEach   数组
+            3.Object.assign({},obj) 对象
+            4.
+        */
+        var obj = {name:"cheng",age:18}
+        // var a = {...obj}
+        var a = Object.assign({},obj)
+        obj.id = 100;
+        console.log(a)
+    </script>
+</body>
+</html>

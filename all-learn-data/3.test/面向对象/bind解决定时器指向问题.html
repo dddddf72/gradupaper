@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">anniu</button>
+    <script>
+        // var id = "1001"
+        // var btn = document.getElementById("btn");
+        // btn.onclick = function(){
+        //     // console.log(this.id)  //btn执行事件，指向btn，输出btn
+        //     setTimeout(function(){ //window.setTimout
+        //         console.log(this.id)  //指向window //输出1001
+        //     }, 1000)
+        // }
+        // 解决方法：bind
+// 写法1：
+//  var id = "1001"
+//         var btn = document.getElementById("btn");
+//         btn.onclick = function(){
+            
+//             setTimeout(function(){ 
+//                 console.log(this.id)  
+//             }.bind(btn), 1000)   //bind方法改变上下文执行环境
+//         }
+
+        // 写法2：
+        var id = "1001"
+        var btn = document.getElementById("btn");
+        btn.onclick = function(){
+            var self = this;        //增进语义化
+            setTimeout(function(){ 
+                console.log(this.id)  
+            }.bind(self), 1000)   //bind方法改变上下文执行环境
+        }
+    </script>
+</body>
+</html>

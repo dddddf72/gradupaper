@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 声明数组a  
+        var a = [1,2,3];
+        //声明数组b
+        var b = [4,5,6];
+        //使用unshift方法，将a数组的内容(a数组的内容通过展开语法获取)添加到数组中
+        b.unshift(...a);
+        //输出b数组,此时b数组的前部分为a数组的内容
+        console.log(b); //输出为[1,2,3,4,5,6]
+    </script>
+</body>
+</html>

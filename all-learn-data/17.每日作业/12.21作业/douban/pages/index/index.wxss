@@ -1,0 +1,74 @@
+/* 导航部分开始 */
+.header{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr  2fr;
+    background-color: rgb(166, 172, 87);
+    align-items: center;
+    justify-items: center;
+    padding: 15px 0;
+}
+.txtbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchbtn{
+    background-color: #333;
+}
+.searchtxt{
+    width: 150px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+.fdj{
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+}
+/* 导航部分结束 */
+
+/* 内容部分开始 */
+.content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.xuhao{
+    margin:30px 0 0 5px;
+}
+.contentimg{
+    margin:30px 0 0 5px;
+    width: 100px;
+    height: 100px;
+}
+.contenttxt{
+    margin:30px 0 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+.contenttxt text{
+    margin-top: 5px;
+}
+.title{
+    color:rgb(51, 119, 170) ;
+}
+.rating{
+    color: orange;
+}
+.ratevaluate{
+    font-size: 10px;
+}
+.labels{
+    font-size: 10px;
+}
+image{
+    width: 50px;
+    height: 50px;
+}
+/* 内容部分结束 */

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username" placeholder="请输入用户名">
+    <script>
+        // 用户名规则，一或多个字母开头，8位数
+        var username= document.getElementById("username")
+        username.onkeyup=function(){
+            if(event.keyCode==13){
+                var value= this.value
+                var reg = /^[a-zA-Z]{1,8}$/
+                console.log(reg.test(value))
+            }
+        }
+    </script>
+</body>
+</html>

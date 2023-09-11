@@ -1,0 +1,3 @@
+<view class="container">
+  <v-item wx:for="{{result}}" music="{{item}}"></v-item>
+</view>

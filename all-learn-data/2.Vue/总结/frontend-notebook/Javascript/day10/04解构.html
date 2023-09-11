@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        1.es6对象 键和值相同可以只写一个
+        2.解构
+        3.回调函数  抄几遍
+         */
+        function ajax({method,url,success}){
+            var res = 10;
+            console.log(method);
+            console.log(url);
+            success(res);
+        }
+        ajax({
+            method:"get",
+            url:"http",
+            success:res=>{
+                console.log(res)
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* vue
+        应用场景：复杂类型(Array,Object)的赋值运算中 */
+        // 浅拷贝 既传值也传址
+        // var arr = [1,2,3]
+        // var b = arr;
+        // b.push(4)
+        // console.log(arr)
+        // 深拷贝(只传值)
+        var arr = [1,2,3]
+        var b = [];
+        arr.forEach(item=>{
+            b.push(item)
+        })
+        console.log(b)
+        b.push(4)
+        console.log(arr)
+    </script>
+</body>
+</html>

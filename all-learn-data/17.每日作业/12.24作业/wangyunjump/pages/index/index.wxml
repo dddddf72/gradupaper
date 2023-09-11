@@ -1,0 +1,9 @@
+<view class="content" >
+    <view bindtap="handleToggle" data-id="{{item.id}}" wx:for="{{playlists}}" wx:key="item" >
+        <image src="{{item.coverImgUrl}}"></image>
+        <text class="name">{{item.name}}</text>
+        <view class="playcount">{{item.playCount}}
+            <image src="/images/三角形.png" class="triangle"></image>
+            </view> 
+    </view> 
+</view>

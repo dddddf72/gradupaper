@@ -1,0 +1,9 @@
+/* pages/music/music.wxss */
+.content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20rpx;
+}
+.container{
+    padding:0 20rpx;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //声明数组对象
+        var students = [
+            {name:"zhang",age:20},
+            {name:"li",age:18},
+            {name:"wang",age:9},
+            {name:"chen",age:14},
+            // 需求，根据年龄升序
+        ]
+        //下为原理推测：
+        //使用sort()方法的比较函数,应当包含两个参数a,b用于比较
+        // 格式为 数组名.sort((a,b)=>{return a-b})
+        // 当a.age-b.age>0的时候(即前一个值a大于后一个值b的时候)，
+        // 将b所对应的值串放到a对应的值串前面，
+        //然后继续比较a和下一个值串
+        // a.age-b.age<0时候，将a对应值串放在b对应值串的前面
+        //a-b等于0时，不变
+
+        //下述第一段语句为声明创建一个变量res ,用于存储排序后的结果
+        var res = students.sort((a,b)=>{
+            //比较a和b,a>b时候，返回大于0的值
+            return a.age-b.age  
+        })
+        //输出排序后的结果，结果存储在res中，故输出res
+        console.log(res)
+
+            // 根据年龄降序
+            //降序原理同升序，sort((a,b)=>{return b.age-a.age}),左边的a代表内容中的前一个值串，
+//右边的b代表后一个值串，当使参数改变位置时sort((b,a)=>{return b.age-a.age})，排序方式就相反(升序)
+            //
+            //下述语句为声明创建一个变量ser，用于存放比较后的值串
+        var ser = students.sort((a,b)=>{
+            //因为在设置参数时，左边的参数为前一个值串，右边的参数为后一个值串
+            //因此下述语句为判断后一个值串减去前一个值串的判断语句
+            //若后一个值串b大于前一个值串a(b.age-a.age>0)，就把a对应值放在b对应值的前面
+            //若b.age-a.age<0即后一个值串小于前一个值串，就把小的值串放前面(后一个值串b放前面)
+            //b.age-a.age=0时，不变
+            return b.age-a.age 
+        })
+        //输出排序后的结果，结果存储在ser变量中，故输出ser
+        console.log(ser)
+
+
+       
+    </script>
+</body>
+</html>

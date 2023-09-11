@@ -1,0 +1,53 @@
+1.什么是跨域     
+
+2.如何解决跨域   客户端： jsonP/json    script                      服务器端：origin:"*"    ctx.set('Access-Control-Allow-Origin','*'
+
+3.原生ajax如何实现  new  ,  open  ,  send ,   onreadystate
+
+4.JQAJ的传参    、url , type,datatype , callback
+
+5.什么时候使用AJAX    需要获取数据的时候
+
+6.json格式的字符串如何解析为json对象  json.parse()
+
+7.如何判断数组 isarry 
+
+8.axios的传参   url  ,  type  , pramse , data ,  callback,  !callback
+
+9.字符串中有哪几个方法支持正则表达式     search ,  match  
+
+10.search  返回下标
+
+11.match  返回数组
+
+12.typeof 不能识别数组，可以识别函数
+
+13.split 作用，将字符串分隔成数组
+
+14.函数是传定参还是不定参    不定参
+
+15.传递的函数装在函数哪个对象      arguments
+
+16.join 作用，将数组分隔成字符串
+
+17.阻止a标签跳转 ，return false
+
+18.JQ中content宽度，即盒子内容宽度 .width
+
+19.盒子宽度，content+border+padding   outerWidth
+
+20.every,some方法返回值  boolean
+
+21.filter方法返回值   满足条件的数组
+
+22.find() 方法返回  父元素下的子元素   ,find(item=>{return a>b})返回满足条件的第一个元素
+
+23.如何判断数组中是否包含某个值    includes , find , findindex  , indexOf
+
+24.哪几种情况为false  0 , "" , null , undefined , NaN
+
+25.break 和continue的区别  break跳出循环 ，continue是跳过当次循环继续后面的循环
+
+26.如何对对象进行遍历  1.for...in          2.Object.keys(obj)  ; Object.values(obj)          3.Object.getOwnPropertyNames(obj)
+
+27.重载概念：根据参数的不同，动态决定调用哪个方法

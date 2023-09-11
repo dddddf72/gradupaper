@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 在函数里面使用var定义的变量(包含函数的参数)--局部变量
+        // 函数外面声明的变量--全局变量
+        var a = 10;
+        function show(){
+            console.log(a);
+            var b = 20;
+            console.log(b);
+        }
+        show();
+        console.log(b);
+    </script>
+</body>
+</html>

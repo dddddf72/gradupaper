@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ /* 顶部导航开始 */
+.TopBanner{
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 600px;
+    height: 174px;
+    background-color:rgb(255, 209, 1) ;
+}
+.TopBannerFirst{
+    height: 60px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 150px auto 150px;
+}
+.TopBannerSecond{
+    margin-top: 15px;
+    justify-content: center;
+    grid-gap : 20px 20px;
+    height: 75px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(4,100px);
+}
+
+.item{
+    position: relative;
+    text-align: center;
+}
+.item input{
+    font-size: 20px;
+    outline: none;
+    border: none;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 35px;
+}
+.item img{
+    width: 15px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 28%;
+    left: 5%;
+}
+.TopBannerFirst .item>span:nth-child(3){
+    font-size: 0px;
+}
+/* 顶部导航结束  */
+
+
+
+
+
+            /* 内容开始 */
+.centerContent{
+    margin-top: 200px;
+}
+/* 内容轮播开始 */
+.content{
+    cursor: pointer;
+    position: relative;
+    width:600px;
+    height:370px;
+    margin-left: auto;margin-right: auto;
+    /* border:1px solid #333; */
+}
+#list{
+    position: absolute;
+    width:600px;
+    height:400px;
+}
+#btns{
+    position: absolute;
+}
+#list>div:not(:first-child){
+    display: none;
+    
+    /* margin-left: 600px; */
+}
+
+.listFirst1{
+    width: 600px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows:repeat(3,100px);
+    justify-items: center;
+    align-items: center;
+}
+
+.listFirst2{
+    width: 600px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows:repeat(3,100px);
+    justify-items: center;
+    align-items: center;
+}
+
+.listFirst3{
+    width: 600px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows:repeat(3,100px);
+    justify-items: center;
+    align-items: center;
+}
+
+.xiuxian{
+    margin-left: 15px;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    grid-template-rows: 21px 21px;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.xiuxian1{
+    background: rgb(254, 193, 51);
+    border-top-left-radius: 15px;
+}
+.xiuxian2{
+    background: rgb(255, 97, 148);
+    border-top-right-radius: 15px;
+}
+.xiuxian3{
+    background: rgb(189, 86, 255);
+    border-bottom-left-radius: 15px;
+}
+.xiuxian4{
+    background: rgb(154, 92, 255);
+    border-bottom-right-radius: 15px;
+}
+
+
+#btns{
+    z-index: 101;
+    transform: translateX(-50%);
+    bottom: 20px;left:50%;}
+#btns .current{
+    background:orangered;
+}    
+#btns>span{
+    cursor: pointer;
+    width:20px;
+    height:20px;
+    display: inline-block;
+    border-radius: 50%;
+    border:1px solid #fff;
+    background-color:rgba(44,44,44,.3);
+}
+/* 内容轮播结束 */
+.bcgblack{
+    width: 600px;
+    height: 1400px;
+    box-shadow: 0px -1px 5px 1px rgba(0, 0, 0, .15);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(244, 244, 244);
+}
+/* 美团优选开始 */
+.youxuan{
+    width: 580px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+.youxuanhead{
+    padding-top: 20px;
+    width: 580px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1.5fr;
+    justify-items: center;
+    align-items: center;
+}
+.youxuanhead div{
+    /* border: 1px solid red; */
+    padding:0 5px;
+}
+
+.youxuanbottom{
+    width: 580px;
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    align-items: center;
+}
+/* .youxuanbottom div{
+    border: 1px solid red;
+} */
+.youxuanbottom img{
+    width: 100px;
+    height: 90px;
+}
+/* .shoudanjia{
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    font-size: 15px;
+    top: 0;
+    right: 10px;
+    border-radius: 10px;
+    background-color: rgb(254, 65, 53);
+}
+.triangle{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom: 20px solid red;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+
+} */
+/* 美团优选结束 */
+
+/* 猜你喜欢开始 */
+.cainixihuan{
+    margin-top: 20px;
+    width: 600px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+}
+.cainixihuan div{
+    /* border: 1px solid red; */
+}
+/* 猜你喜欢结束 */
+
+/* 猜你喜欢内容开始 */
+.cainixihuancontent{
+    font-size: 0;
+    margin-top: 15px;
+    margin-bottom: 100px;
+    width: 570px;
+    height: 1000px;
+    /* background-color: red; */
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.cainixihuanleft{
+    float: left;
+    width:280px;
+    height: 800px;
+    display: grid;
+    grid-template-rows: 380px 420px;
+    grid-row-gap: 20px;
+}
+.cainixihuanleft div{
+    border: 1px solid transparent;
+}
+.cainixihuancontent img{
+    
+    width: 280px;
+    height: 190px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.lefttext{
+    position: relative;
+    padding-left: 10px;
+    width: 280px;
+    height: 190px;
+    background-color: #fff;
+    border-bottom-left-radius: 15px ;
+    border-bottom-right-radius: 15px;
+    font-size: 20px;
+}
+
+.lefttext2{
+    position: relative;
+    padding-left: 10px;
+    width: 280px;
+    height: 180px;
+    background-color: #fff;
+    border-bottom-left-radius: 15px ;
+    border-bottom-right-radius: 15px;
+    font-size: 20px;
+}
+
+.cainixihuanright{
+    float: right;
+    width:280px;
+    height: 800px;
+    display: grid;
+    grid-template-rows: 420px 380px;
+    grid-row-gap: 20px;
+}
+.cainixihuanright div{
+    border: 1px solid transparent;
+}
+
+.righttext{
+    position: relative;
+    padding-left: 10px;
+    width: 280px;
+    height: 230px;
+    background-color: #fff;
+    border-bottom-left-radius: 15px ;
+    border-bottom-right-radius: 15px;
+    font-size: 20px;
+}
+
+.righttext2{
+    position: relative;
+    padding-left: 10px;
+    width: 280px;
+    height: 210px;
+    background-color: #fff;
+    border-bottom-left-radius: 15px ;
+    border-bottom-right-radius: 15px;
+    font-size: 20px;
+}
+
+.special{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+    color: rgb(246, 142, 7);
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* 猜你喜欢内容结束 */
+
+            /* 内容结束 */
+
+
+
+
+
+/* 底部导航开始 */
+.bottomBanner{
+    padding-left:5px;
+    width: 600px;
+    height: 100px;
+    line-height: 100px;
+    position: fixed;
+    background-color: #fff;
+    border-top: 2px solid rgb(206, 204, 204);
+    bottom: 0;
+    left: 50%;
+    z-index: 9999;
+    transform:translate(-50%,0);
+}
+.bottomBanner>div{
+    position: relative;
+    /* display: inline-block; */
+    float:left;
+    margin-top: 10px;
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+   
+    cursor: pointer;
+}
+
+.bottomBanner div:not(:nth-child(1)){
+    margin-left: 88px;
+}
+
+.bottomBanner>div i{
+    font-size: 50px;
+}
+.meituan{
+    border-radius: 50%; 
+}
+.bottomBanner>div p{
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    transform:translate(-50%,0);
+    width: 60px;
+    height: 40px;
+    
+}
+/* 底部导航结束 */

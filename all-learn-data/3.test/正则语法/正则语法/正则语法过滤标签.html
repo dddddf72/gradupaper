@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var  str = "<p>我是</p>.<div>是</div>";
+        var reg = /<[^<>]+>/g;  //左右为<>号，且内容为非<>号的所有字符
+        console.log(str.replace(reg,""))
+    </script>
+</body>
+</html>

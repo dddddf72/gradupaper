@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        hello world
+    </div>
+    <div class="test">
+        good
+    </div>
+    <script>
+        // 如何获取DOM元素
+        var app = document.getElementsByTagName("div");
+        // app HTMLCollection(HTML的集合),不是数组  类数组对象,可以使用数组的属性,可以for循环
+        console.log(Array.isArray(app))
+        console.log(app.length)
+        for(var i=0;i<app.length;i++){
+            console.log(app[i])
+        }
+    </script>
+</body>
+</html>

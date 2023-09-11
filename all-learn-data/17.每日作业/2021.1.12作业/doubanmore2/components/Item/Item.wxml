@@ -1,0 +1,13 @@
+<view class="item"   bind:tap="handleItem">
+  <image src="{{movie.pic}}"></image>
+  <view class="text">{{movie.title}}</view>
+  <view class="pf">
+      <block wx:for="{{movie.rate}}">
+        <image wx:if="{{item>=1.5}}" src="/images/star.png"></image>
+        <image wx:elif="{{item>=1}}" src="/images/ban-star.png"></image>
+        <image wx:else src="/images/no-star.png"></image>
+      </block>
+      <text class="fen">{{movie.raiting}}</text>
+    </view>
+    
+</view>

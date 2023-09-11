@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 声明一个引用数据类型，占用两块内存空间(栈内存放变量，堆内存放实际对象)
+        // 栈内存中的变量存的是一个引用(指针，地址的值)，指向堆内存中的实际对象
+        var arr = [1,2,3];
+        // 赋值运算，赋的值是引用(指针，地址的值)，指向堆内存中的同一个对象
+        var sum = arr;
+        console.log(sum)
+        // 改变了堆内存中的同一个对象的值[1,2,3,4]
+        arr.push(4)
+        // 因此sum存的地址所指向的值为[1,2,3,4]
+        console.log(sum) //[1,2,3,4]
+    </script>
+</body>
+</html>  

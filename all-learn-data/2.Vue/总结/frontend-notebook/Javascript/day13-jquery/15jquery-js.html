@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <style>
+        div{
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        div
+    </div>
+    <script>
+        /* 
+        html();
+        innerHTML
+         */
+         /* 1.jquery对象转为为js对象之后,才能使用原生的方法 */
+         var div = $("div")[0];
+         var content = div.innerHTML;
+         console.log(content);
+    </script>
+</body>
+</html>

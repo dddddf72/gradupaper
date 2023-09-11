@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="app">
+
+    </p>
+    <script>
+        /* 
+        1.什么是异步 何时使用
+        2.如何使用原生ajax
+         */
+        var app = document.getElementById("app")
+        var url ="http://192.168.4.18:8000/"
+        /* ajax 如何使用ajax向后台获取数据*/
+        /* 1. 创建ajax核心对象*/
+        var xhr =  new XMLHttpRequest();
+        /* 2.与服务器建立连接 xhr.open(method,url,async) 
+        请求的方式,地址,是否异步
+        */
+        xhr.open("get",url,true)
+        /* 3.发送请求 */
+        xhr.send()
+        /* 4.响应 */
+        /* onreadystatechange  监听服务器的响应状态*/
+        xhr.onreadystatechange = function(){
+            /* xhr.status  服务器端响应的状态码  200 */
+            /* xhr.readyState 服务器响应的进度  4 响应已经完成 */
+            if(xhr.readyState == 4 && xhr.status == 200){
+                var txt = xhr.responseText;
+                /* JSON.parse()  可以json格式的字符串,转换为json格式的数据 */
+                var obj = JSON.parse(txt);
+                console.log(obj)
+                app.innerHTML =  obj.name
+
+            }
+        }
+    </script>
+</body>
+</html>

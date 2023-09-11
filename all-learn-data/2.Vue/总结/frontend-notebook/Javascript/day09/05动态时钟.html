@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <img src="images/0.png" alt="">
+        <img src="images/0.png" alt="">
+        <span>:</span>
+        <img src="images/0.png" alt="">
+        <img src="images/0.png" alt="">
+        <span>:</span>
+        <img src="images/0.png" alt="">
+        <img src="images/0.png" alt="">
+    </div>
+    <script>
+        function handleTime(value) {
+            if (value < 10) {
+                return "0" + value;
+            }
+            return "" + value;
+
+        }
+        function showTime() {
+            var imgs = document.querySelectorAll("#app img")
+            var d = new Date();
+            var hours = handleTime(d.getHours());
+            var minutes = handleTime(d.getMinutes());
+            var seconds = handleTime(d.getSeconds());
+            var sum = hours + minutes + seconds;
+            for (var i = 0; i < imgs.length; i++) {
+                // imgs[i].src = "images/" + sum[i] + ".png";
+                imgs[i].src = `images/${sum[i]}.png`;
+            }
+            setTimeout(function(){
+                showTime()
+            },1000)
+        }
+        showTime()
+    </script>
+</body>
+
+</html>

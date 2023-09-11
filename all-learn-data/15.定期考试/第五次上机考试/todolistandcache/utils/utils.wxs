@@ -1,0 +1,9 @@
+function handlenum(value) {
+    if (value.constructor == "Array") {
+        var res = value.filter(function (item) {
+            return item.state == true;
+        })
+        return res.length;
+    }
+}
+module.exports = { handlenum: handlenum }

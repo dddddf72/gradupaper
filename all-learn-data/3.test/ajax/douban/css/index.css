@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.left{
+    margin-left: 13.0208vw;
+    display: flex;
+    margin-top: 20px;
+    width: 32.5521vw;
+    border-top: 1px dashed #333;
+    
+    /* 使图片和div水平对齐 */
+}
+
+.left img{
+    width: 200px;
+    height: 300px;
+    margin-top: 20px;
+}
+.left p,span{
+    margin-top: 20px;
+}

@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 页面样式开始 */
+.bgBig{
+    width: 100%;
+    padding-top: 1.9531vw;
+    background-color: rgb(244,244,244);
+}
+/* 导航开始 */
+.navigation{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: grid;
+    height: 9.7656vw;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(244,244,244);
+    grid-template-columns: 1fr 8fr 1fr;
+}
+.searchcenter{
+    width: 78.125vw;
+    height: 6.1146vw;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5.2083vw;
+    padding-left: 3.2552vw;
+}
+.inputsearch{
+    border: none;
+    outline: none;
+    font-size: 3.9063vw;
+    margin-left: 1.3021vw;
+    color: gray;
+}
+/* 导航结束 */
+
+
+/* 轮播开始 */
+.swiper-container{
+    width: 91.1458vw;
+    margin-top: 10.6354vw;
+}
+
+.swiper-slide img{
+    width: 91.1458vw;
+    
+}
+/* 轮播结束 */
+hr{
+    width: 100%;
+    border: .5px solid rgb(209, 209, 209);
+    margin-top: 
+    2.9297vw;
+}
+/* 热门推荐开始 */
+.hot{
+    margin-top: 2.9297vw;
+    padding:0 1.9531vw;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1.9531vw;
+    /* padding: 20px; */
+    /* background-color: green; */
+}
+.rmtj{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+.rmtj div{
+    padding:0 3.9063vw;
+}
+.rmtj div:nth-child(1){
+    font-size: 3.9063vw;
+}
+.rmtj div:nth-child(2){
+    font-size: 1.9531vw;
+}
+.rmtjimg{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    justify-items: center;
+}
+.rmtjimg div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:0 1.9531vw;
+    margin-top: 1.9531vw;
+    position: relative;
+}
+.rmtjimg>div>img{
+    width: 13.0208vw;
+    height: 13.0208vw;
+    border-radius: 0.9766vw;
+}
+
+.count{
+    font-size: 1.0417vw;
+    padding:0;
+    height: 1.3021vw;
+    position: relative;
+    top: 0.3255vw;
+    right: 2.1531vw;
+    margin-top: 0;
+    background-color: gray;
+    opacity: .9;
+    border-radius: 0.9766vw;
+    color:#fff;
+}
+.rmtjimg p{
+    height: 2.7344vw;
+    font-size: 1.0417vw;
+    width: 13.0208vw;
+}
+.count>span{
+    display: flex;
+    position: absolute;
+    left: 0.3906vw;
+    top: 50%;
+    transform:translate(0,-50%);
+    align-items: center;
+}
+.count>span>img{
+    width: 1.3021vw;
+    height: 1.3021vw;
+    transform: rotate(90deg);
+
+}
+/* 热门推荐结束 */
+
+/* 新碟上架开始 */
+.new{
+    padding:0 1.9531vw;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1.9531vw;
+}
+.lonely {
+    margin-top: 2.9297vw;
+    z-index: 50;
+    width: 100%;
+    padding: 0 1.0417vw;
+    background: #fff;
+    border: 0.0651vw solid #fff;
+}
+.newtitle{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+.newtitle div{
+    padding:0 3.9063vw;
+}
+.newtitle div:nth-child(1){
+    font-size: 3.9063vw;
+}
+.newtitle div:nth-child(2){
+    font-size: 1.9531vw;
+}
+.five {
+    z-index: 40;
+    position: relative;
+    overflow: hidden;
+    width: 77.2552vw;
+    margin-left: auto;
+    margin-right: auto;
+    height: 15.9505vw;
+    margin-top: 1.8229vw;
+    /* margin-left: 0px; */
+}
+
+.box4{
+    z-index: 50;
+    position: absolute;
+    /* left: 5px; */
+    display: flex;
+    justify-content: space-around;
+    width: 308.2031vw;
+    height: 19.5313vw;
+}
+.box4 p{
+    font-size: 0.7813vw;
+}
+.box4>div{
+    z-index: 50;
+    position: relative;
+    float: left;
+    width: 13.0208vw;
+    height: 13.0208vw;
+}
+.box4>div>img{
+    width: 13.0208vw;
+    height: 13.0208vw;
+}
+
+.lt{
+    z-index: 9999;
+    position: absolute;
+    top: 5.7292vw;
+    left: -0.3255vw;
+    width: 1.1068vw;
+    height: 1.1068vw;
+    background: url(../images/index.png) no-repeat;
+    background-position: -16.9271vw -4.8828vw;
+    cursor:pointer;
+}
+.lt:hover{
+    background-position: -18.2292vw -4.8828vw;
+}
+.gt{
+    z-index: 9999;
+    position: absolute;
+    top: 5.7292vw;
+    right: -0.3255vw;
+    width: 1.1068vw;
+    height: 1.1068vw;
+    background: url(../images/index.png) no-repeat;
+    background-position: -19.5313vw -4.8828vw;
+    cursor:pointer;
+}
+.gt:hover{
+    background-position: -20.8333vw -4.8828vw;
+}
+/* 新碟上架结束 */
+
+
+/* 页面样式结束 */

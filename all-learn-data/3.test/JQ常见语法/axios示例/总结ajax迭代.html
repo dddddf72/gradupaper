@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 原生ajax
+        var url = "http://192.168.4.18:8000/"
+        var xhr = new XMLHttpRequest();
+            xhr.open("get",url,true);
+            xhr.send();
+            xhr.onreadystatechange = function (){
+                if(xhr.status == 200 && xhr.readyState ==4){
+                    // JSON.parse进行数据解析
+                    var res = JSON.parse(xhr.responseText)
+                    console.log(res)
+                }
+            }
+
+            // 1代,封装ajax,缺点要记住传参的顺序
+            function ajax(url,method="get",success){
+                var url = url;
+        var xhr = new XMLHttpRequest();
+            xhr.open(method,url,true);
+            xhr.send();
+            xhr.onreadystatechange = function (){
+                if(xhr.status == 200 && xhr.readyState ==4){
+                    // JSON.parse进行数据解析
+                    var res = JSON.parse(xhr.responseText)
+                    success(res)
+                }
+            }
+            }
+            // 1.2，传对象
+            function ajax({url,
+                method="get",
+                success})
+                {
+               
+        var xhr = new XMLHttpRequest();
+            xhr.open(method,url,true);
+            xhr.send();
+            xhr.onreadystatechange = function (){
+                if(xhr.status == 200 && xhr.readyState ==4){
+                    // JSON.parse进行数据解析
+                    var res = JSON.parse(xhr.responseText)
+                    success(res)
+                }
+            }
+            }
+
+            // 2代  jQ  ajax
+            $.ajax({
+                url:"http://192.168.4.18:8000/",
+                type:"get",
+                dataType:"json", //跨域需要改jsonp
+                success:res=>{
+                    console.log(res)
+                }
+            })
+
+            // 2.1代  封装JQAJ
+            function http({url,type="get",success}){
+                $.ajax({
+                    url,
+                    type,
+                    dataType:"json",
+                    success:res=>{
+                        console.log(res)
+                    }
+                })
+            }
+
+            // 3代 Promise封装ajax
+                
+
+
+            // 4代 最终版本，通过then调用
+            function http(){
+                return  new Promise((resolve,reject)=>{
+                    $.ajax({
+                        url,
+                        type:"get",
+                        success:res=>{
+                            resolve(res)
+                        },
+                        error:err=>{
+                            reject(err);
+                        }
+                    })
+                })
+            }
+    </script>
+</body>
+</html>

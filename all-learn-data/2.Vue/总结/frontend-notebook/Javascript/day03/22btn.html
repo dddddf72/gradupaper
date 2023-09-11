@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="all">全选</button>
+    <button id="noAll">不选</button>
+    <button id="reverse">反选</button>
+    <div>
+        <input type="checkbox">足球
+        <input type="checkbox">篮球
+        <input type="checkbox">Lol
+        <input type="checkbox">王者荣耀
+    </div>
+    <script>
+        var all = document.getElementById("all");
+        var noAll = document.getElementById("noAll");
+        var reverse = document.getElementById("reverse");
+        var inputs = document.getElementsByTagName("input");
+        /* 1.对btn执行点击事件 */
+        all.onclick = function () {
+            /* 2.将所有的input的checked属性设置为true */
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].checked = true;
+            }
+        }
+        noAll.onclick = function () {
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].checked = false;
+            }
+        }
+        reverse.onclick = function () {
+            for (var i = 0; i < inputs.length; i++) {
+                console.log(inputs[i].checked)
+                inputs[i].checked = (inputs[i].checked) ? false : true;
+            }
+        }
+    </script>
+</body>
+
+</html>

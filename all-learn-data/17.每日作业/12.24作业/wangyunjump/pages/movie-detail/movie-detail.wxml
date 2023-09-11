@@ -1,0 +1,103 @@
+<wxs src="../../utils/utils.wxs" module="tools"></wxs>
+<!-- 黑色背景部分分成三块，想看-看过之前一块；评分一块；点播一块 -->
+<!-- pagedetail为详细介绍部分 -->
+<view class="out">
+  <view class="pagedetail" wx:for="{{ result }}" wx:key="item">
+    <view class="leftpic">
+      <image src="{{ item.picone }}"></image>
+    </view>
+
+    <view class="righttxt">
+      <text class="title">{{ tools.handletitle(item.title, 1) }}</text>
+      <text class="Etitle">{{ tools.handletitle(item.title, 2) }}</text>
+      <button class="btn" style="width: 320rpx;margin: 30rpx 0 0 0;font-size: 30rpx;padding: 10rpx 10rpx;color: rgb(157, 106, 23);">
+        No.1 豆瓣电影Top250
+      </button>
+      <text class="detailtext"
+        >{{ item.amer }}/{{ item.criminal }}/{{ item.plot }}/{{
+          item.toronto
+        }}/{{ item.pianchang }}{{ item.time }}</text
+      >
+      <view class="likestar">
+        <view>
+          <image src="/images/加心愿单.png"></image>
+          想看
+        </view>
+        <view>
+          <image src="/images/空星星.png"></image>
+          看过
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 评分部分 -->
+  <view class="ratingout">
+  <view class="rating">
+    <view class="ratingleftone">
+      <text>豆瓣评分<text class="sup">TM</text></text>
+      <view class="apprating">打开App评分</view>
+    </view>
+    <view class="ratingnum">
+      <block wx:for="{{result}}">
+        <text class="ratingleft" style="cursor: none;text-align: start;">{{item.rating}}</text>
+        <view class="ratinglast">
+          <view>
+    <block wx:for="{{item.ratingstar}}">
+      <image wx:if="{{item>1.5}}" src="/images/star.png"></image>
+      <image wx:elif="{{item>1}}" src="/images/ban-star.png"></image>
+      <image wx:else src="/images/no-star.png"></image>
+    </block>
+          </view>
+    <text class="comment"> {{item.comment}}人评分</text>
+  </view>
+  </block>
+
+    </view>
+  </view>
+</view>
+
+  <!-- 点播部分 -->
+  <view class="clickplayout">
+    <view class="clickplay">
+      <image src="/images/播放.png"></image>
+      <text class="inline">可在线观看</text>
+      <text>打开豆瓣App查看播放源 ></text>
+    </view>
+  </view>
+<!-- 点播部分结束 -->
+
+<!-- 剧情简介开始 -->
+</view>
+
+<view class="detailout">
+  <view class="detail" wx:for="{{result}}">
+    <image class="logo" src="/images/logodetail.png"></image>
+
+    <view class="role">
+      <text class="roletitle">剧情简介</text>
+      <text class="rolecontent">{{jianjie}}</text>
+      <a class="open" bindtap="clickopen" id="zhankai"  data-value="{{item.value}}">{{item.text}}</a>
+      <!-- <button bindtap="openclick">展开</button> -->
+    </view>
+
+    <view class="player">
+
+      <text class="actor">演职员</text>
+
+      <swiper indicator-dots="{{swiperParams.dots}}"
+      wx:for="{{result}}"
+indicator-color="{{swiperParams.defaultColor}}"
+indicator-active-color="{{swiperParams.activeColor}}">
+    <swiper-item class="swiperitem" wx:for="{{item.play}}" wx:for-item="value" style="width: 100px;">
+        <image class="itemimg" src="{{value.ppic}}"></image>
+        <text>{{value.pname}}</text>
+        <text>{{value.role}}</text>
+    </swiper-item>
+</swiper>
+
+    </view>
+
+  </view>
+</view>
+
+<!-- 剧情简介结束 -->

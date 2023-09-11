@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>机考示例3</title>
+</head>
+<body>
+    <!-- 取最大值  -->
+       <script>
+var arr = [10,22,14,4];
+// 方法1
+var num = arr[0];
+for(var i=0;i<arr.length;i++){
+    if(num<arr[i]){
+      num = arr[i];
+    }
+}
+console.log(num);
+// 方法2
+console.log(Math.max(...arr));
+       </script>
+</body>
+</html>

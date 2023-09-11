@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 实现浅拷贝 */
+        var arr = [{name:"cheng"},{name:"zhang"},{name:"li"}];
+        var res = [...arr];
+        res[0].name="huang";
+        res.push({name:"vue"});
+        console.log(arr);
+    </script>
+</body>
+</html>

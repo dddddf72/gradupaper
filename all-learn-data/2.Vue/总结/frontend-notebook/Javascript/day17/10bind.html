@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        /* 
+        bind绑定的函数不会马上执行,只是改变了函数上下文的执行环境
+        call,applay调用的时候马上执行
+         */
+        var name = "window"
+        var zhang = {
+            name: "张三"
+        }
+        var show = function(a,b){
+            console.log(this.name)
+            console.log(a+b);
+        }.bind(zhang);
+        show(2,3);
+    </script>
+</body>
+
+</html>

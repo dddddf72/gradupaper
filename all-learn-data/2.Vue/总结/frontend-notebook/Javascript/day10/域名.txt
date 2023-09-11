@@ -1,0 +1,10 @@
+chengbenchao.top   //主域名
+www.chengbenchao.top;  
+aaa.chengbenchao.top
+bbb.chengbenchao.top
+//www,aaa 子域名
+https://www.chengbenchao.top:8080/a.txt
+//https,http协议
+
+//协议,子域名,主域名,端口号,请求的资源文件
+当  协议,子域名,主域名,端口号有任意个不同的时候,就算跨域

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //声明创建数组arr
+        var arr = [1,2,3,4,5];
+        //使用splice()方法修改数组
+        //需求[1,2,7,4,5],方法splice(index,quantity,value)，//index,从哪个开始读，quantity删除几个,value传值
+        //使用splice方法,从下标为2的值开始，修改一个值，改为7
+        arr.splice(2,1,7);  //输出为[1,2,7,4,5]
+               //需求[1,2,7,8,5],splice可以传多个值   
+               //使用splice()方法，从下标为2的值开始，修改两个值(即删除这两个值),改为7和8   
+        arr.splice(2,2,7,8); 
+        //输出数组arr       
+        console.log(arr)    
+    </script>
+</body>
+</html>

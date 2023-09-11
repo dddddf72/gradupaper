@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr =""
+        // 可以将容易出错的代码(对缓存的操作如http请求，文件的上传/下载)
+        try{
+            // alertt("http")
+        if(Array.isArray(arr)){ 
+            console.log(arr.length)   //捕获错误
+            
+        }else{
+            throw "必须传入一个数组"
+        }
+    }catch(err){
+            console.log(err) 
+        }
+    
+        // console.log("hello world")
+
+        /* throw可以自定义一个错误 ，*/
+        
+    </script>
+</body>
+</html>

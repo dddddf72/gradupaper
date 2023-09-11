@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 数组去重
+         */
+        var arr = [1,2,1,4,5,6,4];
+        /* arr = [1,2,4,5,6] */
+        var result = [];
+        arr.forEach(item=>{
+            if(!result.includes(item)){
+                result.push(item);
+            }
+        })
+        console.log(result)
+    </script>
+</body>
+</html>

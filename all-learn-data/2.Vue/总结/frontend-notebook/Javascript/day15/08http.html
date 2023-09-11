@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="http/index.js"></script>
+</head>
+<body>
+    <script>
+        /* 
+        top/playlist/?cat=华语
+        playlist/detail?id=${id}
+         */
+        async function go(){
+             var res = await http("top/playlist/?cat=华语");
+             var id = res.playlists[0].id;
+             var detail  =await http(`playlist/detail?id=${id}`);
+             console.log(detail)
+        }
+        go()
+    </script>
+</body>
+</html>

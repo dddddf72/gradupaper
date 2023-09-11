@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        1.子类可以继承父类的静态方法
+        2.在子类的静态方法中调用父类的静态方法,可以通过super/this去调用
+         */
+        class Person{
+            static baseUrl = "https://www.baidu.com"
+            static sayName(){
+                console.log("name")
+            }
+        }
+        class Teacher extends Person{
+            static sayAge(){
+                super.sayName();
+                console.log(super.baseUrl)
+                console.log("age");
+            }
+        }
+        Teacher.sayAge()
+        console.log(Person.baseUrl)
+    </script>
+</body>
+</html>

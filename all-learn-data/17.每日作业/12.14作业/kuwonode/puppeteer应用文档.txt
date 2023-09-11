@@ -1,0 +1,55 @@
+1-1 puppeteer起步
+const puppeteer = require('puppeteer');
+
+(async () => {
+    // 新建一个浏览器的实例
+  const browser = await puppeteer.launch({
+    headless:false,  //有界面的，true为无界面
+    slowMo:200
+  });
+  const page = await browser.newPage(); //新建一个页面
+  await page.goto('https://www.kuwo.cn/search/list?key=你');//到达某个页面
+  await page.waitForTimeout(11115000) //在页面等待/停顿的时间
+  await page.screenshot({path: 'example.png'});//截图函数
+
+  await browser.close();    //关闭浏览器实例
+})();
+
+1-2 抓取数据
+const puppeteer = require('puppeteer');
+const cheerio = require("cheerio");
+(async () => {
+    // 1新建一个浏览器的实例
+  const browser = await puppeteer.launch({
+    headless:false,  //2有界面的，true为无界面
+    slowMo:200,
+    defaultViewport:null   //使页面铺满整个屏幕
+  });
+  const page = await browser.newPage(); //3新建一个页面
+  await page.goto('https://www.kuwo.cn/search/list?key=你');//4到达某个页面
+  await page.hover(".search_list")
+  await page.waitForTimeout(5000) //5在页面等待/停顿的时间
+  var content = await page.content(); //6获取页面
+//   console.log(content)
+  var $ = cheerio.load(content,{decodeEntities:false});
+// var title = $(".song_name").find("a").html();
+// console.log(title)
+var itmes = $(".song_item")
+var arr = [];
+itmes.each((index,value)=>{
+    var imgUrl =$(value).find(".song_rank img").attr("src");
+    arr.push({
+        imgUrl,
+    })
+})
+console.log(arr)
+  await page.screenshot({path: 'example.png'});//7截图函数
+
+  await browser.close();    //8关闭浏览器实例
+})();
+
+3.如何在一个JS文件中使用另一个js文件的对象(@import)
+导出：module.exports={a};
+
+导入：const a = require("/a")=module.exports;
+console.log(a)

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        类:对某一个类具体事物的抽象。
+        对象:某一类事物的具体实例。
+        原型对象:是某一类对象的基类,所有创建的对象都会共享该原型对象  (共享机制) 
+        */
+        function Teacher(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        Teacher.prototype.sayName = function(){
+            console.log(this.name)
+        }
+        var p = new Teacher("lisi",20);
+        /* 1.有没有sayName */
+        /* 2.为什么有sayName */
+        console.log(p)
+    </script>
+</body>
+</html>

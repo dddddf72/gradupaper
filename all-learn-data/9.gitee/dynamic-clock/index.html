@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #clock{
+            margin: 150px 150px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 思路
+获取系统时间
+Date对象
+getHours,getMinutes,getSeconds
+显示系统时间
+字符串连接
+小于10补零
+使用定时器 setInterval() -->
+<div id="clock">
+    <img src="images/0.png" alt="">
+    <img src="images/0.png" alt="">
+    <img src="images/0.png" alt="">
+    <img src="images/0.png" alt="">
+    <img src="images/0.png" alt="">
+    <img src="images/0.png" alt="">
+
+</div>
+
+<script>
+    showTime();
+    setInterval(showTime,1000)
+    function showTime(){
+        var d = new Date();
+        var hour = d.getHours();
+        var minute = d.getMinutes();
+        var second = d.getSeconds();
+        //1.小10补零
+        function add(value){
+            if(value<10){
+                return "0" + value
+            }else{
+                return value + "";
+            }
+        }
+        var allTime = add(hour) + add(minute) + add(second);
+        // 分割字符串显示系统时间
+        var arr = allTime.split("");
+        console.log(arr);
+        var imgs = document.getElementsByTagName("img");
+        for(let i = 0 ; i<imgs.length; i++ ){
+            // imgs[i].src = "images/" + arr[i] + ".png"
+            // 使用字符串模板进行拼串
+            imgs[i].src = `images/${arr[i]}.png`
+        }
+    }
+</script>
+</body>
+</html>

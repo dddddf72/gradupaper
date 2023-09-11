@@ -1,0 +1,18 @@
+.out{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-items: center;
+}
+.out img{
+    width: 100px;
+    height: 100px;
+}
+.out p{
+    width:100px;
+display:-webkit-box;
+-webkit-box-orient:vertical;
+text-overflow:ellipsis;
+overflow:hidden;
+-webkit-line-clamp:2;
+}

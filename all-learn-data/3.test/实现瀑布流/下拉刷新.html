@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <link rel="stylesheet" href="css/瀑布流.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 2000px;
+            background:linear-gradient(rgb(255,0,0),rgb(0,25,255));
+        }
+    </style>
+</head>
+<body>
+    <!-- 判断滚动条是否到达底部 -->
+    <script>
+        $(window).scroll(function(){
+            // 获取滚动条距离顶部的高度
+            var scrollTop = $(window).scrollTop();
+            // console.log(scrollTop)
+            // 获取可视区域的高度
+            var availHeight = $(window).height();
+                // console.log(availHeight+scrollTop)
+                // 获取内容区域的高
+                var dw = $(document).height();
+                console.log(dw)
+            // 滚动条的高度加上可视区域的高度等于内容区域的高度
+        })
+    </script>
+</body>
+</html>

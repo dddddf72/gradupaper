@@ -1,0 +1,65 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "Used in paper",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "egg": "^2.15.1",
+    "egg-cors": "^2.2.3",
+    "egg-mongoose": "^3.3.1",
+    "egg-oss": "^2.0.0",
+    "egg-scripts": "^2.13.0",
+    "egg-view-arttemplate": "^2.0.2",
+    "koa2-cors": "^2.0.6"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "pkgwin": "pkg . -t win --out-path ./dist --debug",
+    "pkglinux": "pkg . -t node10-linux-x64 --out-path /usr/dist --debug",
+    "start": "egg-scripts start --daemon --title=egg-server-library",
+    "stop": "egg-scripts stop --title=egg-server-library",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "bin": "build.js",
+  "pkg": {
+    "scripts": [
+      "./app/**/*.js",
+      "./config/**/*.js",
+      "./app.js",
+      "./agent.js"
+    ],
+    "assets": [
+      "./node_modules/nanoid/**/*.js"
+    ]
+  },
+  "ci": {
+    "version": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "SST",
+  "license": "MIT"
+}

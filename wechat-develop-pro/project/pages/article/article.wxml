@@ -1,0 +1,3 @@
+<v-item
+data="{{item}}"
+wx:for="{{articles}}" wx:key="_id"></v-item>

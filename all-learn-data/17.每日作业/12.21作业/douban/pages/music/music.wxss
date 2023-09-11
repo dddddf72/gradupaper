@@ -1,0 +1,15 @@
+.item{
+    width: 200rpx;
+}
+.item image{
+    width: 200rpx;
+    height: 270rpx;
+}
+.name{
+    width:50px;
+display:-webkit-box;
+-webkit-box-orient:vertical;
+text-overflow:ellipsis;
+overflow:hidden;
+-webkit-line-clamp:2;
+}

@@ -1,0 +1,3 @@
+<v-movie wx:for="{{movies}}" index="{{title}}"
+    wx:key="_id"
+     data="{{item}}"></v-movie>

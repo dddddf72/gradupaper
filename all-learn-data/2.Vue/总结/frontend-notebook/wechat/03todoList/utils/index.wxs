@@ -1,0 +1,14 @@
+/* 获取已完成的数量 */
+function finishNum(arr){
+    console.log(arr.constructor)
+    if(arr.constructor =="Array"){
+        var res = arr.filter(function(item){
+            return item.state == true;
+        })
+        return res.length;
+    }
+    
+}
+module.exports = {
+    finishNum:finishNum
+}

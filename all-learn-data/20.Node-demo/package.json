@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "puppeteer-chromium-resolver": "^5.2.0"
+  }
+}

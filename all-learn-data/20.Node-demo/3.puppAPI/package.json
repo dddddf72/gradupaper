@@ -1,0 +1,12 @@
+{
+  "name": "3.puppAPI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "koa-server/index.js wangyi-cloud-music/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

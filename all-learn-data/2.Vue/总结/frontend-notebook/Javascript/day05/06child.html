@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        firtChild   获取第一个子节点
+        firtElementChild 获取第一个元素子节点
+        lastChild
+        lastElementChild
+     -->
+     <!-- 
+         nextSibling
+         nextElementSibling
+
+         previousSibling
+         previousElementSibling
+      -->
+    <div>hello</div>
+    <ul id="app">
+        <li>html</li>
+        <li>css</li>
+    </ul>
+    <div>
+        world
+    </div>
+    <script>
+        var app =  document.getElementById("app");
+        console.log(app.previousElementSibling)
+    </script>
+</body>
+</html>

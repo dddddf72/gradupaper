@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var  arr = [
+            {name:"小米",price:1999},
+            {name:"红米",price:999},
+            {name:"iphone",price:9999},
+            {name:"华为",price:3000},
+            
+        ]
+        /* price>1000
+        放到一个新的数组中
+         */
+         var res = arr.filter(item=>item.price>1000);
+         console.log(res);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<wxs src="../../utils/utils.wxs" module="tools"></wxs>
+<van-card   wx:for="{{carts}}"     price="{{item.productPrice}}" desc="{{item.productInfo}}"
+ title="{{item.productName}}"
+    thumb="{{item.productCover}}">
+    <view slot="footer">
+        <van-checkbox value="{{item.isSelected}}" 
+        data-id="{{item.id}}"
+        bind:change="onItemChange"></van-checkbox>
+        <view>小计:￥{{item.productPrice*item.productCount}}</view>
+    </view>
+    <view slot="num">
+        <van-stepper value="{{ item.productCount }}" 
+        data-id="{{item.id}}"
+        bind:change="onCount" />
+    </view>
+    
+</van-card>
+<van-submit-bar
+  price="{{ tools.sum(carts) }}"
+  button-text="提交订单"
+  bind:submit="onSubmit"
+>
+<van-checkbox value="{{tools.allState(carts)}}" bind:change="onSum">全选</van-checkbox>
+</van-submit-bar>

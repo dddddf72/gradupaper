@@ -1,0 +1,5 @@
+<view class="item" bindtap="handleClick">
+    <image src="{{data.coverImgUrl}}"></image>
+    <view class="text">{{data.name}}</view>
+</view>
+

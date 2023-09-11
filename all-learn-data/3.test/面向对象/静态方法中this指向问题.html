@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name,age){
+                this.name = name;
+                this.age =age;
+            }
+            sayAge(){
+                //在普通方法中调用类的方法
+                Person.sayName();    //类调用静态方法sayName
+                console.log(this.age);  //输出实例化的age
+            }
+            static sayName(){
+                console.log(this)  //this指向调用静态方法的类
+            //    this.sayAge();
+            console.log("name");
+        }
+        }
+        Person.sayName();  
+    </script>
+</body>
+</html>

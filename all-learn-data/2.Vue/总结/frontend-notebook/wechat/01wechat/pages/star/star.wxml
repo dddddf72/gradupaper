@@ -1,0 +1,4 @@
+<!--pages/star/star.wxml-->
+<image  src="{{item==2?'/images/star.png':'/images/no-star.png'}}" wx:for="{{rating}}">
+    
+</image>

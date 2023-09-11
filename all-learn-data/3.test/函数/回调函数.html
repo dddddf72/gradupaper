@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 回调函数作用：将函数内部的值返回到外部
+        var show = function(res){
+            console.log(res);
+        }
+        function go(show){  //将函数作为参数传递给go函数
+            var a = 10;     
+            show(a);    
+        }
+        // go函数调用时，传入函数show
+        go(show);//输出为10
+
+        function go(callback){
+            var a = 10;
+            callback(a);
+        }
+        // 此时callback = 
+        go(show);               //输出为10
+        // show = function(res){console.log(res)}
+        go(function(res){
+            console.log(res)    //输出为10
+        })
+    </script>
+</body>
+</html>

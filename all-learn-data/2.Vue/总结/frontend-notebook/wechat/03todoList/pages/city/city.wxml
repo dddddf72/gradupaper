@@ -1,0 +1,53 @@
+<van-search
+  value="{{ keyword }}"
+  shape="round"
+  background="#4fc08d"
+  bind:change="handleChange"
+  placeholder="请输入搜索关键词"
+/>
+<view wx:if="{{keyword.length ==0}}">
+    <view class="hot">定位/正在访问</view>
+    <van-row gutter="20">
+        <van-col span="6">
+            <van-button 
+            bindtap="handleClick"
+            type="primary" size="normal">{{location}}</van-button>
+        </van-col>
+        <!--  缓存的城市-->
+        <van-col span="6" wx:for="{{visitedCities}}">
+            <van-button 
+            data-name="{{item}}"
+            bindtap="handleClick"
+            type="default" size="normal">{{item}}</van-button>
+        </van-col>
+    </van-row>
+    <view class="hot">热门城市</view>
+    <van-row gutter="20">
+        <van-col span="6" wx:for="{{result.hotCities}}">
+            <van-button 
+            data-name="{{item.name}}"
+            bindtap="handleClick"
+            type="default" size="normal">{{item.name}}</van-button>
+        </van-col>
+    </van-row>
+    <van-index-bar index-list="{{lists}}"  >
+        <view wx:for="{{result.cities}}">
+            <van-index-anchor index="{{index}}" />
+            <block wx:for="{{item}}" wx:for-item="city">
+                <van-cell 
+                data-name="{{city.name}}"
+
+                bindtap="handleClick"
+                title="{{city.name}}" />
+            </block>
+        </view>
+    </van-index-bar>
+</view>
+<!-- 显示搜索的城市 -->
+<view wx:if="{{keyword.length>0}}">
+    <van-cell 
+    data-name="{{item.name}}"
+    bindtap="handleClick"
+    wx:for="{{searchCities}}" title="{{item.name}}" />
+    <view class="result" wx:if="{{searchCities.length == 0}}">无结果</view>
+</view>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="one">hello 1</div>
+    <div class="one">hello 2</div>
+    <div class="one">hello 3</div>
+    <div class="one">hello 4</div>
+    
+
+    <script>
+        var all = document.getElementsByClassName("one");
+        for(var  i= 0 ; i<all.length;i++){
+    console.log(all[i]);
+    all[i].onclick =function(){
+        console.log(this);
+        this.style.display="none";
+        // 在事件中，谁执行事件，this就指谁
+        }
+    }
+    </script>
+</body>
+</html>

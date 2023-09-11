@@ -1,0 +1,14 @@
+1.node.js的包管理工具(package manage )
+2.node一定要装长期支持版，不建议使用测试版
+3.判断是否安装成功 命令行node -v  npm -v   （vue --version）
+4.npm list 查看当前目录已安装的插件
+5.安装插件方式 npm i axios -S
+6.卸载插件方式 npm uninstall axios -S
+7.npm init -y  把普通文件夹初始化成npm的仓库，生成package.json文件
+8.npm i axios --save  ==npm i axios -S   （安装在dependencies[依赖]中）
+9.代码运行的环境(开发环境，生产环境)  -S命令在两种环境中都需要这个依赖
+有些插件只需要在开发环境使用，生产环境不需要 (devDependencies),例如常见的辅助开发工具
+安装在开发依赖中(-d) cnpm i typescript -d  ==-d命令是安装在devDependencies
+10.更新插件 npm update xxx -S /-D
+11.-g为全局安装，路径位于C：\Users\Appdata\Roaming
+

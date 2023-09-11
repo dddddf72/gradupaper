@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2149345_migq79nbxw.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">  
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"> </script>
+    <script src="lib/jquery-3.2.1.js"></script>
+    <style>
+       .iconfont{
+            cursor: pointer;
+        }
+       .icon-youxi{
+           font-size: 2vw;
+           font-weight: bold;
+       }
+       .icon-xiazai{
+           font-size: 2vw;
+       }
+       .icon-shijianlishijilujishizhongbiaoxianxing{
+           font-size: 2vw;
+           font-weight: bold;
+       }
+       .icon-VIP{
+           font-weight: bold;
+           font-size: 2.2vw;
+       }
+       .icon-liangdaogang{
+           font-size: 2vw;
+       }
+       .icon-fangdajing{
+            position: absolute;
+            top: -0.8047vw;
+            left: 0vw;
+           font-size: 4vw;
+           color: orangered;
+           font-weight: bold;
+       }
+       .icon-taiyang{
+           font-size: 1.6vw;
+           color: yellow;
+       }
+       .icon-kafei{
+            font-size: 1.3vw;
+       }
+       .swiper-container{
+           margin-left: 2.0182vw;
+           margin-top: 3.3021vw;
+            width: 95vw;
+            height: 35vw;
+        }
+        .swiper-wrapper{
+            width: 100vw;
+            height: 100vw;
+        }
+        .swiper-container img{
+            width: 95vw;
+            height: 35vw;
+        }
+        .header2 input{
+        position: absolute;
+        top: -1vw;
+        left: 3.5vw;
+        width: 6.5104vw;
+        height: 1.9531vw;
+        font-size: 1.3021vw;
+        outline: none;
+        border: none;
+}
+    </style>
+</head>
+<body>
+    <!-- 结构层开始 -->
+    <!-- 总内容开始 -->
+    <div class="outborder">
+<!-- 头部开始 -->
+        <div class="headerfix">
+            <div class="header1">
+                <div>
+                    <p class="jingxuan headercurrent">精选</p>
+                </div>
+                <div>
+                    <p>爱看</p>
+                </div>
+                <div>
+                    <p>姜子牙</p>
+                </div>
+                <div>
+                    <p>电视剧</p>
+                </div>
+                <div>
+                    <p>电影</p>
+                </div>
+                <div>
+                    <p>综艺</p>
+                </div>
+                <div>
+                    <p class="iconfont icon-liangdaogang"></p>
+                </div>
+            </div>
+            <div class="header2">
+                <div><span class="iconfont icon-fangdajing"></span><input type="text" placeholder="全网搜"></div>
+                <div>
+                    <div><p class="iconfont icon-youxi"></p></div>
+                    <div><p class="iconfont icon-xiazai"></p></div>
+                    <div><p class="iconfont icon-shijianlishijilujishizhongbiaoxianxing"></p></div>
+                    <div><p class="iconfont icon-VIP"></p></div>
+            
+                </div>
+            </div>
+        </div>
+    <!-- 头部结束 -->
+
+    <!-- 轮播开始 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/谍战.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/花木兰.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/姜太公.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/立白.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/巩仙.jpg" alt=""></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <!-- <div class="swiper-pagination"></div> -->
+        
+        <!-- 如果需要导航按钮 -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+        
+        <!-- 如果需要滚动条 -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+
+    <script>        
+        var mySwiper = new Swiper ('.swiper-container', {
+          direction: 'horizontal', // 垂直切换选项
+          loop: true, // 循环模式选项
+          autoplay:true,
+          // 如果需要分页器
+          pagination: {
+            el: '.swiper-pagination',
+            clickable:true,
+          },
+          
+          // 如果需要前进后退按钮
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            
+          },
+          
+          // 如果需要滚动条
+         //   scrollbar: {
+        //     el: '.swiper-scrollbar',
+       //   },
+        })        
+        </script>
+    <!-- 轮播结束 -->
+
+    <!-- 重磅热播开始 -->
+        <div class="zhongbangrebo">
+            <div><p>重磅热播<span class="iconfont icon-taiyang" ></span>VIP首月6元&gt;</p></div>
+            <div><button ><span class="iconfont icon-kafei"></span>中共十九届会议</button></div>
+            <div><img src="images/zhongbang1.jpg" alt=""></div>
+            <div><img src="images/zhongbang2.png" alt=""></div>
+        </div>
+    <!-- 重磅热播结束 -->
+
+<!-- 底部导航开始 -->
+        <div class="bottomfooter">
+            <div><img src="images/首页.png" alt=""></div>
+            <div><img src="images/热点.png" alt=""></div>
+            <div><img src="images/VIP会员.png" alt=""></div>
+            <div><img src="images/doki.png" alt=""></div>
+            <div><img src="images/个人中心.png" alt=""></div>
+        </div>
+<!-- 底部导航结束 -->
+
+</div>
+<!-- 总内容结束 -->
+<!-- 结构层结束 -->
+<!-- 行为层开始 -->
+    <script>
+        $(".header1 p").click(function(){
+            $(this).addClass("headercurrent").parent().siblings().children().removeClass("headercurrent");
+        })
+    </script>
+<!-- 行为层结束 -->
+
+</body>
+</html>

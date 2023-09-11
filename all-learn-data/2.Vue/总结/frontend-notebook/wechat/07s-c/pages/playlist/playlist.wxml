@@ -1,0 +1,14 @@
+<view class="item" wx:for="{{playlists}}" 
+data-id="{{item.id}}"
+data-url="{{item.al.picUrl}}"
+bind:tap="handleClick"
+wx:key="id">
+    <view class="index">{{index+1}}</view>
+    <image class="poster" src="{{item.al.picUrl}}"></image>
+    <view>
+        <view class="title">{{item.name}}</view>
+        <view class="author">{{item.ar[0].name}}</view>
+    </view>
+    <view>01:50</view>
+    <image class="play" src="{{states[item.id]?'/images/icons/play.png':'/images/icons/pause.png'}}"></image>
+</view>

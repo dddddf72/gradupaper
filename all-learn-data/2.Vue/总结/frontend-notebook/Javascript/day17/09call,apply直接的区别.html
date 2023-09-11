@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+        应用场景:传递多个参数的情况
+        call  依次去传递
+        applay 需要传递数组
+         */
+        var name = "window"
+        var zhang = {
+            name: "张三"
+        }
+        function show(a, b) {
+            console.log(this.name);
+            console.log(a + b)
+        }
+        // show(1,2)
+        // show.call(zhang,2,3);
+        show.apply(zhang,[1,2])
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="lib/http.js"></script>
+    <style>
+        .item img {
+            width: 150px;
+            height: 150px;
+            padding: 5px;
+        }
+
+        .item {
+            border: 1px solid #eee;
+            float: left;
+            margin-right: 80px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+    <script>
+        /* 初始化数据 */
+        loadData()
+        jump();
+        /* 下拉刷新加载的数据 */
+        $(window).scroll(function () {
+            if (isReachBottom()) {
+                var offset = $(".item").length;
+                loadData(offset)
+            }
+            
+        })
+        function jump() {
+            setTimeout(() => {
+                $(".item").click(function (event) {
+                   let aid = event.currentTarget.dataset.aid;
+                   location.href = `detail.html?id=${aid}`
+                })
+            }, 200)
+        }
+
+        function isReachBottom() {
+            var scrollTop = $(window).scrollTop();
+            var availHeight = $(window).height();
+            var dh = $(document).height();
+            return (scrollTop + availHeight == dh) ? true : false;
+        }
+
+        function loadData(offset) {
+            http({
+                offset,
+                success: res => {
+                    var playlists = res.playlists;
+                    playlists.forEach(item => {
+                        var template = `
+                         <div class="item" data-aid=${item.id}>
+                            <img src=${item.coverImgUrl}>
+                         </div>   
+                      `
+                        $("#app").append(template)
+                    })
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

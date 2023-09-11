@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="email" placeholder="请输入邮箱">
+    <script>
+        var email=document.getElementById("email")
+        email.onkeyup = function(){
+            if(event.keyCode==13){
+                var value= this.value.trim();
+                var reg = /^[\w]+@[0-9a-zA-Z]+\.[a-z]+$/
+                console.log(reg.test(value))
+            }
+        }
+    </script>
+</body>
+</html>

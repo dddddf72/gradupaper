@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 定义两个类，Person  Teacher
+        
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.sayName = function(){
+            console.log(this.name)
+        }
+        function Teacher(name,age,skill){
+            var self = this;
+            Person.call(this,name,age);
+            this.skill = skill;
+        }
+        
+        // /* 继承方法写法1 */
+        // Teacher.prototype = Person.prototype;
+        // // 重置构造属性
+        // Teacher.prototype.constructor = Teacher;
+
+        //继承方法写法2
+        
+        Teacher.prototype = Object.create(Person.prototype,{
+            constructor:{
+                value:Teacher
+            }
+        })
+        
+        Teacher.prototype.sayAge =function(){   //调用prototype,从上到下读取，若置于上方则被下方的覆盖
+            console.log(this.age)
+        }
+        var t  = new Teacher("zhang",18,"js");
+        console.log(t)  //输出Teacher{name:"zhang",age:18,skill:"js"}
+        t.sayName()  //输出为zhang
+        t.sayAge()  //18   
+        var p = new Person("lisi",13);
+        // 父对象不能调用子对象的方法
+        // p.sayAge(); //报错
+        console.log(t.constructor==Teacher) //true //Teacher(){}
+    </script>
+</body>
+</html>

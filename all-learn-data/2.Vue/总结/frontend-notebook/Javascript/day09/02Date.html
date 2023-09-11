@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 获取当前的时间 -->
+    <script>
+        // Date
+        var d = new Date();
+        /* 年,月,日 */
+        var year = d.getFullYear();
+        var month = d.getMonth();
+        var date =  d.getDate();
+        /* 时,分,秒,毫秒
+        1s =1000 millisecond
+         */
+        var hour =  d.getHours();
+        var minute = d.getMinutes()
+        var second = d.getSeconds();
+        var mills = d.getTime();
+        console.log(d);
+        console.log(year);
+        console.log(month+1)   //月份是从0开始的,要加1
+        console.log(date)
+        console.log(hour)
+        console.log(minute)
+        console.log(second);
+        console.log(mills)
+    </script>
+</body>
+</html>

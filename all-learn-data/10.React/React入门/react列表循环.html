@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+    <script type="text/babel">
+    class App extends React.Component{
+        constructor(props){
+            super(props);
+            this.state={
+                lists:[
+                    {id:1001,name:"html"},
+                    {id:1002,name:"vue"},
+                    {id:1003,name:"react"},
+                ]
+            }
+        }
+                render(){
+                    const ListItem = this.state.lists.map(item=>{
+                        return <div key={item.id}>{item.name}</div>   //必须return
+                    })
+                    console.log(ListItem)   //拿的是一个HTML的数组，
+                    return(
+                        // 方法1
+                        // <div>{this.state.lists.map((item)=>{
+                        //     return <div>{item.name}</div>
+                        // })}</div>
+                        //方法2
+                        <div>{ListItem}</div>
+                    )
+                }
+            }
+        ReactDOM.render(
+            <App/>,
+            document.getElementById("app")
+        );
+    </script>
+</body>
+</html>

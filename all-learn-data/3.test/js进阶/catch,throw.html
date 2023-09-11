@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //catch的返回值正常情况下为resolve状态
+        // var p = Promise.resolve(100).then(res=>{
+        //     console.log(res)
+        //     throw "err" 
+        // })
+        // p.then(()=>{
+        //     console.log(200)
+        // }).catch(err=>{ //catch的返回值为resolve状态
+        //     console.log(p)
+        // }).then(()=>{
+        //     console.log(300)
+        // })
+
+        var p = new Promise.reject(100).catch(res=>{
+            console.log(res)    //正常情况下为catch为成功状态
+            throw "err" //遇到异常，错误则为rejected状态
+        })
+        console.log(p)
+    </script>
+</body>
+</html>

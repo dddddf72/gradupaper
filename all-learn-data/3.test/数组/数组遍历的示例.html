@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [
+            {name:"html",value:"12px"},
+            {name:"css",value:"13px"},
+            {name:"vue",value:"11px"}
+        ]
+        /* 需求：var res = [
+            {name:"html",value:24},
+                            {name:"css",value:26},
+                            {name:"vue",value:22}
+                            ] */
+       
+        //value从字符串string变为数值number并且*2
+
+         arr.map(item=>{
+            var value=parseInt(item["value"])*2
+            return item["value"]=value;
+        })
+        console.log(arr)
+
+    </script>
+</body>
+</html>

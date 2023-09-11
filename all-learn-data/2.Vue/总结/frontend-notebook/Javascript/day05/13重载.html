@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 重载:就是根据参数的不同,动态决定调用哪个方法 */
+        /* js中没有重载的概念,因为重复声明,下面的会覆盖上面的声明 */
+        function go(a){
+            console.log(a);
+        }
+        function go(a,b){
+            console.log(a+b);
+        }
+        go(10);
+        go(10,20)
+    </script>
+</body>
+</html>

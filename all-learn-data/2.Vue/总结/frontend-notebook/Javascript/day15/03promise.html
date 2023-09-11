@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- promise
+        概念:promise是为了解决异步问题而诞生的
+        目的:为了解决异步任务而诞生,可以将一个异步的流程变为同步的
+        两种状态:
+        成功(fulfilled)  resolve   then
+        失败(rejected)  reject     catch
+     -->
+     <script>
+         var p =  new Promise((resolve,reject)=>{
+             resolve(1);
+             reject(2);
+         })
+        /* 一个promise对象中的回调函数不会马上执行 */
+        console.log(p)
+        p.then(res=>{
+            console.log(res)
+        })
+     </script>
+</body>
+</html>

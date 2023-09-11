@@ -1,0 +1,15 @@
+image{
+    width: 200rpx;
+    height: 200rpx;
+}
+.content{
+    position: relative;
+}
+.playcount{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.content:nth-child(odd){
+    border: 1px solid #333;
+}

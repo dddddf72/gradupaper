@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var data  = {
+            country:"美国",
+            year:1994,
+            story:"犯罪"
+        }
+        /* 美国/1994/犯罪 */
+        var  arr = []
+        for(var i in data){
+            arr.push(data[i])
+        }
+        var str = arr.join("/");
+        console.log(str);
+    </script>
+</body>
+</html>

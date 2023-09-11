@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>hello 1</li>
+        <li>hello 2</li>
+        <li>hello 3</li>
+        <li>hello 4</li>
+        <li>hello 5</li>
+    </ul>
+    <script>
+        var lis = document.getElementsByTagName("li");
+        for(var i=0;i<lis.length;i++){
+            if(i%2 ==0){
+                lis[i].style.backgroundColor = "pink"
+            }else{
+                lis[i].style.backgroundColor = "blue";
+            }
+        }
+    </script>
+</body>
+</html>

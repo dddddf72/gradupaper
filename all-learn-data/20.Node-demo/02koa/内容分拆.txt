@@ -1,0 +1,20 @@
+1.配置
+2.路由
+3.http请求
+4.处理数据
+
+注释：写接口文档
+列表页面的数据：
+    localhost?start=num 默认地址 （默认获取25条，获取条数通过修改start值）
+    localhost?start=25
+
+详情页的数据：
+    /subject/:id     //此为动态id
+
+前后端接口联调
+接口地址字段统一
+
+搜索页的数据：
+    /search?keyword = value
+    
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"></link>
+</head>
+<body>
+        <form action="/doAdd" method="POST" role="form" enctype="multipart/form-data">
+            <legend>members</legend>
+            <div class="form-group">
+                <label for="">姓名：</label>
+                <input required type="text" class="form-control" name="name" id=""  placeholder="请输入姓名">
+            </div>
+            <div class="form-group">
+                <label for="">年龄：</label>
+                <input required type="text" value="" class="form-control"  onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();"  name="age" id="" placeholder="请输入数字">
+            </div>
+            <div class="form-group">
+                <label for="">爱好：</label>
+                <input required type="text" class="form-control" name="like" id="" placeholder="请输入爱好">
+            </div>
+            <div class="form-group">
+                <label for="">上传头像</label>
+                <input type="file" name="file">
+            </div>
+
+            <button type="submit" class="btn btn-primary">提交</button>
+        </form>
+</body>
+</html>

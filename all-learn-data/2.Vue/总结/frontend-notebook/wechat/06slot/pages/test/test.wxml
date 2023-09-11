@@ -1,0 +1,4 @@
+<!--pages/test/test.wxml-->
+<v-num
+bind:tap="doAdd"
+ num="{{num}}"></v-num>

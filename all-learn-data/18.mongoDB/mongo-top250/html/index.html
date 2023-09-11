@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"></link>
+    <style>
+        .dianzan{
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>电影</th>
+                <th>评分</th>
+                <th>like</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="item of movies" :key="item._id">
+                <td>{{item._id}}</td>
+                <td>{{item.title}}</td>
+                <td>{{item.raiting}}</td>
+                <td @click='dianzan(item._id)'><img class="dianzan" :src="item.zan?'../images/red.png':'../images/black.png'" alt=""></td>
+                <td>
+                    <button type="button" class="btn btn-danger" @click='doDelete(item._id)'>删除</button>
+                    <button type="button" class="btn btn-warning">修改</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                movies:[]
+            },
+            mounted(){
+                var url = "http://localhost:9090/top250"
+                axios.get(url).then(res=>{
+                    console.log(res.data.data)
+                    this.movies = res.data.data
+                })
+            },
+            methods:{
+                doDelete(id){
+                    console.log(id);
+                    this.movies = this.movies.filter(item=>item._id!=id);
+                    $.ajax({
+                        url:'http://localhost:9090/doDelete',
+                        type:'post',
+                        data:{
+                            id
+                        }
+                    }).then(res=>{
+                        console.log(res)
+                    })
+                },
+                dianzan(id){
+                    axios.get('http:/localhost:9090/top250').then(res=>{
+                            this.movies = res.data.data
+                        })
+                        var result=this.movies.filter(item=>item._id==id)
+                        result.forEach(item=>{
+                            var zan2 = !item.zan
+                            $.ajax({
+                                url:'http://localhost:9090/dianzan',
+                                type:'post',
+                                data:{
+                                    id,
+                                    zan2
+                                }
+                            }).then(res=>{
+                                console.log(res)
+                            })
+                            //携带id向/doCollect发起Http请求
+                            $.ajax({
+                                url:'http://localhost:9090/doCollect',
+                                type:'post',
+                                data:{
+                                    id,
+                                    zan2
+                                }
+                            }).then(res=>console.log(res))
+                        })
+                }
+                /* 方法2：
+                    dianzan(id){
+                        var movies = this.movies;
+                        var item = movies.find(item=>item._id==id);
+                        if(item.zan){item.zan=false}else{item.zan=true;}
+                        this.movies = movies;
+                        var zan2= item.like;
+                        $.ajax({url:'http://localhost:9090/dianzan',
+                        type:'post',
+                        data:{id,zan2}}).then(res=>{
+                            console.log(res)
+                        })
+                    }
+                */
+
+            }
+        })
+    </script>
+</body>
+</html>

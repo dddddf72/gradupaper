@@ -1,0 +1,21 @@
+<wxs src="../../utils/utils.wxs" module="tools"></wxs>
+<view class="out">
+	<image class="pic" src="{{data.pic}}"></image>
+
+	<text class="title">{{tools.handletitle(data.title)}}</text>
+
+	<view class="rating">
+		<view
+		 class="star"
+		 wx:for="{{data.ratingstar}}"
+		 wx:key="item"
+		>
+			<image wx:if="{{item>1.5}}" src="/images/star.png"></image>
+			<image wx:elif="{{item>1}}" src="/images/ban-star.png"></image>
+			<image wx:else src="/images/no-star.png"></image>
+		</view>
+		<text class="ratingnum">{{data.raiting}}</text>
+	</view>
+
+</view>
+

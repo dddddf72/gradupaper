@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="item"><img src="images/01.jpg" alt=""></div>
+    <div class="item"><img src="images/02.jpg" alt=""></div>
+    <div class="item"><img src="images/03.jpg" alt=""></div>
+    <div class="item"><img src="images/04.jpg" alt=""></div>
+    <div class="item"><img src="images/05.jpg" alt=""></div>
+    <div class="item"><img src="images/06.jpg" alt=""></div>
+    <div class="item"><img src="images/07.jpg" alt=""></div>
+    <div class="item"><img src="images/08.jpg" alt=""></div>
+    <div class="item"><img src="images/09.jpg" alt=""></div>
+    <div class="item"><img src="images/010.jpg" alt=""></div>
+    <div class="item"><img src="images/011.jpg" alt=""></div>
+    <div class="item"><img src="images/012.jpg" alt=""></div>
+    <script>
+        // 1.一排放置几个图片
+        var ww = $(window).width();
+        var box = $(".item").outerWidth();
+        var num = Math.floor(ww/box);
+        console.log(num)
+        // 2.将第一排的高度放在一个数组arr中
+        var arr =[];
+        $(".item").each((index,value)=>{
+            if(index<num){
+                var height = $(value).outerHeight();
+                arr.push(height);
+            }
+            // 3.从高度最小的地方放置图片，放置后将最小值的数组重置
+            else{
+                var minHeight = Math.min(...arr);
+                var index = arr.indexof(minHeight);
+                var offsetLeft = $(".item").eq(index).offset().left;
+                $(value).css({position:"absolute",left:offsetLeft,top:minHeight})
+                arr[index] = minHeight+$(value).outerHeight();
+            }
+        })
+    </script>
+</body>
+</html>

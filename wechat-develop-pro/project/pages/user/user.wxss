@@ -1,0 +1,13 @@
+/* pages/user/user.wxss */
+.btn{
+    padding: 20px;
+    text-align: center;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user-info text{
+    margin-left: 100rpx;
+}

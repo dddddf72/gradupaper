@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>机考示例1</title>
+</head>
+<body>
+  <!-- todolist  -->
+    <input type="text">
+    <ul></ul>
+    <script>
+        var input = document.getElementsByTagName("input")[0];
+        var ul = document.getElementsByTagName("ul")[0];
+        var arr = [];
+        input.onkeydown = function(){
+            if(event.keyCode == 13){
+                if(arr.indexOf(this.value)==-1 && this.value != ""){
+                    arr.push(this.value);
+                    var li = document.createElement("li");
+                    li.innerHTML = this.value;
+                    ul.append(li);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!--  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>机考示例2</title>
+  <style>
+      .parent{
+          width: 200px;
+          height: 200px;
+          position: relative;
+      }
+      .parent div{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+      }
+      .html{
+          background-color: red;
+          z-index: 99;
+      }
+      .css{
+          background-color: yellow;
+      }
+      .current{
+          color: orange;
+      }
+  </style>
+</head>
+<body>
+  <!-- table切换 -->
+    <ul>
+        <li class="current">HTML</li>
+        <li>CSS</li>
+    </ul>
+<div class="parent">
+    <div class="html"></div>
+    <div class="css"></div>
+</div>
+<script>
+    var lis = document.getElementsByTagName("li");
+    var divs = document.querySelectorAll(".parent div");
+    for(let i = 0 ; i < lis.length ; i++ ){
+        lis[i].onclick = function(){
+            for(let i = 0 ; i < lis.length ; i++){
+                lis[i].classList.remove("current");
+            }
+            this.classList.add("current");
+            for(let i = 0 ; i < divs.length ; i++){
+                divs[i].style.display = "none"
+            }
+                divs[i].style.display = "block"
+        }
+    }
+</script>
+</body>
+</html>
+
+
+
+
+<!--  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>机考示例3.1</title>
+</head>
+<body>
+    <!-- 取最大值  var arr = [10,22,14,4];-->
+    <script>
+        // 方法1
+        var arr = [10,22,14,4];
+        var max = arr[0];
+        for(var i = 1 ; i < arr.length ; i++){
+            if(max<arr[i]){
+                max = arr[i];
+            }
+        }
+        console.log(max);
+        // 方法2
+        console.log(Math.max(...arr));
+    </script>
+</body>
+</html>
+
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>机考示例3.2</title>
+</head>
+<body>
+    <!-- 数组内容求和 -->
+    <script>
+        // 方法1
+    var a = [1,2,3,4];
+        var sum = 0 ; 
+        for(var i = 0 ; i < a.length ; i++){
+            sum=sum+a[i];
+        }
+        console.log(sum);
+        // 方法2
+        console.log(a.reduce((a,b)=>{
+            return a+b;
+        }))
+
+    </script>
+</body>
+</html>
+
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>机考示例4</title>
+</head>
+<body>
+  <!-- var obj  = [{name:"cheng",count:30},{name:"li",count:12},{name:"zhang",count:14}] 根据count升序降序 -->
+  <script>
+    //   升序
+      var obj  = [{name:"cheng",count:30},{name:"li",count:12},{name:"zhang",count:14}]
+      var res = obj.sort((a,b)=>{
+          return a.count - b.count;
+      })
+      console.log(res)
+    //  降序
+      var down = obj.sort((a,b)=>{
+            return b.count - a.count;
+      })
+      console.log(down)
+  </script>
+</body>
+</html>
+
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>机考示例5</title>
+</head>
+<body>
+  <!-- 数据处理
+var obj =[
+    {
+        "isSelected": true,
+        "name": "纸上行舟",
+        "count": 3,
+        "id": "0001"
+    },
+    {
+        "isSelected": true,
+        "name": "我可能得抑郁症了！舟",
+        "count": 2,
+        "id": "0002"
+    },
+    {
+        "isSelected": true,
+        "name": "绕日飞行",
+        "count" : 4,
+        "id": "0003"
+    }
+]
+var obj = [{id:xxx,name:xxx},{id:xxx,name:xxx},{id:xxx,name:xxx}] -->
+<script>
+    var obj =[
+    {
+        "isSelected": true,
+        "name": "纸上行舟",
+        "count": 3,
+        "id": "0001"
+    },
+    {
+        "isSelected": true,
+        "name": "我可能得抑郁症了！舟",
+        "count": 2,
+        "id": "0002"
+    },
+    {
+        "isSelected": true,
+        "name": "绕日飞行",
+        "count" : 4,
+        "id": "0003"
+    }
+]
+    var arr = [];
+    obj.map(item=>{
+        var {id,name} = item;
+        arr.push({id,name})
+    })
+    console.log(arr);
+
+</script>
+</body>
+</html>
+
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>机考示例6</title>
+</head>
+<body>
+    <!-- 字符串方法示例 -->
+    <input type="text" id="input">
+    <script>
+        var data = [
+            {name:"qqrw",age:10,skill:"re"},
+            {name:"dsfa",age:12,skill:"re"},
+            {name:"zxcxv",age:16,skill:"re"}
+                ]
+
+        var input = document.getElementById("input")
+        input.onkeydown = function(){
+            // console.log("1")
+            if(event.keyCode == 13){
+                var content = this.value;
+                if(content){
+                  var res = data.filter(item=>{
+                        return item.name.includes(content);
+                    })
+                        res.map(item=>{
+                            item.name.slice(0,3)+"..."
+                        })
+                        console.log(res)
+                }
+              }
+            }
+    </script>
+</body>
+</html>
+
+<!--  -->

@@ -1,0 +1,76 @@
+function handledata(value) {
+    if (value.length > 4) {
+        return value.slice(0, 4) + "..."
+    }
+    return value;
+}
+function sum(arr) {
+    if (arr.length > 0) {   //判断数组是否有值
+        var res = arr.filter(function (item) {
+            return item.isSelected == true;  //取得数组中满足条件的值
+        })
+        var sum = 0;
+        res.forEach(function (item) {
+            sum += (item.productPrice * item.productCount);
+        })
+        return sum * 100;
+    }
+}
+
+function allState(arr) {
+    var res = arr.every(function (item) {
+        return item.isSelected == true;
+    });
+    return res;
+}
+
+function handlenum(stt) {
+    var arr = stt.toFixed(2)
+    return arr;
+}
+
+function handletitle(value, fit) {
+    var fit = fit;
+    if (fit == 1) {
+        value = value.replace(getRegExp("[a-zA-Z]", "g"), '').trim();
+        if (value.length > 6) {
+            value = value.slice(0, 6) + "..."
+        }
+    } else if (fit == 2) {
+        value = value.replace(getRegExp("[^a-zA-Z\s]", "g"), '');
+    }
+    return value
+}
+
+function handlerating(value) {
+    value = Number(value)
+    for (var i = 0; i < 5; i++) {
+        var arr = [];
+        if (value > 2) {
+            arr.push(2)
+        } else if (value1 > 1) {
+            arr.push(value)
+        } else {
+            arr.push(0)
+        }
+    }
+    return arr;
+}
+
+function handlereg(value) {
+
+    value = value.replace(getRegExp("[\n<br>]", "g"), '').trim();
+    if (value.length > 70) {
+        value = value.slice(0, 70) + '...'
+    }
+    return value
+}
+module.exports = {
+    sum: sum,
+    allState: allState,
+    handlereg: handlereg,
+    handlenum: handlenum,
+    handledata: handledata,
+    handletitle: handletitle,
+    handlerating: handlerating
+}

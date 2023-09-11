@@ -1,0 +1,41 @@
+<wxs src="/utils/utils.wxs" module="tools"></wxs>
+<!-- 顶部详情开始 -->
+<view class="playout">
+	<image class="headpic" src="{{result.coverImgUrl}}"></image>
+
+	<view class="headright">
+		<text class="name">{{result.name}}</text>
+		<view class="rolemes">
+			<image class="rolepic" src="{{result.creator.avatarUrl}}"></image>
+			<text>{{result.creator.nickname}}</text>
+			<image class="rolefun"></image>
+		</view>
+		<text class="detailmes">{{result.description}}</text>
+	</view>
+</view>
+
+<view class="songlist" wx:for="{{result.tracks}}">
+
+	<image
+	 bindtap="jumpplay"
+	 data-url="{{item.al.picUrl}}"
+	 data-id="{{item.id}}"
+	 class="songpic"
+	 src="{{item.al.picUrl}}"
+	></image>
+
+	<view class="songmes">
+		<text>{{tools.handlename(item.name)}}</text>
+		<text wx:for="{{item.ar}}" wx:for-item="value">{{tools.handlename(value.name)}}</text>
+	</view>
+
+	<text class="dt">{{tools.handleDtime(item.dt)}}</text>
+
+	<image
+	 data-id="{{item.id}}"
+	 bindtap="clickplay"
+	 class="play"
+	 src="{{playstate[item.id]?'/images/play.png':'/images/pause.png'}}"
+	></image>
+</view>
+

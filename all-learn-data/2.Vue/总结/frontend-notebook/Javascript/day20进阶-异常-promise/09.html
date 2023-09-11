@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* catch的返回值  Promise的状态,正常情况下是resolved,如果有错误,那么状态是rejected */
+        var p = Promise.reject(100).catch(res=>{
+            console.log(res)
+            throw "err"
+        })
+        console.log(p)
+    </script>
+</body>
+</html>

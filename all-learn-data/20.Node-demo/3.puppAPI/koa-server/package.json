@@ -1,0 +1,25 @@
+{
+  "name": "koa-v",
+  "version": "1.0.0",
+  "description": "```js\r npm i \r npm start\r ```",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "koa": "^2.13.0",
+    "koa-router": "^10.0.0",
+    "koa2-cors": "^2.0.6",
+    "nodemon": "^2.0.6",
+    "superagent": "^6.1.0",
+    "superagent-charset": "^1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/chengbenchao/koa-server.git"
+  }
+}

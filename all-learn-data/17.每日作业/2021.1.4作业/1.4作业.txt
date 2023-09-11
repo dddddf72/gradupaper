@@ -1,0 +1,6 @@
+1.todolist敲一遍
+2.写笔记（缓存，wx:for渲染对象，app.js（数据共享）wx.navigateback()页面回调）
+3.搜索
+4.考试的内容（没考过的优先写任务4）
+5.下次考试todolist,搜索框
+

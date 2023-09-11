@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // typeof 不能识别数组  object
+        //数组 []  
+        // Array.isArray  输出的是boolean
+        var arr = [1,2,3];
+        var all = ["html","css","js"];
+        console.log(typeof arr);
+        console.log(Array.isArray(arr));
+        // 属性 length  可以读取数组的长度
+        console.log(arr.length)
+        // 数组的下标从0开始  
+
+        console.log(all[0])
+        // 下标越界之后输出undefined
+        console.log(arr[100])
+    </script>
+</body>
+</html>

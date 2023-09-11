@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-stepper":"../../vant/dist/stepper/index",
+    "van-card": "../../vant/dist/card/index",
+    "van-submit-bar": "../../vant/dist/submit-bar/index",
+    "van-checkbox": "../../vant/dist/checkbox/index",
+    "van-button": "../../vant/dist/button/index"
+  }
+}

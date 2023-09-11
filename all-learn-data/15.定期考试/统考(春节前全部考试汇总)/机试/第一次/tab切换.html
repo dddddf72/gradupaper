@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .current{
+            color: orange;
+        }
+        .html{
+            z-index: 99;
+            background-color: red;
+        }
+        .css{
+            background-color: yellow;
+        }
+        .parent{
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+        .parent div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="current">html</li>
+        <li>css</li>
+    </ul>
+    <div class="parent">
+        <div class="html">html</div>
+        <div class="css">css</div>
+    </div>
+    <script>
+        var lis = document.getElementsByTagName('li')
+        var divs = document.querySelectorAll('.parent div')
+        for(let i = 0 ;i<lis.length;i++){
+                    lis[i].onclick = function(){
+                for(let i =0 ;i<lis.length;i++){
+                    lis[i].classList.remove('current')
+                }
+                this.classList.add('current')
+                for(let i = 0 ;i<divs.length;i++){
+                    divs[i].style.display="none"
+                }
+                    divs[i].style.display = "block"
+            }
+        }
+    </script>
+</body>
+</html>

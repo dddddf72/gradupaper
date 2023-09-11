@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var p = new Promise((resolve,reject)=>{
+            setTimeout(() => {  //定时器为异步,要等一会儿才执行
+                resolve(100)    
+            })
+        })
+        console.log(p);
+        setTimeout(() => {
+            console.log(p)
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"></link>
+</head>
+<body>
+
+    <form action="/doChange" method="POST" role="form" enctype="multipart/form-data">
+        <legend>修改信息</legend>
+        {{each arr}}
+        <div class="form-group">
+            <label for="">修改姓名:</label>
+            <input type="hidden" name="id" class="form-control" id="" value="{{@$value._id}}">
+            <input type="text" required class="form-control" name="name" value="{{$value.name}}"  placeholder="请输入姓名">
+        </div>
+        <div class="form-group">
+            <label for="">修改年龄:</label>
+            <input type="text" required class="form-control" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" name="age" value="{{$value.age}}"  placeholder="请输入年龄">
+        </div>
+        <div class="form-group">
+            <label for="">修改爱好:</label>
+            <input type="text" required class="form-control" name="like" aria-selected="true" value="{{$value.like}}" placeholder="请输入爱好">
+        </div>
+        <div class="form-group">
+            <label for="">修改头像:</label>
+            <input type="file" name="file">
+        </div>
+        <button type="submit" class="btn btn-primary">提交</button>
+        {{/each}}
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 我们写的正则表达式，只要符合字符产的某一段就可以了
+        var str = "abc124432";
+        var reg =/\d{3,5}/;
+        console.log(reg.test(str))//true
+    </script>
+</body>
+</html>

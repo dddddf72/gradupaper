@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for ... in 遍历对象
+        var obj = {
+            1001:false,
+            1002:false,
+            1003:false
+        }
+        for(var key in obj){
+            console.log(obj.key)  //点的方式只能读取具体的属性值
+            console.log(obj[key])//读取变量要通过中括号的方式去读取
+        }
+        // 需求将1003的值改为true
+        for(var key in obj){
+            if(key==1003){
+                obj[key]=true;
+            }
+        }
+        console.log(obj)
+        // 以什么开头的字符串
+        var str = "武汉";
+        console.log(str.endsWith("汉")) //输出为布尔值，以什么开头，endsWith以什么结尾
+    </script>
+</body>
+</html>

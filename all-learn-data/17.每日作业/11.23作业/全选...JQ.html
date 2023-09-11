@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <button>全选</button>
+    <br>
+    <button>全不选</button>
+    <br>
+    <button>反选</button>
+    <br>
+    <input type="checkbox">篮球
+    <input type="checkbox">足球
+    <input type="checkbox">乒乓球
+    <input type="checkbox">羽毛球
+    <input type="checkbox">橄榄球
+
+    <script>
+        $("button:nth-child(1)").click(function(){
+            $("input").attr("checked",true);
+        })
+        $("button:nth-child(3)").click(function(){
+            $("input").attr("checked",false);
+        })
+        $("button:nth-child(5)").click(function(){
+            $("input").attr("checked",!($("input").attr("checked")));
+        })
+      
+        // $("button:nth-child(1)").click(function(){
+        //     $("input").prop("checked",true);
+        // })
+        // $("button:nth-child(3)").click(function(){
+        //     $("input").prop("checked",false);
+        // })
+        // $("button:nth-child(5)").click(function(){
+        //     $("input").each(function(){
+        //         this.checked = !(this.checked);
+        //     })
+        // })
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+/* pages/city/city.wxss */
+.hot{
+    color:#888;
+    font-size: 24rpx;
+}
+page{
+    padding: 5rpx;
+}
+.van-button{
+    width:170rpx !important;
+    height: 70rpx !important;
+}
+.result{
+    text-align: center;
+    padding:5rpx;
+}

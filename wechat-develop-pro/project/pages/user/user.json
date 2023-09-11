@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-button": "../../dist/button/index",
+    "van-image": "../../dist/image/index",
+    "van-tab": "../../dist/tab/index",
+    "van-tabs": "../../dist/tabs/index",
+    "v-movie": "../../components/MovieItem/index"
+  },
+  "navigationBarTitleText": "个人中心"
+}

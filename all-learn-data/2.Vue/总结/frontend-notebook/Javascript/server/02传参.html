@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 解构 */
+        function http({
+            callback:callback,
+            method,
+            url,
+        }) {
+            console.log(callback);
+            console.log(method)
+            console.log(url)
+        }
+        http({
+            callback:"123",
+            method:"get",
+            url:"xx"
+        })
+    </script>
+</body>
+
+</html>

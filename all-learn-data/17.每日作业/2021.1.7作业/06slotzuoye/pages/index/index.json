@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "v-item": "/components/Item/Item",
+    "v-head": "/components/head/head",
+    "v-title": "/components/Title/index"
+  }
+}

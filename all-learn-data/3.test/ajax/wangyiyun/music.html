@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http/index.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="http/start.js"></script>
+    <link href="http://at.alicdn.com/t/font_2158967_dxgxhdffcnb.css" rel="stylesheet">
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #app{
+            display: flex;
+            width: 65.1042vw;
+            height: 26.0417vw;
+            margin: 0 auto;
+        }
+        #app img {
+            width: 9.7656vw;
+        }
+        #app a{
+            margin: 0 auto;
+            width: 9.7656vw;
+        }
+        .container{
+            width: 9.7656vw;
+            height: 9.7656vw;
+            /* margin: 0  auto; */
+        }
+        #input{
+            width: 13.0208vw;
+            height: 3.2552vw;
+            outline: none;
+            border: none;
+            position: absolute;
+            top: 50%;
+            transform: translate(0,-50%);
+        }
+        #btn{
+            width: 6.5104vw;
+            height: 3.2552vw;
+            border: none;
+            outline: none;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0,-50%);
+        }
+        .search{
+            top: -6.5104vw;
+            left: 40.0391vw;
+            width: 19.5313vw;
+            height: 16.9271vw;
+            background-color: yellow;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="search">
+    <input type="text" id="input" placeholder="音乐/视频/电台/用户">
+    <button id="btn">搜索</button>
+    </div>
+    <div id="container"></div>
+    <div id="app"></div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 需求，遇到上，天，那，变成*号
+        var reg = /[上天哪]/g;  //中括号为多选一
+        var str = "上海,哪里去,天";
+        console.log(str.replace(reg,"*"))
+    </script>
+</body>
+</html>

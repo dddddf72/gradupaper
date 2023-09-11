@@ -1,0 +1,4 @@
+<view class="container">
+  <v-item wx:for="{{playlists}}" wx:key="id" data="{{item}}"></v-item>
+</view>
+

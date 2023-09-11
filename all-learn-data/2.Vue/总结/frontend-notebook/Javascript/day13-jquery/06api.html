@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        div.item {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #333;
+            padding: 20px;
+            float: left;
+        }
+        #app{
+            margin:0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="item">
+
+        </div>
+        <div class="item">
+
+        </div>
+        <div class="item">
+
+        </div>
+        <div class="item">
+
+        </div>
+        <div class="item">
+
+        </div>
+        <div class="item">
+
+        </div>
+    </div>
+
+    <script>
+        /* 
+        width -->content
+        outerWidth-->content,padding,border
+         */
+        /* 
+        改变css样式
+        $(element).css({attr:value})
+         */
+        var ww = $(window).width();
+        var box = $(".item").outerWidth();
+        var num = Math.floor(ww / box);
+        $("#app").css({width:num*box+"px"})
+    </script>
+</body>
+
+</html>

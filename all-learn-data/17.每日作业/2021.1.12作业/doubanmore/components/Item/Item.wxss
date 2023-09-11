@@ -1,0 +1,11 @@
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.ratstar{
+    display: flex;
+}
+.star{
+    width: 20rpx;
+    height: 20rpx;
+}

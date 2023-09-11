@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // boolean,string -->number强制转换
+        // Number(),parseInt(),parseFloat()
+        // undefined,"",0,NaN
+        var a = 10;
+        var e= 11;
+        var c = true+1-"6"+"false";
+        var b = "abc" && 123;
+        var c  = 0 || 123;      
+        var d = a++ + ++a + 20; 
+                                //11 12
+        var c = a-- +20 + ++a;  //12+20+12
+        var f = 10+false - true + ++e;  //10+0-1+12
+        console.log(f);
+    </script>
+</body>
+</html>

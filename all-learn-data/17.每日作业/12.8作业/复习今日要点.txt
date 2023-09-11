@@ -1,0 +1,6 @@
+1.回调函数
+
+2.回调地狱（能写）
+
+3.Promise对象，状态（resolve,reject）
+

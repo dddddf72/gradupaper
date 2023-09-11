@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .current{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        toggle toggleClass();
+        contains      hasClass()  判断是否包含某个class
+     -->
+    <p id="app">hello world</p>
+    <script>
+        var app =  document.getElementById("app");
+        app.onclick =  function(){
+            // if(this.classList.contains("current")){
+            //     this.classList.remove("current")
+            // }else{
+            //     this.classList.add("current")
+            // }
+            this.classList.toggle("current")
+        }
+    </script>
+</body>
+</html>

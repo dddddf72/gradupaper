@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 返回数组  
+        String   match
+         */
+        var arr = [{city:"武汉",state:true,spell:"wuhan"},
+        {city:"北京",state:false,spell:"beijing"},
+        {city:"武昌",state:false,spell:"wuchang"}]
+        /* city中含有武的组成一个数组 */
+        var keyword = "武汉";
+        
+        var res = arr.filter(item=>{
+            // return  item.city.includes(keyword);
+            if(item.city.includes(keyword) || item.spell.includes(keyword) ){
+                return item;
+            }
+        })
+        console.log(res)
+    </script>
+</body>
+</html>

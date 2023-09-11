@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 全选全不选效果 -->
+    <button id="all">全选</button>
+    <br>
+    <button id="noAll">全不选</button>
+    <br>
+    <button id="reverse">反选</button>
+    <br>
+    <input  type="checkbox">篮球
+    <input  type="checkbox">足球
+    <input  type="checkbox">高尔夫
+    <input  type="checkbox">橄榄球
+    <input  type="checkbox">乒乓球
+    <br>
+    <script>
+        // 全选
+        var all = document.getElementById("all")
+        var checks = document.getElementsByTagName("input")
+        var noAll = document.getElementById("noAll")
+        var reverse = document.getElementById("reverse")
+        all.onclick=function(){
+            for(var i =0;i<checks.length;i++){
+                checks[i].checked=true;
+            }
+        }
+        // 全不选
+        noAll.onclick=function(){
+            for(var i = 0;i<checks.length;i++){
+                checks[i].checked = false;
+            }
+        }
+        // 反选
+        reverse.onclick=function(){
+            for(var i = 0 ;i<checks.length;i++){
+                checks[i].checked = !(checks[i].checked)
+            }
+        }
+    </script>
+</body>
+</html>

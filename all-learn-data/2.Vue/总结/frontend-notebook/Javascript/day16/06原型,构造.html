@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Function */
+        var arr = new Array(1,2,3);
+        /* Array.prototype */
+        console.log(arr);
+        /* sum */
+        var obj = [4,5,6];
+        Array.prototype.sum = function(params){
+            if(Array.isArray(params)){
+                return params.reduce((a,b)=>a+b);
+            }
+        }
+        /*
+        在数组的原型上添加http方法
+        方法名 http
+        输出 console.log("http")
+         */
+        console.log(arr.sum(arr));
+        console.log(obj.sum(obj));
+    </script>
+</body>
+</html>

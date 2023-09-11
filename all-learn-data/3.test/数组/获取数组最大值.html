@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 声明创建数组arr
+        var arr = [1,2,3]
+        //使用Math.max()方法取最大值的尝试，
+        console.log(Math.max(arr)); //输出为NaN，尝试失败，不能直接操作数组
+       var b = Math.max(...arr);    //因此使用"..."的方法操作展开的数组
+       console.log(b)   //输出为3
+    </script>
+</body>
+</html>

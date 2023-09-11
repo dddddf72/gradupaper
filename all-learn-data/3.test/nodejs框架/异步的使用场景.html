@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+    <!-- JS中异步的使用场景
+        1.http请求
+        2.定时器
+    -->
+    <!-- android 网络请求中不能操作Ui线程 -->
+     <script>
+         console.log(1)
+$.get("data.json",res=>{
+    console.log(res)
+})
+console.log(2)  //执行顺序为1，2，{name:su}
+     </script>
+</body>
+</html>

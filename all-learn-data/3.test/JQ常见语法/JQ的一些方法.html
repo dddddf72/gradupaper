@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    
+</head>
+<body>
+    <li>html</li>
+    <li>css</li>
+    <li>javascript</li>
+    <div id="app">
+    <div class="item">hello world</div>
+</div>
+    <div>div</div>
+    <script>
+        // filter,map遍历JQ对象
+        //map方法遍历JQ对象
+        // find方法,获取父元素下的子元素
+        $("li").filter((index,item) => {
+            console.log(item)
+        });
+       var arr = $("li").map((index,item)=>{
+            return $(item).html("good")
+        })
+         var a = $("#app").find(".item");
+         console.log(a)
+    </script>
+</body>
+</html>

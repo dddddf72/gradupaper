@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // test 方法，判断字符串是否符合正则
+        var pwd = "12121";   //需求密码包含5-7位数字
+        var reg = /[\d]{5,}/g; //量词规定字符出现的次数，
+        //{m}，只出现了m次，
+        //{m,n},大于等于m,小于等于n
+        // {m,} 大于等于m次
+        console.log(reg.test(pwd))  //输出为true
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/test/test",
+    "pages/index/index",
+    "pages/my/my",
+    "pages/more/more",
+    "pages/playlist/playlist",
+    "pages/play/play",
+    "pages/djs/djs"
+    
+  ],
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#aaaaaa",
+    "selectedColor": "#fff",
+    "backgroundColor": "#000000",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "发现音乐",
+        "iconPath": "/images/发现音乐gray.png",
+        "selectedIconPath": "/images/发现音乐white.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的音乐",
+        "iconPath": "/images/音乐gray.png",
+        "selectedIconPath": "/images/音乐white.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,14 @@
+@mixin checkerboard($size,$base,$accent,$linColorFirst){
+    background:$base;
+    background-image:
+    linear-gradient(45deg,$accent 25%,transparent 0,transparent 75%,$accent 0),
+    linear-gradient(45deg,$linColorFirst 25%,transparent 0,transparent 75%,$linColorFirst 0);
+    background-position: 0 0 ,$size $size;
+    background-size: 2*$size 2*$size;
+}
+div{
+    @include checkerboard(15px,#eee,rgba(168, 5, 233, 0.25),rgba(0,0,0,.25));
+    width: 300px;
+    height: 300px;
+}
+

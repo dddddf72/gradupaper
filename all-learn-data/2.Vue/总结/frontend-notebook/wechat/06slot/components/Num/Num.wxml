@@ -1,0 +1,2 @@
+<!--components/Num/Num.wxml-->
+<view>{{_num}}</view>

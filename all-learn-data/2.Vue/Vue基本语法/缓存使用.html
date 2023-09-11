@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="utils/缓存封装.js"></script>
+</head>
+<body>
+    <!-- <div id="app"></div> -->
+    <script>
+        // var lists = [{name:"html",state:false}]
+        // // 将json对象转换为json格式的字符串类型
+        // var res = JSON.stringify(lists);
+        // // localStorage设置本地存储特点：只能存简单值的类型，不能存数组和对象
+        // localStorage.setItem("todo",res)
+        // // 取本地存储
+        // var result = localStorage.getItem("todo")
+        // console.log(JSON.parse(result))
+        // var reg = /^[{\[].+[}\]]$/
+        // console.log(reg.test(res))
+        // 使用封装函数
+        var lists = [{name:"html",state:false}]
+        setStorage("todo",lists);
+        var res = getStorage("todo")
+        console.log(res)
+    </script>
+</body>
+</html>

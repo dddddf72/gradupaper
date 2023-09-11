@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="请输入密码" id="email">
+
+    <script>
+        var email = document.getElementById("email");
+        email.onkeyup = function(event){
+            if(event.keyCode == 13){
+                var value = this.value.trim();
+                var reg = /^[a-zA-z]+\d{5,}$/
+                console.log(reg.test(value))
+            }
+        }
+        /* 请输入6位数密码 
+        银行密码 
+        var reg = /^\d{6}$/
+        */
+        /* 
+        cheng12345 --true
+        cheng123  --false
+        账户密码
+        以为字母开头,后面是数字,数字至少包含5位
+
+        var reg = /^[a-zA-z]+\d{5,}$/
+         */
+    </script>
+</body>
+</html>

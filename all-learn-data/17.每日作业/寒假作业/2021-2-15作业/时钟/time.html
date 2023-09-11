@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="clock">
+        <img src="images/0.png" alt="">
+        <img src="images/0.png" alt="">
+        <img src="images/0.png" alt="">
+        <img src="images/0.png" alt="">
+        <img src="images/0.png" alt="">
+        <img src="images/0.png" alt="">
+    </div>
+    <script>
+        showTime();
+        setInterval(showTime,1000)
+        function showTime(){
+            var d = new Date();
+            var hour=d.getHours();
+            var minute=d.getMinutes();
+            var second=d.getSeconds();
+            function add(value){
+                if(value<10){
+                    return "0"+value
+                }else{
+                    return value+""
+                }
+            }
+            var allTime=add(hour)+add(minute)+add(second)
+            var arr = allTime.split("")
+            var imgs=document.getElementsByTagName("img")
+            for(let i =0;i<imgs.length;i++){
+                imgs[i].src=`images/${arr[i]}.png`
+            }
+        }
+
+    </script>
+</body>
+</html>

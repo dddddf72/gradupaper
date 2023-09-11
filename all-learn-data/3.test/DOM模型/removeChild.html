@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div id="child">child</div>
+        <!-- 需求将div换成P -->
+        <!-- <p>hello world</p> -->
+    </div>
+    <script>
+        // remove Child（）让元素在dom树，渲染树都消失
+        // replaceChild(newNode,targetNode)
+        var app =document.getElementById("app");
+        var child = document.getElementById("child");
+        var p =document.createElement("p");
+        p.innerHTML="hello world";
+        app.replaceChild(p,child);
+    </script>
+</body>
+</html>

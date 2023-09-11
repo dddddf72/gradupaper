@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // "/"为转义字符
+        var str = "https://www.baidu.com"
+        var s ="http://www.baidu.com"
+        var reg = /(https|http):\/\/[w]{3}\.baidu\.com/;
+        console.log(reg.test(str))
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="axios.js"></script>
+</head>
+<body>
+    <script>
+        // var url = "top/album";
+        // http({
+        //     url
+        // }).then(res=>{console.log(res)})
+        // http({
+        //     url:"album?id=96964667"
+        // }).then(res=>(console.log(res)
+        // ))
+
+        http({
+            url:"/album",
+            params:{
+                id:"96964667"
+            }
+        }).then(res=>{console.log(res)})
+    </script>
+</body>
+</html>

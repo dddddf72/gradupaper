@@ -1,0 +1,18 @@
+.content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+}
+.content img{
+    width: 100px;
+    height: 100px;
+}
+.content p{
+    width:100px;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    -webkit-line-clamp:2;
+}

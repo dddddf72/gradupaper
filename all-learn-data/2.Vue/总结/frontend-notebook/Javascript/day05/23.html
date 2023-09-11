@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = [
+            { name: "cheng", age: 18, skill: "vue" },
+            { name: "li", age: 17, skill: "js" },
+            { name: "zhang", age: 16, skill: "html" },
+        ]
+        var arr = [];
+        for(var i=0;i<obj.length;i++){
+            var {name,skill} = obj[i];
+            arr.push({
+                name,
+                skill
+            })
+        }
+        console.log(arr);
+    </script>
+</body>
+
+</html>

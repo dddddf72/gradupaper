@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <script>
+        /* 
+        $.ajax({
+            url,  请求的url地址
+            type, 请求的方式
+            data, 
+            dataType, 请求的数据类型
+            success:res=>{  成功的回调
+                console.log(res)
+            }
+        })
+         */
+        /*  http://192.168.4.18:3000/search?keywords=你
+        jquery-ajax中 get传值问号后面的值,可以放在data属性中
+        */
+        var url = "http://192.168.4.18:3000/search?keywords=你"
+        // $.ajax({
+        //     url,
+        //     type:"get",
+        //     data:{
+        //         keywords:"你"
+        //     },
+        //     success:res=>{
+        //         console.log(res)
+        //     }
+        // })
+        // $.get(url).then(res=>{
+        //     console.log(res)
+        // })
+        $.get(url,res=>{
+            console.log(res)
+        })
+    </script>
+</body>
+</html>

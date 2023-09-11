@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 静态方法:
+        1.静态方法是属于类所独有的,类创建的时候,就会在内存中存在。不用实例化,直接通过
+        类名直接调用,不会造成系统资源的格外浪费 
+        2.不可以在静态方法中,调用普通方法
+        3.静态方法中的this,指调用静态方法的这个类
+        4.静态方法是可以被继承的
+        */
+        /* 在静态方法中this指-->调用静态方法的类
+        */
+        class Person{
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            sayAge(){
+                Person.sayName();
+                console.log(this.age);
+            }
+            static sayName(){
+                console.log(this)
+                console.log("name")
+            }
+        }
+        Person.sayName();
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // setTimeout(()=>{
+        //     console.log("onLaunch")
+        // },1000)
+        // console.log("onLoad")
+        /* 回调 */
+        setTimeout(()=>{
+            if(callback){
+                console.log("onLaunch");
+                callback();
+            }
+        },1000)
+        callback = ()=>{
+            console.log("onLoad")
+        }
+    </script>
+</body>
+</html>

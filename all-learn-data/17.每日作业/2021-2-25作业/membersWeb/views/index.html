@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"></link>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<style>
+    .zan{
+        width: 20px;
+        height: 20px;
+    }
+    .headpic{
+        width: 30px;
+        height: 30px;
+    }
+    .table>thead>tr>th{
+        vertical-align: middle !important;
+    }
+    .table>tbody>tr>td{
+        vertical-align:middle !important;
+    }
+
+    .table>tbody>tr>td:nth-child(7){
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .table>thead>tr>th:nth-child(7){
+        text-align: center;
+    }
+    .table>thead>tr>th:nth-child(8){
+        text-align: center;
+    }
+</style>
+<body>
+    <div id="app">
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>爱好</th>
+                    <th>like</th>
+                    <th>头像</th>
+                    <th>操作</th>
+                    <th><a href="/add"><button type="button" class="btn btn-primary">增加</button></a></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{each arr}}
+                <tr >
+                    <td>{{@$value._id}}</td>
+                    <td>{{$value.name}}</td>
+                    <td>{{$value.age}}</td>
+                    <td>{{$value.like}}</td>
+                    <td @click="dianzan(item._id)">
+                        <form action="/dianzan" method="post" role="form">
+                            <div>
+                                <input type="hidden" name="result" class="form-control" id="" value="{{$value._id}}&{{$value.zan}}">
+                            </div>
+                            <button style="border:none;padding:0;background-color: transparent;outline: none;" type="submit" >
+                                <img class="zan" :src="{{$value.zan}}?'red.png':'black.png'" alt="">
+                                </button>
+                        </form>
+
+                    </td>
+                    <td><img class="headpic" src="{{$value.imageUrl}}" alt="" onerror="this.src='default.jpg'"></td>
+                    <td>
+                        <form action="/doDelete" method="post" role="form">
+                            <div>
+                                <input type="hidden" name="id" class="form-control" id="" value="{{$value._id}}">
+                            </div>
+                        <button type="submit" class="btn btn-danger">删除</button>
+                    </form>
+                    <form action="/change" method="GET" role="form">
+                        <div>
+                            <input type="hidden" name="id" class="form-control" id="" value="{{$value._id}}">
+                        </div>
+                        <button type="submit" class="btn btn-warning">修改</button>
+                    </form>
+                    </td>
+
+                </tr>
+                {{/each}}
+
+            </tbody>
+        </table>
+
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            // data:{
+            //     members:[]
+            // },
+            // mounted(){
+            //     var url = "http://localhost:2021/membersWeb"
+            //     axios.get(url).then(res=>{
+            //         this.members = res.data.data
+            //     })
+            // },
+            // methods:{
+            //     doDelete(id){
+            //         console.log(id)
+            //         // this.members = this.members.filter(item=>item._id!=id);
+            //         axios({
+            //             url:'/doDelete',
+            //             type:'post',
+            //             data:id,
+            //             success:function(data){console.log(data)}
+            //         })
+            //     },
+            //     dianzan(id){
+            //         var members = this.members;
+            //         var item = members.find(item=>item._id==id);
+            //         if(item.zan){item.zan=false;}
+            //         else{item.zan=true;}
+            //         console.log(this.members)
+            //         // this.members = members;
+            //         var like = item.zan;
+            //         $.ajax({url:'http://localhost:2021/dianzan',
+            //     type:'post',data:{id,like}}).then(res=>{
+            //         console.log(res)
+            //     })
+            //     }
+            // }
+        })
+    </script>
+</body>
+</html>

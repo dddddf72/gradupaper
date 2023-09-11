@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索页</title>
+</head>
+<body>
+    <p>搜索</p>
+    <script>
+        console.log(location.search.split("=")[1])
+        var keyword  = location.search.split("=")[1];
+        var c = decodeURIComponent(keyword);
+        console.log(c);
+    
+    </script>
+</body>
+</html>

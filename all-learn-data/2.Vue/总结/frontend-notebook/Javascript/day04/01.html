@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- nodeType  判断一个节点的类型
+        1  元素节点
+        3  文本节点
+        2  属性节点
+     -->
+                                                        
+     <!-- 
+         getAttributeNode()  获取属性节点
+         firtChild获取第一个子节点
+      -->
+    <p id="app">hello world</p>
+    <script>
+        var app = document.getElementById("app");
+        var id = app.getAttributeNode("id");
+        console.log(app.nodeType)
+        console.log(app.firstChild.nodeType)
+        console.log(id.nodeType)
+    </script>
+</body>
+</html>

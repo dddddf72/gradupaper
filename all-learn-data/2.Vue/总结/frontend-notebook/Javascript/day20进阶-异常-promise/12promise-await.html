@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        await只能得到Promise--resolved状态的结果,作用相当于then函数
+         */
+        (async ()=>{
+            var p = Promise.reject(100);
+            var res = await p;
+            console.log(res)
+
+        })();
+        /* Promise.reject(err).catch()捕获异常 */
+    </script>
+</body>
+</html>

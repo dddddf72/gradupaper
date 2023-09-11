@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>html  <button>删除</button></li>
+        <li>css  <button>删除</button></li>
+        <li>javascript  <button>删除</button></li>
+    </ul>
+    <script>
+        var btns = document.getElementsByTagName("button");
+        for(var i=0;i<btns.length;i++){
+            btns[i].onclick = function(){
+                debugger;
+                var temp = window.confirm("确定吗");
+                // console.log(this.parentNode);
+                if(temp){
+                    this.parentNode.style.display="none"
+                }
+            }
+        }
+    </script>
+</body>
+</html>

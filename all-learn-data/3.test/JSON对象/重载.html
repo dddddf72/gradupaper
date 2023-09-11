@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 根据传入参数不同，动态加载 -->
+    <!-- javascript不支持重载，因为后定义的函数会覆盖先定义的函数 -->
+    <script>
+        function go(a){
+            console.log(a);
+        }
+        function go(a,b){
+            console.log(a+b);
+        }
+        
+        go(10);
+        go(10,20);
+
+        // 下为使用arguments.length模拟重载
+        function go(){
+            if(arguments.length == 1){
+            console.log(arguments[0])
+        }else if(arguments.length == 2){
+            console.log(arguments[0]+arguments[1])
+        }
+        }
+        go(1);
+        go(20,30);
+    </script>
+</body>
+</html>

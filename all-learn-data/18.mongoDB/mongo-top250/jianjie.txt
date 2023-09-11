@@ -1,0 +1,4 @@
+mongoose使用
+1.安装mongoose
+cnpm i mongoose.connect('127.0.0.1:27017')
+2.

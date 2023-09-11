@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* flex给子元素设置,设置在父元素中的权重 */
+        .parent{
+            width:400px;
+            height: 200px;
+            background: red;
+            display: flex;
+        }
+        .one{
+            height: 100px;
+            background: green;
+            flex:1;
+        }
+        .two{
+            height: 100px;
+            background: blue;
+            flex:1;
+        }
+        /* 1/1+1+1 */
+    </style>
+</head>
+<body>
+    <!-- flex给子元素设置 -->
+    <div class="parent">
+        <div class="one"></div>
+        <div class="two"></div>
+    </div>
+</body>
+</html>

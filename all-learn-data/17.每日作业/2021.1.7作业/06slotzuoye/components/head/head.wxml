@@ -1,0 +1,8 @@
+<view class="head">
+    <view class="left">
+        <image src="{{data.pic}}"></image>
+        <text>{{data.name}}</text>
+    </view>
+    <text>更多></text>
+</view>
+<slot name="bgcontent"></slot>

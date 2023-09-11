@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "koa": "^2.13.0",
+    "koa-router": "^10.0.0",
+    "puppeteer": "^5.5.0"
+  }
+}

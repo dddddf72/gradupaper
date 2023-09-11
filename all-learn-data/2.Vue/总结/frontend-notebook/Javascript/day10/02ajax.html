@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ajax
+        1.客户端向服务器获取数据的一种技术
+        2.是一种在无需重新加载整个网页的情况下,能够局部更新网页的技术
+     -->
+     <!-- 如何实现 -->
+     <script>
+         var url ="http://192.168.4.18:8000/"
+         /* 1.创建ajax核心对象 */
+         var xhr = new XMLHttpRequest();
+         /* 2.与服务建立连接(method,url,async) */
+         xhr.open("get",url,true)
+         /* 3.发送请求 */
+         xhr.send()
+         /* 4.响应 */
+         xhr.onreadystatechange =  function(){
+             if(xhr.status == 200 && xhr.readyState ==4){
+                 var res =JSON.parse(xhr.responseText) ;
+                 console.log(res)
+             }
+         }
+     </script>
+</body>
+</html>

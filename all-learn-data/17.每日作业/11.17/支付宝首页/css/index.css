@@ -1,0 +1,442 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ /* 顶部导航开始 */
+
+.TopBannerFirst{
+    z-index: 200;
+    width: 600px;
+    background-color:rgb(22, 120, 255);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    height: 60px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 150px auto 150px;
+}
+.TopBannerSecond{
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    background-color:rgb(22, 120, 255);
+    margin-top: 60px;
+    justify-content: center;
+    grid-gap : 20px 20px;
+    height: 100px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(4,100px);
+}
+
+.item{
+    position: relative;
+    text-align: center;
+}
+.item input{
+    font-size: 20px;
+    outline: none;
+    border: none;
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 35px;
+}
+.item img{
+    width: 15px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 28%;
+    left: 5%;
+}
+.TopBannerFirst .item>span:nth-child(3){
+    font-size: 0px;
+}
+/* 顶部导航结束  */
+
+            /* 内容开始 */
+.contentcenter{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2720px;
+    background-color: rgb(246, 246, 246);
+}
+/* 内容轮播开始 */
+.content{
+    cursor: pointer;
+    position: relative;
+    width:600px;
+    height:300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#list{
+    position: absolute;
+    width:600px;
+    height:300px;
+}
+
+#list>div:not(:first-child){
+    display: none;
+}
+
+.listFirst1{
+    width: 600px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows:repeat(3,100px);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.listFirst1>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.quanbu{
+    width: 40px;
+    height: 40px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    /* background-color: red; */
+    grid-gap: 2px 2px;
+    justify-items: center;
+    align-items: center;
+}
+.quanbu div{
+    
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(185, 185, 185);
+}
+
+/* 内容轮播结束 */
+
+/* 消息通知条开始 */
+.messageGet{
+    position: relative;
+    background-color:#fff;
+    width: 580px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns:1fr ;
+    grid-template-rows: repeat(2,1fr);
+    justify-items: start;
+    align-items: center;
+}
+.messageGet>div{
+    margin-left: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 50px;
+}
+.messageGet>div span{
+    color: gray;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.messageGetjiantou{
+    position: absolute;
+    font-size: 25px;
+    color: gray;
+    right: 25px;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+/* 消息通知条结束 */
+
+/* 网商贷开始 */
+.wangshangdai{
+    margin-top: 20px;
+    width: 580px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: #fff;
+    border-radius: 10px;
+
+}
+/* 网商贷结束 */
+
+/* 大牌直降开始 */
+.dapaizhijiang{
+    padding: 15px;
+    margin-top: 20px;
+    width: 580px;
+    height: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 50px 250px 250px;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 0px 20px;
+
+}
+.dapaizhijiang>div{
+    display: flex;
+    flex-direction: column;
+}
+.dapaizhijiang>div img{
+    width: 170px;
+    height: 170px;
+}
+
+/* 大牌直降结束 */
+
+/* 特惠出游开始 */
+.tehuichuyou{
+    width: 580px;
+    height: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 50px 300px;
+    justify-items: center;
+    align-items: center;
+
+}
+.tehuichuyou>div img{
+    width: 170px;
+    height: 170px;
+}
+.tehuichuyouspecial{
+    background-color: #333;
+    border-radius: 5px;
+    padding:3px 5px;
+    opacity: .8;
+    color: #fff;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+.tehuichuyouspecial1{
+    background-color: rgb(249, 58, 74);
+    border-radius: 5px;
+    padding:3px 5px;
+    color: #fff;
+    position: absolute;
+    left: 5px;
+    bottom: 95px;
+}
+/* 特惠出游结束 */
+
+/* 超值抢购开始 */
+.chaozhiqianggou{
+    width: 580px;
+    height: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 50px 300px;
+    justify-items: center;
+    align-items: center;
+}
+.chaozhiqianggou>div img{
+    width: 170px;
+    height: 170px;
+}
+/* 超值抢购结束 */
+
+/* 惠支付开始 */
+.huizhifu{
+    position: relative;
+    padding: 15px;
+    width: 580px;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    grid-gap: 10px 0;
+    display: grid;
+    
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows:repeat(2,60px);
+}
+.huizhifuspecial{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 9px;
+    right: 50px;
+    background: url(../images/jiankangjin.png)no-repeat;
+    background-size: cover;
+}
+.huizhifuspecial2{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 9px;
+    right: 0px;
+    background: url(../images/zuigaolingqu.png)no-repeat;
+    background-size: cover;
+}
+.shuxian{
+    position: absolute;
+    height: 55px;
+    border: .5px solid rgb(230, 228, 228);
+    width: .1px;
+    top: 111px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.hengxian{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    border: .5px solid rgb(230, 228, 228);
+    background-color: rgb(230, 228, 228);
+    width: 550px;
+    transform: translate(-50%,-50%);
+}
+/* 惠支付结束 */
+
+/* 财富生活开始 */
+.caifushenghuo{
+    width: 580px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    grid-gap: 10px 0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 50px 170px 50px;
+    justify-items: center;
+}
+.caifushenghuo>div img{
+    width: 170px;
+    height: 170px;
+}
+/* 财富生活结束 */
+
+/* 蚂蚁森林开始 */
+.mayisenlin{
+    width: 580px;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(../images/mayisenlin.png)no-repeat;
+    background-size: cover;
+}
+/* 蚂蚁森林结束 */
+
+/* 我是有底线的开始 */
+.dixian{
+    position: relative;
+    width: 580px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dixianleft{
+    position: absolute;
+    top: 50%;
+    left: 170px;
+    width: 100px;
+    border: .5px solid rgb(230, 230, 230);
+    background-color: rgb(230, 228, 228);
+    transform: translate(-50%,-50%);
+}
+.dixianright{
+    position: absolute;
+    top: 50%;
+    right: 70px;
+    width: 100px;
+    border: .5px solid rgb(230, 230, 230);
+    background-color: rgb(230, 228, 228);
+    transform: translate(-50%,-50%);
+}
+/* 我是有底线的结束 */
+
+            /* 内容结束 */
+
+
+
+
+
+/* 底部导航开始 */
+.bottomBanner{
+    z-index: 300;
+    width: 600px;
+    height: 100px;
+    position: fixed;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(5,1fr);
+    background-color: #fff;
+    border-top: 2px solid rgb(206, 204, 204);
+    bottom: 0;
+    left: 50%;
+    transform:translate(-50%,0);
+}
+.bottomBanner>div{
+    position: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.bottomBanner>div p{
+    text-align: center;
+}
+
+.bottomBanner>div i{
+    font-size: 50px;
+}
+.zhifubao{
+    border-radius: 50%; 
+    margin-left: 7px;
+    background-color: rgb(255, 209, 1);
+}
+
+/* 底部导航结束 */

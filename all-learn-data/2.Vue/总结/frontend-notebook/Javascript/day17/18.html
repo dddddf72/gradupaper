@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+        1.封装
+        2.继承
+        3.多态 (自带多态)
+         */
+        /* es5中实现继承的方式 */
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.sayName = function () {
+            console.log(this.name)
+        }
+        function Teacher(name, age, skill) {
+            Person.call(this, name, age)
+            this.skill = skill;
+        }
+        Teacher.prototype =Object.create(Person.prototype,{
+            constructor:{
+                value:Teacher
+            }
+        })
+        Teacher.prototype.sayAge = function () {
+            console.log(this.age)
+        }
+        var t = new Teacher("zhang", 18, "js");
+        console.log(t.constructor)
+        t.sayName();
+        t.sayAge()
+        
+    </script>
+</body>
+
+
+</html>

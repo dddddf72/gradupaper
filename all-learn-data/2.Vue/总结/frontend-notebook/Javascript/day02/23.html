@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        ||  有一边为true,结果就为true。遇到true,就会返回
+         */
+        var b  = 0 ||"abc";
+        var c = "abc" || 1;
+        var d = 0 || NaN;
+        console.log(b);
+        console.log(c);
+        console.log(d);
+    </script>
+</body>
+</html>

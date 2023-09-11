@@ -1,0 +1,37 @@
+function handledata(value){
+    if(value.length>4){
+        return value.slice(0,4)+"..."
+    }
+    return value;
+}
+function sum(arr){   
+    if(arr.length>0){   //判断数组是否有值
+        var res = arr.filter(function(item){  
+            return item.isSelected==true;  //取得数组中满足条件的值
+        })
+        var sum = 0 ;
+      res.forEach(function(item){
+        sum += (item.productPrice*item.productCount);
+      })
+      return sum*100 ;
+    }
+}
+
+function allState(arr){
+    var res = arr.every(function(item){
+        return item.isSelected==true;
+    });
+    return res;
+}
+
+function handlenum(stt){
+    var arr = stt.toFixed(2)
+    return arr;
+}
+
+module.exports = {
+    handledata:handledata,
+    sum:sum,
+    allState:allState,
+    handlenum:handlenum
+}

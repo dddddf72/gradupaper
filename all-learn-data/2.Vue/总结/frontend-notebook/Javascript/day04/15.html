@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id = "input">
+    <script>
+        /* 
+        event.key  获取按下键盘对于的值
+        event.keyCode  13回车
+        R  82
+         */
+        var input  = document.getElementById("input");
+        input.onkeydown = function(event){
+            console.log(event.keyCode)
+            if(event.keyCode == 82){
+                console.log("放下")
+            }
+        }
+        input.onkeypress =  function(){
+            console.log("press")
+        }
+        input.onkeyup = function(){
+            console.log("放开")
+        }
+    </script>
+</body>
+</html>

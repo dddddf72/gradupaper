@@ -1,0 +1,2 @@
+<image src="{{play.imgUrl}}"></image>
+<image bindtap="handleMusic1" class="play"  src="{{playState?'/images/play.png':'/images/pause.png'}}"></image>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <script>
+        var url ="/search"
+        axios({
+            url,
+            baseURL:"http://192.168.4.18:3000",
+            method:"get",
+            params:{
+                keywords:"你"
+            }
+        }).then(res=>{
+            console.log(res)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .one{
+        width: 400px;
+        height: 400px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,100px);
+        background-color: red;
+    }
+    .one div{
+        background-color: yellow;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .one img{
+        width: 70px;
+    }
+</style>
+<body>
+    <div class="one">
+        <div>
+            <img src="centerright1.jpg" alt="">
+            <p>wode</p>
+        </div>
+    </div>
+</body>
+</html>

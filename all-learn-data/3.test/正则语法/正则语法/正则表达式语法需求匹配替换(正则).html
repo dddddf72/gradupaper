@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = "hello";
+        // 正则表达式 规则表达
+        var reg = /l/;
+        console.log(str.replace(reg,"*")) //只替换了一个
+        // 解决方法
+        var reg = /l/ig; //i，g为修饰符，i为忽略大小写，表示全局替换
+        // 正则语法，两边斜杠，中间关键字 /keyword/
+        console.log(str.replace(reg,"*"))
+    </script>
+</body>
+</html>

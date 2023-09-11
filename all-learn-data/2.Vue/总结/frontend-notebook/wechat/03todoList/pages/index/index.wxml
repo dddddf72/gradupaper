@@ -1,0 +1,30 @@
+<wxs src="../../utils/index.wxs" module="tools"></wxs>
+<van-search
+  shape="round"
+  background="#4fc08d"
+  placeholder="请输入搜索关键词"
+  bind:search="onSearch"
+/>
+<view class="current">正在进行中<text>{{lists.length-tools.finishNum(lists)}}</text></view>
+<view class="item" wx:for="{{lists}}" wx:if="{{item.state == false}}"
+
+>
+  <van-checkbox value="{{item.state}}"
+  data-index="{{index}}"
+   bind:change="onChange">{{item.name}}</van-checkbox>
+  <van-icon name="clear" color="red"  size="30px"  
+  data-name="{{item.name}}"
+  bind:tap="handleDelete"
+   />
+</view>
+
+<view class="current">已完成 <text>{{tools.finishNum(lists)}}</text></view>
+<view class="item" wx:for="{{lists}}" wx:if="{{item.state}}">
+  <van-checkbox value="{{item.state}}" 
+  data-index="{{index}}"
+  bind:change="onChange">{{item.name}}</van-checkbox>
+  <van-icon name="clear" color="red"  size="30px"
+  data-name="{{item.name}}"
+  bind:tap="handleDelete"
+   />
+</view>

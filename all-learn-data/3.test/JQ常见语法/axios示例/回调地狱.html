@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <style>
+        audio{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <h2>列表数据</h2>
+    <p class="dp">
+
+    </p>
+    <audio src="" controls></audio>
+    <script>
+        // 回调地狱，不断嵌套发送Http请求
+        var url = "http://192.168.4.18:3000/top/playlist/?cat=华语";
+        $.ajax({
+            url,
+            success:res=>{
+                var {name,id} = res.playlists[0]
+                console.log(id)
+                $("#app").html(name);
+                
+                var listurl = `http://192.168.4.18:3000/playlist/detail?id=${id}`;
+                $.ajax({
+                    url:listurl,
+                    success:res=>{
+                        var {name,id} = res.playlist.tracks[0]
+                       $(".dp").html(name)
+                       console.log(id)
+                       var musicUrl = `http://192.168.4.18:3000/song/url?id=${id}`
+                       $.ajax({
+                           url:musicUrl,
+                           success:res=>{
+                               let src = res.data[0].url;
+                            // console.log(res.data[0].url)
+                            $("audio").attr("src",src)
+                           }
+                       })
+                    }
+                })
+            }
+        })
+        
+    </script>
+</body>
+</html>

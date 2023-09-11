@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- es6 class关键字实现一个类 -->
+    <script>
+        class Person{ //constructor函数--构造一个对象的函数
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            sayName(){
+                console.log(this.name);
+            }
+        }
+        Person.prototype.sayAge = function(){
+            console.log(this.age)
+        }
+        var p = new Person("cheng",20)
+        console.log(p)
+        p.sayName();
+        p.sayAge();
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            var arr = [
+                {name:"html",value:"12px"},
+                {name:"css",value:"13px"},
+                {name:"vue",value:"11px"}
+            ]
+            var res = [];
+            for(var key in arr){
+                // console.log(arr[key].value)
+                arr[key].value = parseInt(arr[key].value)*2;
+                // console.log(arr[key])
+                res.push(arr[key]);
+                
+            }
+            console.log(res);
+            console.log(arr);
+        </script>
+</body>
+</html>

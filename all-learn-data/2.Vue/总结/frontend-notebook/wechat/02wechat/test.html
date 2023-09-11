@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <style>
+        p {
+            width: 320px;
+            /* 可以让文字只显示两行,文字以省略号结尾 */
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo error qui natus cum facilis, minima delectus
+        laborum quisquam, fuga dignissimos sit dolorem fugit assumenda aut rem porro ipsum corporis quod!</p>
+    <span prop="hello">good</span>
+    <script>
+         var arr = [{price:1,num:2,name:"html",state:true},{price:4,num:5,name:"css",state:true}];
+         /* some,every */
+         var res = arr.every(item=>item.state);
+         console.log(res)
+    </script>
+</body>
+
+</html>

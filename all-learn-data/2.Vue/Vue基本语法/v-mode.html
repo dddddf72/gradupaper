@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- v-model效果，双向数据绑定同步（输入框和控制台的数据同步） -->
+        <!-- 修饰符，number，v-model.number数值型，要同时修改input的type类型  min为设置数值的最小值-->
+        <input type="number" v-model.number="msg" min="1">
+        <input type="text" v-model.trim="str">
+        </div>
+    <script>
+        new Vue({el:"#app",data:{msg:1,str:"hello"}})
+    </script>
+</body>
+</html>

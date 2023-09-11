@@ -1,0 +1,3 @@
+<van-button type="primary" 
+bind:tap="handleClick"
+size="normal">{{city}}</van-button>

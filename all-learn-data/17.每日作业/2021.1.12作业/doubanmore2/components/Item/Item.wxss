@@ -1,0 +1,15 @@
+image{
+    width:200rpx;
+    height: 200rpx;
+}
+.item{
+    width:200rpx;
+    padding:5rpx;
+}
+.fen{
+    display: inline-block;
+}
+.pf image{
+width: 20rpx;
+height: 20rpx;
+}

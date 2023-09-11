@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = 6; //[2,2,2,2,1.5]
+        var arr = [];
+        // 9.5 [2,]
+        // 7.5  [2,2]
+        //5.5  [2,2,2]
+        //3.5  [2,2,2,2];
+        //1.5 [2,2,2,2,1.5]
+        for(var i=0;i<5;i++){
+            if(num>2){
+                arr.push(2)
+            }else if(num>0){
+                arr.push(num)
+            }else{
+                arr.push(0)
+            }
+            num=num-2;
+        }
+        console.log(arr);
+        /* 
+        9  [2,2,2,2,1]  //1.5  满分   star<1.5  没有分
+        6.3 [2,2,2,0.3,0]
+        7.5 [2,2,2,1.5,0]
+        8.8 [2,2,2,2,0.8]
+         */
+    </script>
+</body>
+</html>

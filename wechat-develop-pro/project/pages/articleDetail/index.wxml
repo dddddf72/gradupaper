@@ -1,0 +1,18 @@
+<image class="bg" src="{{item.imgSrc}}">
+</image>
+<view class="music">
+<image class="{{playstate?'musicin':'musicout'}}"
+bind:tap="handleMusic"
+src=" {{playstate?'/images/icons/music-start.png':'/images/icons/music-stop.png'}}"></image>
+</view>
+<view class="detail">
+    <image src="{{item.avatar}}"></image>
+    <view>知乎 发表于:<text></text>{{item.dateTime}}</view>
+</view>
+<view>{{item.title}}</view>
+<view class="collect-share">
+    <image
+    bind:tap="onCollect"
+    class="collection" src="{{item.collected?'/images/icons/collection.png':'/images/icons/collection-anti.png'}}"></image>
+    <image class="share" bind:tap="share" src="/images/icons/share-anti.png"></image>
+</view>

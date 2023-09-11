@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Person  Teacher */
+        /* 
+        原型对象:Javascript的继承是基于原型的继承
+        call能够实现属性的继承
+         */
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.sayName = function(){
+            console.log(this.name)
+        }
+        function Teacher(name,age,skill){
+            Person.call(this,name,age)
+            this.skill = skill;
+        }
+        
+        /* 方法的继承 */
+        Teacher.prototype = Person.prototype;
+        Teacher.prototype.sayAge = function(){
+            console.log(this.age)
+        }
+        Teacher.prototype.constructor =  Teacher;
+        var t = new Teacher("zhang",18,"js");
+        var p = new Person("lisi",13);
+        console.log(t);
+    </script>
+</body>
+</html>

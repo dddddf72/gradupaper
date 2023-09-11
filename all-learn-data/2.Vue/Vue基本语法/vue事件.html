@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app" @click="handleClick">
+        {{msg.slice(0,3)}}
+        <!-- vue中可以直接进行数据处理 -->
+    </div>
+    <!-- {{msg}}     只能在实例中使用，出了实例无法使用 -->
+    <script>
+        // 1.new一个vue的实例/对象，el是元素的简写，
+      var vm =   new Vue({el:"#app",data:{msg:"hello world"},
+        //将vue实例挂载到app这个元素上
+        //data就是实例可以使用的数据
+        methods:{//vue中获取data中的数据，直接获取，不需要加data
+            handleClick(){
+                console.log(this.msg)
+            }
+        }
+    })
+    //谁New就指谁，指向vm
+    console.log(vm.$data.msg)  //输出data中数据的底层原理
+
+
+    </script>
+</body>
+</html>

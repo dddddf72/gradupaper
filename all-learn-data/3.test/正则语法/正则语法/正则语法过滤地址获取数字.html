@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var  str = "https://movie.douban.com/subject/1292052/"
+         // 方法1
+        // 只获取数组
+        var reg = /[^\d]/g; 
+        console.log(str.replace(reg,""))
+        // 方法2
+        var reg1 = /\d+/;
+        var res =str.match(reg1);
+        console.log(res[0])
+       
+    </script>
+</body>
+</html>

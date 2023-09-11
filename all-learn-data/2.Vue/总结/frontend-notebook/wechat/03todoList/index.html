@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* 如何将对象的key */
+        var obj ={
+            A:[{name:"html"},{name:"ctc"}],
+            B:[{name:"vue"},{name:"js"}],
+            C:[{name:"vue"},{name:"js"}]
+
+        }
+        var keyword ="v";
+        /* arr */
+        // var arr = Object.values(obj);
+        // var res = [];
+        // arr.forEach(item=>{
+        //     res.push(...item)
+        // })
+        // console.log(res)
+        var arr = [];
+        for(let key in obj){
+            obj[key].forEach(item=>{
+                if(item.name.includes(keyword)){
+                    arr.push(item);
+                }
+            })
+        }
+        console.log(arr);
+    </script>
+    
+</body>
+</html>

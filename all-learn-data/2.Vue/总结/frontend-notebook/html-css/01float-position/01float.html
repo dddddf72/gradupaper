@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* float目的:就是为了让元素并排显示
+        内联块问题:有间隙
+         */
+        *{margin:0;padding:0}
+        div{
+            height: 50px;
+            background-color: red;
+        }
+        div span{
+            display: inline-block;
+            width:100px;
+            height: 50px;
+            border:1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- float -->
+    <div>
+        <span>html</span>
+        <span>css</span>
+        <span>javascript</span>
+    </div>
+</body>
+</html>

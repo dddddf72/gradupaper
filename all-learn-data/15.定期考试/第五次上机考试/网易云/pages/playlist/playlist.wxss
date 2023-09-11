@@ -1,0 +1,76 @@
+/* pages/playlist/playlist.wxss */
+/* 顶部详情开始 */
+.playout{
+    padding:50rpx 50rpx 80rpx 50rpx;
+    background-color: #600000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.headpic{
+    width: 350rpx;
+    height: 350rpx;
+}
+.headright{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30rpx;
+}
+.rolemes{
+    display: flex;
+}
+.name{
+    width:250rpx;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    -webkit-line-clamp:2
+}
+.rolepic{
+    width: 50rpx;
+    height: 50rpx;
+}
+.rolefun{
+    width: 50rpx;
+    height: 50rpx;
+}
+text{
+    font-size: 30rpx;
+}
+.detailmes{
+    width:auto;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    -webkit-line-clamp:2
+}
+/* 顶部详情结束 */
+/* 歌曲列表开始 */
+.songlist{
+    margin-top: 50rpx;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+    position: relative;
+}
+.songpic{
+    width:150rpx ;
+    height: 150rpx;
+}
+.songmes{
+    display: flex;
+    flex-direction: column;
+}
+.play{
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    right: 50rpx;
+}
+.dt{
+    position: absolute;
+    right: 150rpx;
+}

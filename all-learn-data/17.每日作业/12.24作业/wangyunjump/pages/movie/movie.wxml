@@ -1,0 +1,14 @@
+<view class="movieout" >
+    <view class="content" bindtap="handleToggle" data-id="{{item.id}}" wx:for="{{result}}" wx:key="item">
+            <image src="{{item.pic}}"></image>
+            <text>{{item.title}}</text>
+        <view class="contenttxt">
+            <view wx:for="{{item.raitingstar}}">
+            <image wx:if="{{item>1.5}}" src="/images/star.png"></image>
+            <image wx:elif="{{item>1}}" src="/images/ban-star.png"></image>
+            <image wx:else src="/images/no-star.png"></image>
+            </view>
+            <text class="raiting">{{item.raiting}}</text>
+        </view>
+    </view>
+</view>

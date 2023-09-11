@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>pc</p>
+    <script>
+        window.onload = function () {
+            if (/Android|iphone|webOS/i.test(navigator.userAgent)) {
+                location.href = "html/mobile.html"
+            } else if (/ipad/i.test(navigator.userAgent)) {
+                location.href = "html/ipad.html"
+            }
+        }
+    </script>
+</body>
+
+</html>

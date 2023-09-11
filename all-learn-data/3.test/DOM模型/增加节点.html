@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 使用JS生成P标签 -->
+        <!-- <p>hello world</p> -->
+    </div>
+</body>
+    <script>
+        // 给APP添加节点
+        var app = document.getElementById("app");
+
+        // 创建P元素
+        var p = document.createElement("p");
+        // 创建文本节点
+        var txt = document.createTextNode("hello world");
+            // 文本节点赋给元素
+            p.appendChild(txt);
+            app.appendChild(p);
+            // console.log(p);
+    </script>
+</html>

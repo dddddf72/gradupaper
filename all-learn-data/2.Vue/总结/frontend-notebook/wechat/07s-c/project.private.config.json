@@ -1,0 +1,36 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/playlist/playlist",
+          "pathName": "pages/playlist/playlist",
+          "query": "id=5347458629",
+          "scene": null
+        },
+        {
+          "name": "pages/play/play",
+          "pathName": "pages/play/play",
+          "query": "id=570334069",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

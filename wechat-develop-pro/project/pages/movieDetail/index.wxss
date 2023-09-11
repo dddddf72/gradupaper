@@ -1,0 +1,163 @@
+/* pages/movie-detail/movie-detail.wxss */
+.bg{
+    height: 200px;
+    filter: blur(5px);
+  }
+  .parent{
+    position: relative;
+  }
+  .blur{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(255,255,255,0.26);
+  }
+  .name{
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+  }
+  .top2{
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+  }
+  .top3{
+    font-size: 14px;
+    position: absolute;
+    top: 150px;
+    left: 15px;
+  }
+  .shuzi{
+    color: crimson;
+  }
+  .huise{
+    color: grey;
+  }
+  .huise1{
+    margin-left: 10px;
+  }
+  .shuzi2{
+    margin-left: 10px;
+  }
+  .huise2{
+    margin-left: 10px;
+  }
+  .box2{
+    position: relative;
+    margin-bottom: 1px solid grey;
+}
+.title{
+    font-weight: bold;
+    position: absolute;
+    margin-left: 15px;
+    top: 25px;
+    font-size: 12px;
+  }
+  .pf{
+    position: absolute;
+    margin-left: 15px;
+    top: 60px;
+  }
+  .score{
+    position: absolute;
+    margin-left: 45px;
+    top: 60px;
+  }
+  .box3{
+    height: 170px;
+    border-bottom: 1px solid rgba(185, 183, 183,0.45);
+    position: relative;
+  }
+
+  .collect,.share{
+    position: fixed;
+    top: 63%;
+    width: 100rpx;
+    height: 100rpx;
+}
+.collect{
+    right: 160rpx;
+}
+.share{
+    right: 20rpx;
+}
+  .dy{
+    position: absolute;
+    top: 80px;
+    margin-left: 15px;
+  }
+  .dym{
+    position: absolute;
+    top: 80px;
+    margin-left: 45px;
+  }
+  .yr{
+    position: absolute;
+    top: 100px;
+    margin-left: 15px;
+  }
+  .Ed{
+    position: absolute;
+    top: 100px;
+    margin-left: 45px;
+  }
+  .type{
+    position: absolute;
+    top: 120px;
+    margin-left: 15px;
+  }
+  .jq{
+    position: absolute;
+    top: 120px;
+    margin-left: 45px;
+  }
+  .box4{
+    height: 180px;
+    border-bottom: 1px solid rgba(185, 183, 183,0.45);
+    position: relative;
+  }
+  .jj{
+    position: absolute;
+    top: 25px;
+    margin-left: 15px;
+  }
+  .content1{
+    position: absolute;
+    top: 50px;
+    line-height: 18px;
+    margin-left: 15px;
+  }
+  .content2{
+    position: absolute;
+    top: 110px;
+    line-height: 18px;
+    margin-left: 15px;
+  }
+  .box5{
+    position: relative;
+  }
+  .member{
+    position: absolute;
+    top: 30px;
+    margin-left: 15px;
+  }
+  .zong{
+    position: relative;
+    color: rgb(80, 79, 79);
+    font-size: 11px;
+  }
+  .pic1{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    top: 150px;
+    right: 15px;
+}

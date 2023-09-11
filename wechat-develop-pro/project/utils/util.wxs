@@ -1,0 +1,17 @@
+function changeNum(num) {
+    var arr = [];
+    for (var i = 0; i < 5; i++) {
+        if (num > 2) {
+            arr.push(2);
+        }
+        else if (num > 0) {
+            arr.push(num.toFixed(1));
+        }
+        else {
+            arr.push(0);
+        }
+        num = num - 2;
+    }
+    return arr;
+}
+module.exports = { changeNum: changeNum }

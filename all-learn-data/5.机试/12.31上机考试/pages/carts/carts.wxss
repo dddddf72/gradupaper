@@ -1,0 +1,9 @@
+.van-card{
+    position: relative;
+}
+.check{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform:translateY(-50%)
+}

@@ -1,0 +1,11 @@
+.ex-tag{
+    color:red;
+  }
+  .playCount{
+    position: absolute;
+    right:0;
+    top:0;
+  }
+  v-item{
+    position: relative;
+  }

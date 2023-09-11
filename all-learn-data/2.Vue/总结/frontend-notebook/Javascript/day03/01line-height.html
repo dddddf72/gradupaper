@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>line-height的继承</title>
+    <style>
+        /* 
+        1.给line-height:200%    line-height*font-size
+        2.line-height:2;   //特殊  div的行高 line-height*div(font-size)
+         */
+        *{margin:0;padding:0}
+        body{
+            font-size: 20px;
+            line-height:3;
+        }
+        div{
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        hello world
+    </div>
+</body>
+</html>

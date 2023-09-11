@@ -1,0 +1,16 @@
+1.网易云数据爬取
+轮播/banner   热门推荐/hot   新碟上架/new-cd
+
+页面2：detail
+https://music.163.com/#/playlist?id=2434408895
+
+页面3：search
+https://music.163.com/#/search/m/?id=2434408895&s=你&type=10
+
+将抓到的数据实现一个移动页面的站1,
+用小程序实现网易云首页，参考网易云APP（自学）
+
+2.安居客注册页面自动输入
+
+3.阿里云注册拖动验证
+

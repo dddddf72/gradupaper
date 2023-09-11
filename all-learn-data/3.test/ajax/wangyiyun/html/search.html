@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta name="referrer" content="no-referrer">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="http://at.alicdn.com/t/font_2158967_dxgxhdffcnb.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+        <script src="../http/index2.js"></script>
+        <script src="../http/search.js"></script>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            #app{
+                padding-top: 50px;
+            }
+            .search{
+                width: 400px;
+                height: 40px;
+                border: 1px solid #999;
+                margin:0 auto;
+                border-radius: 10px;
+                overflow: hidden;
+                position: relative;
+            }
+            .search>input,.search>button{
+                position: absolute;
+                top: 0;
+                outline: none;
+                border: none;
+            }
+            .search>input{
+                width: 350px;
+                height: 40px;
+                left: 0;
+                padding-left: 15px;
+            }
+            .search>button{
+                width: 50px;
+                height: 40px;
+                right: 0;
+                border-left: 1px solid #666;
+            }
+            .search>button .icon-sousuo_huaban{
+                font-size: 25px;
+                color: #666;
+            }
+            .result{
+                color: #666;
+                margin-top: 30px;
+                margin-left: 276px;
+                font-size: 13px;
+                margin-bottom: 20px;
+            }
+            .red{
+                color: red;
+            }
+            .container{
+                width: 800px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(5,140px);
+                grid-gap: 20px 30px;
+            }
+            .container img{
+                width: 140px;
+                height: 140px;
+            }
+            .title{
+                text-decoration: none;
+                color: black;
+                font-size: 14px;
+            }
+            .title:hover{
+                text-decoration: underline;
+            }
+            .name{
+                font-size: 12px;
+                color: #666;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div class="search">
+                <input type="text" value="你" id="input">
+                <button id="btn"><i class="iconfont icon-sousuo_huaban"></i></button>
+            </div>
+            <div class="container">
+    
+            </div>
+            <div id="firstpage">
+                
+            </div>
+        </div>
+    </body>
+    </html>

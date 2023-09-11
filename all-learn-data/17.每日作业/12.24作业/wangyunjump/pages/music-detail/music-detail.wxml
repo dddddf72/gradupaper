@@ -1,0 +1,61 @@
+<!-- 页面开始 -->
+<!-- 顶部导航开始 -->
+<view class="head">
+    <view class="content">
+        <view class="model1"></view>
+        <view class="bgfirst">
+            <image class="bgpic" src="{{playlist.coverImgUrl}}"></image>
+            <view class="playcount">{{playlist.playCount}}
+                <image class="triangle" src="/images/三角形.png"></image>
+            </view>
+        </view>
+        <view class="txt">
+            <text class="name">{{playlist.name}}</text>
+            <view class="poptxt">
+                <image class="userpic" src="{{playlist.creator.avatarUrl}}"></image>
+                <text class="username">{{playlist.creator.nickname}}</text>
+               <view class="model"><image class="jiahao" src="/images/加号.png"></image></view> 
+            </view>
+            <view class="desdh">
+                <text class="description">{{playlist.description}}</text>
+                <text>></text> 
+            </view>
+            
+        </view>
+    </view>
+    <view class="headbtm"></view>
+    <view class="headfunc">
+        <view>
+            <image src="/images/加.png"></image> 
+            <text>{{playlist.subscribedCount}}</text>
+        </view> |
+
+        <view>
+            <image src="/images/消息.png"></image>
+            <text>{{playlist.commentCount}}</text>
+        </view> |
+       
+        <view>
+            <image src="/images/分 享 (1).png"></image>
+            <text>{{playlist.shareCount}}</text>
+        </view>
+    </view>
+</view>
+<!-- 顶部导航结束 -->
+
+<!-- 歌单内容开始 -->
+<view class="musiclist">
+    <view class="listcontent" wx:for="{{music}}" wx:key="item">
+        <text class="xuhao">{{index+1}}</text>
+        <image class="songpic" src="{{item.al.picUrl}}"></image>
+        <view class="songdes">
+            <text>{{item.al.name}}</text>
+            <text >{{item.ar.ar[0].name}}</text>
+        </view>
+        <text class="time">{{item.dt}}</text>
+        <image bindtap="handleMusic" data-id="{{item.id}}" class="playpause" src="{{playStates[item.id]?'/images/play.png':'/images/pause.png'}}"></image>
+    </view>
+</view>
+<!-- 歌单内容结束 -->
+
+<!-- 页面结束 -->

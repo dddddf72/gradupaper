@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        odd 奇数
+        even 偶数
+         */
+        /* li:nth-child(even){
+            background-color:pink;
+        }
+        li:nth-child(odd){
+            background-color: aqua;
+        } */
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        /*
+        i%2  0,1,2,3,4
+             0,1,0,1,0
+         */
+        var lis = document.getElementsByTagName("li");
+        for(var i=0;i<lis.length;i++){
+            if(i%2==0){
+               lis[i].style.backgroundColor = "pink"
+            }else{
+                lis[i].style.backgroundColor = "blue"
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise的三种状态</title>
+</head>
+<body>
+    <script>
+        // promise三种状态
+        var p = new Promise((resolve,reject)=>{
+            // resolve(100)        //调用成功时，下输出为fulfilled(resolved)成功状态
+            reject(0)   //调用失败状态时，输出rejected状态，为失败状态
+        })
+        console.log(p)  //没有调用时，promise的状态为pending(意为冻结，等待)
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var p = Promise.resolve(100).then((res) => {
+            console.log(res)
+            throw "err"
+        })
+        p.then(() => {
+            console.log(200)
+        }).catch(err => {
+            console.log(err)
+        }).then(()=>{
+            console.log(300)
+        })
+    </script>
+
+</body>
+
+</html>

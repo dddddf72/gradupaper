@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <style>
+        .item{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #333;
+            padding:20px;
+            float: left;
+        }
+        #app{
+            margin: 0 auto;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 1.首先判断一排能放下几个 
+    1-1获取窗口的宽度
+    1-2获取每个盒子的宽度
+    num = window/box 
+    -->
+   
+   <!--2.根据第一排的高去放第二排
+        2-1.从最小的高度开始放
+        2-2将第一排的高度放到数组
+-->
+<div id="app">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+</div>
+   <script>
+       var ww = $(window).width();
+    //    console.log(ww)
+    var box = $(".item").outerWidth();
+    var num = Math.floor(ww/box);
+    $("#app").css({width:num*box+'px'})
+    //outWidth包含整个盒子，width只包含盒子的content
+    // console.log(box)
+    </script>
+    
+</body>
+</html>

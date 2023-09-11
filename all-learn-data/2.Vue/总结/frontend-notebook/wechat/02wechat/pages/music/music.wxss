@@ -1,0 +1,16 @@
+.item>image {
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.item {
+    width: 200rpx;
+}
+
+.name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+}

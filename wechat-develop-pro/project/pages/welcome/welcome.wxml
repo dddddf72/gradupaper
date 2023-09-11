@@ -1,0 +1,4 @@
+<view class="container">
+    <button class="btn" bindtap="handleClick">开启小程序之旅</button>
+    <text class="center">{{num}}</text>
+</view>

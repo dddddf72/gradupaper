@@ -1,0 +1,5 @@
+/* pages/play/play.wxss */
+.play{
+    width: 150rpx;
+    height: 150rpx;
+}

@@ -1,0 +1,35 @@
+<van-search
+  value="{{ value }}"
+  shape="round"
+  background="#ea0000"
+  placeholder="请输入搜索关键词"
+  bind:change="onchange"
+/>
+
+<view wx:if="{{value.length==0}}">
+<!-- 定位/正在访问 -->
+<view class="hot">定位/正在访问</view>
+<van-row gutter="20">
+    <van-col span="6"><van-button bindtap="handleclick" data-name="{{location}}" type="defalut" size="mini">{{location}}</van-button></van-col>
+    <van-col span="6" wx:for="{{visitedcities}}" wx:key="item"><van-button data-name="{{item}}" type="defalut" size="mini">{{item}}</van-button></van-col>
+</van-row>
+
+<!-- 热门城市 -->
+<view class="hot">热门城市</view>
+<van-row gutter="20">
+    <van-col span="6" wx:for="{{result.hotCities}}" wx:key="item" bindtap="handleclick" data-name="{{item.name}}"><van-button type="defalut" size="mini">{{item.name}}</van-button></van-col>
+</van-row>
+
+<!-- 列表项 -->
+<van-index-bar index-list="{{ lists }}">
+    <view wx:for="{{result.cities}}" wx:key="item">
+      <van-index-anchor index="{{index}}"></van-index-anchor>
+      <van-cell bindtap="handleclick" wx:for="{{item}}" wx:key="item" wx:for-item="value" data-name="{{value.name}}" title="{{value.name}}" />
+    </view>
+  </van-index-bar>
+</view>
+
+<view wx:if="{{value.length!=0}}">
+    <van-cell bindtap="handleclick" wx:for="{{searchcities}}" wx:key="item" title="{{item.name}}"  data-name="{{item.name}}" />
+    <view class="result" wx:if="{{searchcities.length==0}}">无结果</view>
+</view>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 继承
+        super 就是指父类
+         */
+        class Person{
+            constructor(name,age) {
+                this.name = name;
+                this.age = age;                
+            }
+            sayName(){
+                console.log(this.name)
+            }
+        }
+        
+        class Teacher extends Person {
+            /* 类继承之后,构造函数第一行必须写super关键字 去继承父类的属性*/
+            constructor(name,age,skill){
+                super(name,age);
+                this.skill = skill;
+            }
+            /* 在子类的方法中调用父类的方法 可以通过this或super去调用 */
+            show(){
+                this.sayName();
+                // super.sayName();
+            }
+        }
+        var t = new Teacher("zhang",18,"js");
+        console.log(t)
+    </script>
+</body>
+</html>

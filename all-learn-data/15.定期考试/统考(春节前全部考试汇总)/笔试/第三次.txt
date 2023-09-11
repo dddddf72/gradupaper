@@ -1,0 +1,32 @@
+1- 什么是回调地狱
+由多层嵌套的回调函数组成的代码
+2- 什么是promise,promise有几种状态,如何触发,手写一个简单的promise
+promise:为了解决异步问题而诞生的，将异步的流程转为同步的
+有两种状态：成功的状态 resolve 由.then触发
+         失败的状态  reject  由.catch触发
+<script>
+  var p = new Promise((resolve,reject)=>{
+      //resolve(1)
+      reject(2)
+  })
+  p.then(res=>{
+  console.log(res);
+  }).catch(err=>{
+  console.log(err);
+  })
+</script>
+3- 使用promise封装jquery-ajax
+function http() {
+    return new Promise((resolve,reject)=>{
+        $.ajax({
+            url:"http://192.168.4.18:3000/top/playlist/?cat=华语",
+            type:"get",
+            success:res=>{
+                resolve(res)
+            },
+            error:err=>{
+                reject(err)
+            }
+        })
+    })
+}

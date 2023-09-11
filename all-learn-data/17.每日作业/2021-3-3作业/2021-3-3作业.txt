@@ -1,0 +1,38 @@
+//二手交易（音乐平台/服装售卖/商城/漫画/零食/书城）网站的后台管理系统
+//shopManage
+{
+	avatar:
+	shopName,
+	price,
+	shoer:"xxx",
+	saleNumber:100
+}
+//add 路由
+//edit 
+//delete
+
+
+//user
+{
+	username:"xxx",
+	shopCart:[
+		{avatar,shopName,price,shoper,saleNumber}
+		],
+	history:[
+		{avatar,shopName,price,shoper,saleNumber}
+		],
+	collects:[
+		{avatar,shopName,price,shoper,saleNumber}
+		]
+}
+
+//banner
+{};
+
+//数据量足够多的情况要考虑分页的情况
+
+//get  /search?keyword=你
+
+//登陆功能最后做
+
+

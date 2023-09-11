@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 静态方法和普通方法一样可以被继承
+        
+        class Person{
+            static baseUrl = "http://www.baidu.com"  //把公用属性、方法放在静态方法中，可直接通过类调用
+            static sayName(){
+                console.log("name")
+            }
+        }
+        class Teacher extends Person{ //子类可以继承父类的静态方法
+            static sayAge(){
+                super.sayName();  //this.sayName(); //在子类的静态方法中可以调用父类的静态方法（super,this）
+                console.log("age")
+                console.log(super.baseUrl) //子类中通过super调用父类的静态属性
+            }
+        }
+        Teacher.sayName(); //name
+        Teacher.sayAge();  //name,age ,baseUrl
+        console.log(Person.baseUrl) //www.baidu.com    父类直接调用其独有的静态属性
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <style>
+        
+        .item{
+            width:100px;
+            height: 100px;
+            margin:200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 获取元素距离窗口的距离
+        left:  $(element).offset().left;
+        top:  $(element).offset().top;
+        eq()  找到第几个元素
+     -->
+    <div class="item">
+
+    </div>
+    <div class="item">
+
+    </div>
+    <div class="item">
+
+    </div>
+    <script>
+        // var w =  $(".item").offset().left;
+        // var h =  $(".item").offset().top;
+        console.log($(".item").eq(1));
+        /* eq 第几个元素的 */
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [1,2,3];
+        /* instanceof  判断一个对象是不是某个类的实例 */
+        console.log(arr instanceof Array);
+
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        var p = new Person("cheng",12)
+        console.log(p instanceof Person)
+    </script>
+</body>
+</html>

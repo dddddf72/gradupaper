@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- (将输入框输入的内容显示在下一个元素中) -->
+    <input type="text"  id= "input">
+    <p id="app"></p>
+    <script>
+        var input = document.getElementById("input");
+        var app = document.getElementById("app");
+        input.onkeydown = function(event){
+            if(event.keyCode==13){
+                var li = document.createElement("li");
+                li.innerHTML = this.value;
+                app.append(li);
+            }
+        }
+    </script>
+</body>
+</html>

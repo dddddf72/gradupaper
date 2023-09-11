@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="app">
+        00:00:00
+    </p>
+    <script>
+        var app = document.getElementById("app")
+        function handleTime(value){
+            if(value<10){
+                return "0"+value
+            }else{
+                return ""+value
+            }
+        }
+        function showTime(){
+            var endTime="9999-06-06 00:00:00";
+            endTime=new Date(endTime)
+            var nowTime=new Date().getTime();
+            var gapTime=endTime-nowTime
+            var second = Math.floor(gapTime/1000);
+            var day = handleTime(Math.floor(second/86400));
+            var second = second%86400;
+            var hour=handleTime(Math.floor(second/3600))
+            second=second%3600
+            var minute = handleTime(Math.floor(second/60))
+            second=handleTime(second%60)
+            var sum = day+"天"+hour+":"+minute+":"+second
+            app.innerHTML=sum;
+            setTimeout(() => {
+                showTime();
+            }, 1000);
+        }
+        showTime();
+    </script>
+</body>
+</html>

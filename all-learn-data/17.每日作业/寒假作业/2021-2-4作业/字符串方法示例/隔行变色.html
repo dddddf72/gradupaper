@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* li:nth-child(odd){
+            background-color: skyblue;
+        }
+        li:nth-child(even){ //even是偶数，从1开始算
+            background-color: pink;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 需求：隔行变色 -->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        var lis = document.getElementsByTagName("li")
+        for(var i = 0 ;i<lis.length;i++){
+            if(i%2==0){//偶数，从0开始算
+                lis[i].style.backgroundColor = "pink"
+            }
+            else{
+            lis[i].style.backgroundColor="skyblue"
+        }
+        }
+
+    </script>
+</body>
+</html>

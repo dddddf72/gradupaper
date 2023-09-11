@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!-- filter 过滤器  wxs -->
+    <div id="app">
+        {{msg | handleMsg}}
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                msg:"和来"
+            },
+            filters:{
+                handleMsg(val){
+                    if(val.length>4){
+                        return val.slice(0,4)+"..."
+                    }
+                    return val;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

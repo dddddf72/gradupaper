@@ -1,0 +1,18 @@
+
+.bg{
+    width: 220rpx;
+    height: 220rpx;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.content>text{
+    width:200rpx;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    -webkit-line-clamp:2;
+}
+

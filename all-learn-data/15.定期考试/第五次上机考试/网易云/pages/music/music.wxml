@@ -1,0 +1,6 @@
+<view class="container" wx:for="{{result}}">
+  <v-title title="{{item.title}}" keyword="{{index}}" iconUrl="{{item.iconUrl}}"></v-title>
+  <view class="content">
+    <v-item wx:for="{{item.res}}" wx:for-item="value" music="{{value}}"></v-item>
+  </view>
+</view>

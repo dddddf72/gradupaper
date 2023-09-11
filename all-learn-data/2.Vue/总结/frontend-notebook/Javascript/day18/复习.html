@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1.原型
+        2.原型链构造属性
+        3.继承
+        4.call,apply
+     -->
+     <script>
+         class Person{
+            skill= "javascript"  //默认还是私有属性
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            sayName(){
+                console.log(this.name);
+            }
+        }
+        var p =  new Person("cheng",18);
+        console.log(p)
+        /* javascript模拟一个栈的数据结构 */
+     </script>
+</body>
+</html>

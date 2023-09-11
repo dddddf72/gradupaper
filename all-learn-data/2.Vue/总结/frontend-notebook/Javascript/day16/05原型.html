@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 继承
+        JS的继承是基原型的继承
+         */
+         var arr = [1,2,3];
+        //  toString(); 因为数组的原型上有字符串toString();
+        /* push,unshift()  因为数组原型上有
+         */
+         /* 
+         原型:
+         1.obj.__proto__找到它的原型对象
+         2.数组上的方法都是挂载在原型上(Array.prototype)的
+          */
+          /* Array */
+        console.log(Array.prototype)
+        console.log(arr.__proto__==Array.prototype)
+    </script>
+</body>
+</html>

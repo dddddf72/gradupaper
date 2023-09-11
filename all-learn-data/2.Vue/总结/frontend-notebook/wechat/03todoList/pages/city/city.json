@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-row": "../../vant/dist/row/index",
+    "van-col": "../../vant/dist/col/index",
+    "van-button": "../../vant/dist/button/index",
+    "van-index-bar": "../../vant/dist/index-bar/index",
+    "van-index-anchor": "../../vant/dist/index-anchor/index",
+    "van-cell": "../../vant/dist/cell/index",
+    "van-search": "../../vant/dist/search/index"
+  }
+}

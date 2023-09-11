@@ -1,0 +1,20 @@
+1.使用postman
+2.使用谷歌插件postman
+3.post测试 apidebug http 谷歌插件
+
+定义状态码
+400 --> 请求的参数不合法
+200 --> 请求成功
+
+/get
+/api/last
+//获取最新的一条数据
+
+//post
+/api/next
+//获取下一条数据
+{
+    data:{id}
+}
+
+

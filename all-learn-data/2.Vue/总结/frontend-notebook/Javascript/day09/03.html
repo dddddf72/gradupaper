@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="app">
+        10:10:01
+    </p>
+    <script>
+        function handleTime(value) {
+            if (value < 10) {
+                return "0" + value;
+            }
+            return "" + value;
+        }
+        function showTime() {
+            var app = document.getElementById("app")
+            var endTime = "2020-12-01 16:50:00";
+            /* 1.获取结束时间的毫秒 */;
+            endTime = new Date(endTime).getTime();
+            /* 2.获取当前时间的毫秒 */
+            var nowTime = new Date().getTime();
+            /* 3.获取他们之间的差 */
+            var gapTime = endTime - nowTime;
+            /* 4.将他们的差转换为时分秒 */
+            var seconds = Math.floor(gapTime / 1000);
+            var hours = handleTime(Math.floor(seconds / 3600));
+            seconds = seconds % 3600;
+
+            var minutes = handleTime(Math.floor(seconds / 60));
+            seconds = handleTime(seconds % 60);
+            var sum = hours + ":" + minutes + ":" + seconds;
+            app.innerHTML = sum;
+            setTimeout(function(){
+                showTime()
+            },1000)
+        }
+        showTime();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container" wx:if="{{price>5000}}">苹果手机</view>
+<view wx:elif="{{price>=3000}}">p30</view>
+<view wx:else>oppo</view>
+
+<block wx:for="{{arr}}">
+  <image wx:if="{{item>=1.5}}" src="/images/star.png"></image>
+  <image wx:elif="{{item>=1}}" src="/images/ban-star.png"></image>
+  <image wx:else src="/images/no-star.png"></image>
+</block>

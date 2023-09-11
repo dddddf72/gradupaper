@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P id="app">
+        00:00:00
+    </P>
+    <script>
+        function handleTime(value){
+            if(value<10){
+                return "0" +value;
+            }
+            return "" +value;
+        }
+        function showTime(){
+        var endTime = "9999-06-06 00:00:00";
+        // 1.获取结束时间的毫秒
+        // 直接将变量赋值给Date()函数。并通过getTime毫秒数
+        endTime = new Date(endTime)
+        // 2.获取当前时间的毫秒
+        var nowTime = new Date().getTime();
+        // 3.获取他们之间的差
+        var gapTime = endTime - nowTime;
+        // console.log(gapTime)
+        // 4.将他们的差转换为时分秒
+        // ①1s=1000毫秒 1s=1/60m
+        
+        var  second = Math.floor(gapTime/1000);
+        var day = handleTime(Math.floor(second/86400));
+        var second = second%86400;
+        var hours = handleTime(Math.floor(second/3600));
+        // 取余后为剩余秒数
+        second = second%3600;
+        
+        var minute = handleTime(Math.floor(second/60));
+        second = handleTime(second%60);
+        var sum =day + "天:" + hours + ":" + minute + ":" +second;
+        app.innerHTML = sum;
+        // 调用函数本身，递归
+        setTimeout(function(){
+            showTime();
+        },1000)
+        }
+        showTime();
+
+        // var  mill = second*60
+        // var  hour = mill*60
+
+    </script>
+</body>
+</html>

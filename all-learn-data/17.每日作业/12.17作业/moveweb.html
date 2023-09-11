@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/moveweb.css">
+    <!-- <script src="http.js"></script> -->
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2149345_e82cpioz7v6.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">  
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"> </script>
+</head>
+<style>
+    .icon-daohang{
+        font-size: 3.9063vw;
+        color: #333;
+    }
+    .icon-fangdajing{
+        font-size: 3.9063vw;
+        color: gray;
+    }
+    .icon-yuyin{
+        font-size: 3.9063vw;
+        color: #333;
+    }
+    .icon-sanjiaoxing1{
+        width: 0;
+        height: 0;
+    font-size: 1.0417vw;
+    display: block;
+    position: absolute;
+    top: 0.0977vw;
+    left: 0.5208vw;
+    font-size: 1.0417vw;
+    color: #fff;
+}
+</style>
+<body>
+<!-- 页面开始 -->
+<!-- 导航开始 -->
+<div class="navigation">
+    <div class="threeline">
+        <span class="iconfont icon-daohang"></span>
+    </div>
+    <div class="iconfont icon-fangdajing searchcenter">
+        <input type="text" class="inputsearch" placeholder="任然">
+        </div>
+    <div><span class="iconfont icon-yuyin"></span></div>
+</div>
+<!-- 导航结束 -->
+
+<!-- 内容开始 -->
+    <div class="bgBig">
+        
+        
+        <!-- 轮播开始 -->
+    <div class="swiper-container">
+            <div class="swiper-wrapper"></div>
+
+            <div class="swiper-pagination"></div>
+    </div>
+
+        <script>        
+            var mySwiper = new Swiper ('.swiper-container', {
+              direction: 'horizontal',
+              loop: true,
+              autoplay:true,
+              // 如果需要分页器
+              pagination: {
+                el: '.swiper-pagination',
+                clickable:true,
+              },
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              }
+            })        
+        </script>
+    
+        <!-- 轮播结束 -->
+<hr>
+        <!-- 热门推荐开始 -->
+        <div class="hot">
+            <div class="rmtj">
+                <div style="justify-self: start;"><p>热门推荐</p></div>
+                <div style="justify-self: end;"><p>更多&gt;</p></div>
+            </div>
+            <div class="rmtjimg">
+
+            </div>
+        </div>
+        <!-- 热门推荐结束 -->
+        <hr>
+        <!-- 新碟上架开始 -->
+        <div class="new">
+        <div class="lonely">
+            <div class="newtitle">
+                <div style="justify-self: start;"><p>新碟上架</p></div>
+                <div style="justify-self: end;"><p>更多&gt;</p></div>
+            </div>
+            <div class="five">
+                <div class="box4">
+                    
+                </div>
+                <span class="lt"></span>
+                <span class="gt"></span>
+            </div>
+        </div>
+    </div>
+    <!-- 新碟上架滚动效果开始 -->
+    <script>
+        $(function () {
+            var timer;
+            var index = 0;
+            $(".gt").click(function () {
+    
+                if (!$(".box4").is(":animated")) {
+                    index++;
+                    if (index > 9) {
+                        index = 0;
+                    }
+                    // showBtn();
+                    animate(-76.8229);
+                }
+    
+            })
+            $(".lt").click(function () {
+                if (!$(".box4").is(":animated")) {
+                    index--;
+                    if (index < 0) {
+                        index = 9;
+                    }
+                    animate(76.8229)
+                }
+    
+            })
+    
+            function animate(offset) {
+                var newLeft = $(".box4").position().left + offset
+                $(".box4").animate({ left: newLeft + "vw" }, 1000, function () {
+                    if (newLeft < -156.4453) {
+                        $(".box4").css({ left: "-76.8229vw" })
+                    }
+                    if (newLeft > -76.8229) {
+                        $(".box4").css({ left: "-156.4453vw" })
+                    }
+                })
+            }
+    
+            
+            $("#btns>span").click(function (){
+                var offset = ($(this).index() - index) * -1180;
+                console.log(offset);
+                index = $(this).index();
+                animate(offset);
+            })
+    
+        })
+        </script>
+    <!-- 新碟上架滚动效果结束 -->
+        <!-- 新碟上架结束 -->
+        
+        
+    </div>
+</div>
+    <!-- 内容结束 -->
+
+<!-- 页面结束 -->
+
+<!--获取数据开始  -->
+    <script>
+        var url = "firstpage"
+        axios({
+            url,
+            baseURL:"http://192.168.4.244:8000/",
+            method:"get"
+        }).then(res=>{
+            // 轮播的数据开始
+            var banner = res.data.result1
+            
+            var html = 
+            `
+            <div class="swiper-slide" style="width:78.125vw"><img src="${banner}" alt=""></div>
+            `
+            $(".swiper-wrapper").append(html);
+            // 轮播的数据结束
+        //    console.log(res.data.result2)
+
+            // 热门推荐的数据开始
+           var arr = res.data.result2;
+           arr.forEach(item=>{
+               
+               let name = item.name;
+            //    console.log(name.length)
+               if(name.length>15){
+                   name = name.slice(0,15)+"..."
+               }
+               let coverImage = item.coverImage;
+               let playCount = item.playCount.trim();
+            var html2 = 
+            `
+            <div>
+                <img src="${coverImage}" alt="">
+                <p>${name}</p>
+                
+                <div class="count" style="position:absolute;padding:0 0.9766vw 0 1.9531vw;margin:0"><span><img src="images/三角形.png"></span>${playCount}</div>
+                </div>
+            `
+            $(".rmtjimg").append(html2);
+           })
+            //热门推荐的数据结束
+            
+            // 新碟上架的数据开始
+            var news = res.data.result3;
+            news.forEach(item=>{
+                let Images = item.Images;
+                let songname = item.songname;
+                let artist = item.artist;
+                if(artist.length>15){
+                    artist = artist.slice(0,15)+"..."
+                }
+                var html3 = 
+                `
+                <div>
+                    <img src="${Images}" alt="">
+                    <p>${songname}</p>
+                    <p>${artist}</p>
+                    </div>
+                `
+                $(".box4").append(html3)
+            })
+            // 新碟上架的数据结束
+
+        })
+        
+    </script>
+<!-- 获取数据结束 -->
+</body>
+</html>

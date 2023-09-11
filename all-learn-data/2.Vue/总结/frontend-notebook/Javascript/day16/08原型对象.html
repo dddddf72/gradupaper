@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        作用:将对象通用的方法挂载在原型上
+         */
+        function Student(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        /* sayName */
+        Student.prototype.sayName = function(){
+            console.log(this.name)
+        }
+        var s = new Student("cheng",20);
+        console.log(s)
+        console.log(Student.prototype)
+    </script>
+</body>
+</html>

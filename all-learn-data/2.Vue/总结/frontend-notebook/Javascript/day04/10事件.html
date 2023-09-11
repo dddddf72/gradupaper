@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="app" type="text">
+    <script>
+        /* 
+
+        onfocus  获取焦点
+        onblur   遗失焦点
+         */
+       var app = document.getElementById("app");
+       app.onfocus = function(){
+           this.style.backgroundColor = "red"
+       }
+       app.onblur =  function(){
+           this.style.backgroundColor = "yellow"
+       }
+    </script>
+</body>
+</html>

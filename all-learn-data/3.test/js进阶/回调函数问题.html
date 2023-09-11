@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 回调函数return是没用的
+        //回调函数是函数的参数 
+        function show(callback){
+            var a = 10;
+            callback(a)
+        }
+        show(res=>{
+            console.log(res)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/movie.css">
+    <script src="lib/http.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+
+<body>
+    <div class="app">
+        <div class="left">
+
+        </div>
+        <div class="right">
+
+        </div>
+    </div>
+    <script>
+        /* 1.渲染列表 */
+        var listUrl = "http://192.168.4.18:8000/";
+        ajax({
+            url: listUrl,
+            method: "get",
+            success: res => {
+                var arr = res.result;
+                arr.forEach((item, index) => {
+                    var {pic,title,raiting,slogo,evaluate,labels} = item;
+                    var sum =labels.join("/")
+                    var htmlItem = `
+                    <div class="item">
+                        <span>${index+1}</span>
+                        <img src=${pic} alt="">
+                        <div>
+                            <p class="title">${title}</p>
+                            <p>${sum}</p>
+                            <p><span>评分:${raiting}</span> <span> ${evaluate}人评价</span></p>
+                            <p>${slogo}</p>
+                         </div>
+                   </div>
+                    `
+                    $(".left").append(htmlItem);
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>

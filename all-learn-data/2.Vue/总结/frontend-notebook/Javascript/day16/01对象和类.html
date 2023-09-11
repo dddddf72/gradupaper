@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        对象   某一类的实例
+        类 学生 抽象概念:就是对某一个类具体实例(对象)的抽象
+         */
+         /* Javascript新建一个类  使用构造函数 
+         Student 类
+         name
+         age
+         */
+         function Student(name,age){
+            this.name = name;
+            this.age = age;
+         }
+         /* this指实例化的对象 */
+         /* 具体的对象 */
+         var chen = new Student("陈文",18);
+         var zhang = new Student("张三",18)
+         console.log(chen)
+         console.log(zhang)
+    </script>
+</body>
+</html>

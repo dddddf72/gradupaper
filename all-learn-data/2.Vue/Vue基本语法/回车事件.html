@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--添加enter修饰符，意为event.code==Enter时触发handleenter函数 -->
+        <input type="text" @keyup.enter="handleenter" v-model="keyword">
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                keyword:"",
+            },methods:{
+                handleenter(){
+                    // console.log(event.code);
+                    // if(event.code=="Enter"){
+                        console.log(this.keyword)
+                    // }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

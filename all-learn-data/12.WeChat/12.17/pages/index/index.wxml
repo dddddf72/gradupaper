@@ -1,0 +1,16 @@
+<view class="container" bindtap="handleClick">
+    {{msg}}
+</view>
+
+<input type="text" focus="{{isFocus}}" bindinput="onFocus"></input>
+<form bind:submit="handleSubmit">
+    <input type="text" value="" name="keyword" placeholder="请搜索"></input>
+    <button form-type="submit">搜索</button>
+</form>
+
+<!-- 在html页面中写for循环：wx:for  wx:key -->
+<view wx:for="{{arr}}">
+    {{item.name}}
+</view>
+
+<image bindtap="handleMusic" class="music" src="{{isPlay?'/images/play.png':'/images/pause.png'}}"></image>

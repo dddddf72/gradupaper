@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2198565_317uy9x98l8.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script src="utils/utils.js"></script>
+    <script src="http/index.js"></script>
+    <script src="http/render.js"></script>
+</head>
+
+<body style="overflow-x: hidden">
+    <!-- 导航nav start -->
+    <div class="nav">
+        <ul>
+            <li>
+                <i class="iconfont icon-wangyiyunyinle"
+                    style="background-color:red;font-size: 26px;border-radius: 50%;color: #fff;"></i>
+                <span style="color: #fff; vertical-align: top; font-size: 20px;">网易云音乐</span>
+            </li>
+            <li><a href="#">发现音乐</a></li>
+            <li><a href="#">我的音乐</a></li>
+            <li><a href="#">朋友</a></li>
+            <li><a href="#">商城</a></li>
+            <li><a href="#">音乐人</a></li>
+            <li><a href="#">下载客户端</a></li>
+            <li class="search">
+                <i class="iconfont icon-sousuo1"></i>
+                <input type="text" placeholder="音乐/视频/电台/用户">
+            </li>
+            <li><a href="#" class="create">创作中心</a></li>
+            <li><img src="images/person.jpg" alt=""></li>         
+        </ul>
+    </div>
+    <!-- 导航nav end -->
+    <!-- 目录nav-item start -->
+    <div class="nav-item">
+        <ul>
+            <li class="current">
+                <a href="#">推荐</a>
+                <div class="sanjiao"></div>
+            </li>
+            <li><a href="#">排行榜</a></li>
+            <li><a href="#">歌单</a></li>
+            <li><a href="#">主播电台</a></li>
+            <li><a href="#">歌手</a></li>
+            <li><a href="#">新碟上架</a></li>
+        </ul>
+    </div>
+    <!-- 目录nav-item end -->
+    <!-- 轮播lunbo start -->
+    <div class="content-big">
+        <div id="listOut">
+            <img src="images/lunbo1.jpg" alt="">
+            <img src="images/lunbo2.jpg" alt="">
+            <img src="images/lunbo3.jpg" alt="">
+            <img src="images/lunbo4.jpg" alt="">
+            <img src="images/lunbo6.jpg" alt="">
+        </div>
+        <div class="content">
+            <div class="right">
+                <img src="images/download.jpg" alt="">
+            </div>
+            <div id="list">
+                
+            </div>
+            <button id="prev">
+                <!-- <i class="iconfont icon-lunbojiantou1"></i> -->
+            </button>
+            <button id="next">
+                <!-- <i class="iconfont icon-lunbojiantou11"></i> -->
+            </button>
+            <div id="btns">
+                <span class="current"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- 轮播lunbo end -->
+    <!-- 中间内容 start -->
+    <div class="wrap-big">
+        <div class="wrap">
+            <div class="wrap-left">
+                <div class="hot">
+                    <ul>
+                        <li>
+                            <i class="iconfont icon-yuanquan"></i>
+                            <a href="#">热门推荐</a></li>
+                        <li><a href="#">热门<span></span></a></li>
+                        <li><a href="#">热门<span></span></a></li>
+                        <li><a href="#">热门<span></span></a></li>
+                        <li><a href="#">热门<span></span></a></li>
+                        <li><a href="#">热门</a></li>
+                        <li class="more"><a href="#">更多</a>
+                            <i class="iconfont icon-youjiantou" style="font-weight: 700;"></i>
+                        </li>
+                    </ul>
+                    <div class="hot-content">
+                       
+                    </div>
+                </div>
+                <div class="recommend">
+                    <ul>
+                        <li>
+                            <i class="iconfont icon-yuanquan" style="color: rgb(196, 26, 25);"></i>
+                            <span>个性化推荐</span>
+                        </li>
+                    </ul>
+                    <div class="recommend-content">
+                        <div class="recommend-content-one">
+                            <img src="images/pic2.jpg" alt="">
+                            <div class="opcity">
+                                <i class="iconfont icon-erji"></i>
+                                <em>922万</em>
+                                <a href="#"><i class="iconfont icon-bofang1" style="color: #ccc;"></i></a>
+                            </div>
+                            <p><a href="#">陈粒 / 花粥 / 谢春花 / 房东的猫</a></p>
+                            <p>根据你喜欢的单曲《易燃易爆炸》推荐</p>
+                        </div>
+                        <div class="recommend-content-two">
+                            <img src="images/pic2.jpg" alt="">
+                            <div class="opcity">
+                                <i class="iconfont icon-erji"></i>
+                                <em>922万</em>
+                                <a href="#"><i class="iconfont icon-bofang1" style="color: #ccc;"></i></a>
+                            </div>
+                            <p><a href="#">陈粒 / 花粥 / 谢春花 / 房东的猫</a></p>
+                            <p>根据你喜欢的单曲《易燃易爆炸》推荐</p>
+                        </div>
+                        <div class="recommend-content-three">
+                            <img src="images/pic2.jpg" alt="">
+                            <div class="opcity">
+                                <i class="iconfont icon-erji"></i>
+                                <em>922万</em>
+                                <a href="#"><i class="iconfont icon-bofang1" style="color: #ccc;"></i></a>
+                            </div>
+                            <p><a href="#">陈粒 / 花粥 / 谢春花 / 房东的猫</a></p>
+                            <p>根据你喜欢的单曲《易燃易爆炸》推荐</p>
+                        </div>
+                        <div class="recommend-content-four">
+                            <img src="images/pic2.jpg" alt="">
+                            <div class="opcity">
+                                <i class="iconfont icon-erji"></i>
+                                <em>922万</em>
+                                <a href="#"><i class="iconfont icon-bofang1" style="color: #ccc;"></i></a>
+                            </div>
+                            <p><a href="#">陈粒 / 花粥 / 谢春花 / 房东的猫</a></p>
+                            <p>根据你喜欢的单曲《易燃易爆炸》推荐</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="putaway">
+                    <ul>
+                        <li>
+                            <i class="iconfont icon-yuanquan"></i>
+                            <a href="#">新碟上架</a>
+                        </li>
+                        <li class="more">
+                            <a href="#">更多</a>
+                            <i class="iconfont icon-youjiantou" style="font-weight: 700;"></i>
+                        </li>
+                    </ul>
+                    <div class="putaway-content">
+                        <!-- 轮播部分 -->
+                        <div class="putaway-content-one">
+                            <img src="images/you.jpg" alt="">
+                            <p><a href="#">幸存者 Drifter</a></p>
+                            <p><a href="#">林俊杰</a></p>
+                        </div>
+                        <div class="putaway-content-one">
+                            <img src="images/you.jpg" alt="">
+                            <p><a href="#">幸存者 Drifter</a></p>
+                            <p><a href="#">林俊杰</a></p>
+                        </div>
+                        <div class="putaway-content-one">
+                            <img src="images/you.jpg" alt="">
+                            <p><a href="#">幸存者 Drifter</a></p>
+                            <p><a href="#">林俊杰</a></p>
+                        </div>
+                        <div class="putaway-content-one">
+                            <img src="images/you.jpg" alt="">
+                            <p><a href="#">幸存者 Drifter</a></p>
+                            <p><a href="#">林俊杰</a></p>
+                        </div>
+                        <div class="putaway-content-one">
+                            <img src="images/you.jpg" alt="">
+                            <p><a href="#">幸存者 Drifter</a></p>
+                            <p><a href="#">林俊杰</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 榜单 -->
+                <div class="list">
+                    <ul>
+                        <li>
+                            <i class="iconfont icon-yuanquan"></i>
+                            <a href="#">榜单</a>
+                        </li>
+                        <li class="more">
+                            <a href="#">更多</a>
+                            <i class="iconfont icon-youjiantou" style="font-weight: 700;"></i>
+                        </li>
+                    </ul>
+                    <div class="list-content">
+                        <div class="list-content-one">
+                            <div class="list-content-one-top">
+                                <img src="images/bang.jpg" alt="">
+                                <div class="right">
+                                    <p><a href="#">云音乐飙升榜</a></p>
+                                    <p>
+                                        <i class="iconfont icon-bofang"
+                                            style="color: #999; font-size: 18px; padding-right: 5px;"></i>
+                                        <i class="iconfont icon-shoucangjia" style="color: #999; font-size: 18px;"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="list-content-one-bottom">
+                                <ol type="1">
+                                    <li><span style="color: rgb(196, 26, 25);">1</span><a href="#">云与海</a></li>
+                                    <li><span style="color: rgb(196, 26, 25);">2</span><a href="#">云与海</a></li>
+                                    <li><span style="color: rgb(196, 26, 25);">3</span><a href="#">云与海</a></li>
+                                    <li><span>4</span><a href="#">云与海</a></li>
+                                    <li><span>5</span><a href="#">云与海</a></li>
+                                    <li><span>6</span><a href="#">云与海</a></li>
+                                    <li><span>7</span><a href="#">云与海</a></li>
+                                    <li><span>8</span><a href="#">云与海</a></li>
+                                    <li><span>9</span><a href="#">云与海</a></li>
+                                    <li><span>10</span><a href="#">云与海</a></li>
+                                    <li><a href="#">查看全部&gt;</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="list-content-one">
+                            <div class="list-content-one-top">
+                                <img src="images/bang.jpg" alt="">
+                                <div class="right">
+                                    <p><a href="#">云音乐飙升榜</a></p>
+                                    <p>
+                                        <i class="iconfont icon-bofang"
+                                            style="color: #999; font-size: 18px; padding-right: 5px;"></i>
+                                        <i class="iconfont icon-shoucangjia" style="color: #999; font-size: 18px;"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="list-content-one-bottom">
+                                <ol type="1">
+                                    <li><span style="color: rgb(196, 26, 25);">1</span><a href="#">云与海</a></li>
+                                    <li><span style="color: rgb(196, 26, 25);">2</span><a href="#">云与海</a></li>
+                                    <li><span style="color: rgb(196, 26, 25);">3</span><a href="#">云与海</a></li>
+                                    <li><span>4</span><a href="#">云与海</a></li>
+                                    <li><span>5</span><a href="#">云与海</a></li>
+                                    <li><span>6</span><a href="#">云与海</a></li>
+                                    <li><span>7</span><a href="#">云与海</a></li>
+                                    <li><span>8</span><a href="#">云与海</a></li>
+                                    <li><span>9</span><a href="#">云与海</a></li>
+                                    <li><span>10</span><a href="#">云与海</a></li>
+                                    <li><a href="#">查看全部&gt;</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="list-content-one">
+                            <div class="list-content-one-top">
+                                <img src="images/bang.jpg" alt="">
+                                <div class="right">
+                                    <p><a href="#">云音乐飙升榜</a></p>
+                                    <p>
+                                        <i class="iconfont icon-bofang"
+                                            style="color: #999; font-size: 18px; padding-right: 5px;"></i>
+                                        <i class="iconfont icon-shoucangjia" style="color: #999; font-size: 18px;"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="list-content-one-bottom">
+                                <ol type="1">
+                                    <li><span style="color: rgb(196, 26, 25);">1</span><a href="#">云与海</a></li>
+                                    <li><span style="color: rgb(196, 26, 25);">2</span><a href="#">云与海</a></li>
+                                    <li><span style="color: rgb(196, 26, 25);">3</span><a href="#">云与海</a></li>
+                                    <li><span>4</span><a href="#">云与海</a></li>
+                                    <li><span>5</span><a href="#">云与海</a></li>
+                                    <li><span>6</span><a href="#">云与海</a></li>
+                                    <li><span>7</span><a href="#">云与海</a></li>
+                                    <li><span>8</span><a href="#">云与海</a></li>
+                                    <li><span>9</span><a href="#">云与海</a></li>
+                                    <li><span>10</span><a href="#">云与海</a></li>
+                                    <li><a href="#">查看全部&gt;</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-right">
+                <div class="wrap-right-one">
+                    <div class="top">
+                        <div class="top-left">
+                            <img src="images/pic3.jpg" alt="">
+                        </div>
+                        <div class="top-right">
+                            <p><a href="#">de_sunsh...</a></p>
+                            <p class="lv"><a href="#">LV.7</a></p>
+                            <button>签到</button>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <a href="#">
+                            <span>49</span>
+                            <span>动态</span>
+                        </a>
+                        <a href="#">
+                            <span>49</span>
+                            <span>动态</span>
+                        </a>
+                        <a href="#">
+                            <span>49</span>
+                            <span>动态</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="wrap-right-two">
+                    <div class="singer-top">
+                        <span>入驻歌手</span>
+                        <a href="#">查看全部&gt;</a>
+                    </div>
+                    <div class="singer-content">
+                        <div class="singer-content-one">
+                            <img src="images/mei.jpg" alt="">
+                            <h4>张惠妹aMEI</h4>
+                            <p>台湾歌手张惠妹</p>
+                        </div>
+                        <button><a href="#">申请成为网易音乐人</a></button>
+                    </div>
+                </div>
+                <div class="wrap-right-three">
+                    <div class="anchor">
+                        <span>热门主播</span>
+                    </div>
+                    <div class="anchor-content">
+                        <div class="anchor-content-one">
+                            <img src="images/cheng.jpg" alt="">
+                            <p>陈立</p>
+                            <p>心理学家，美食家陈立教授</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 中间内容 end -->
+    <!-- 回到顶部 start -->
+    <div class="scroll">
+        <img src="images/scroll.jpg" alt="">
+    </div>
+    <!-- 回到顶部 end -->
+    <!-- 底部 footer start -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p class="link">
+                    <a href="#">服务条款</a>
+                    <span>|</span>
+                    <a href="#">服务条款</a>
+                    <span>|</span>
+                    <a href="#">服务条款</a>
+                    <span>|</span>
+                    <a href="#">服务条款</a>
+                    <span>|</span>
+                    <a href="#">服务条款</a>
+                    <span>|</span>
+                </p>
+                <p class="second">
+                    <span>网易公司版权所有©1997-2020</span>
+                    <span>杭州乐读科技有限公司运营：</span>
+                    <a href="#">浙网文[2018]3506-263号</a>
+                </p>
+                <p class="third">
+                    <span>违法和不良信息举报电话：0571-89853516</span>
+                    <span>举报邮箱：</span>
+                    <a href="#">ncm5990@163.com</a>
+                </p>
+                <p class="fourth">
+                    <span>粤B2-20090191-18</span>
+                    <a href="#">工业和信息化部备案管理系统网站</a>
+                    <img src="images/ghs.png" alt="">
+                    <a href="#">浙公网安备 33010902002564号</a>
+                </p>
+            </div>
+            <ul class="footer-right">
+                <li class="footer-right-wrap">
+                    <a class="studio" href="#">
+                    </a>
+                    <span>视频奖励</span>
+                </li>
+                <li class="footer-right-wrap">
+                    <a class="user" href="#">
+                    </a>
+                    <span>视频奖励</span>
+                </li>
+                <li class="footer-right-wrap">
+                    <a class="single-musician" href="#">
+                    </a>
+                    <span>视频奖励</span>
+                </li>
+                <li class="footer-right-wrap">
+                    <a class="admire" href="#">
+                    </a>
+                    <span>视频奖励</span>
+                </li>
+
+                <li class="footer-right-wrap">
+                    <a class="vedio" href="#">
+                    </a>
+                    <span>视频奖励</span>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- 底部 footer end -->
+</body>
+<!-- 目录nav-items start -->
+<script>
+    $(".nav-item ul li").hover(function () {
+        $(this).addClass("current").siblings().removeClass("current");
+    })
+</script>
+<!-- 大轮播start -->
+<script>
+    //1.点击右边的按钮
+    //定义Index变量显示图片的下标值
+    var index = 0;
+    $("#next").click(function () {
+        index++;
+        //下标值越界，就重置
+        if (index > 4) {
+            index = 0;
+        }
+        console.log(index);
+        animate(index);
+        // $("#list img").eq(index).fadeIn().siblings().fadeOut();
+        // $("#btns span").eq(index).addClass("current").siblings().removeClass("current");
+    })
+    //1.点击左边的按钮
+    $("#prev").click(function () {
+        index--;
+        if (index < 0) {
+            index = 4;
+        }
+        console.log(index);
+        animate(index);
+        // $("#list img").eq(index).fadeIn().siblings().fadeOut();
+        // $("#btns span").eq(index).addClass("current").siblings().removeClass("current");
+
+    })
+    //4.点击焦点 换图
+    $("#btns span").click(function () {
+        //重置下标值
+        index = $(this).index();
+        console.log(index);
+        animate(index);
+        // $("#btns span").eq(index).addClass("current").siblings().removeClass("current");
+        // $("#list img").eq(index).fadeIn().siblings().fadeOut();
+    })
+    function animate(index) {
+        $("#btns span").eq(index).addClass("current").siblings().removeClass("current");
+        $("#list img").eq(index).fadeIn().siblings().fadeOut();
+
+        $("#listOut img").eq(index).fadeIn().siblings().fadeOut();
+    }
+    var timeId = setInterval(function () {
+        $("#next").click();
+    }, 2800)
+</script>
+<!-- 小轮播  start -->
+
+<!-- 回到顶部 start -->
+<script>
+    // scrollTop<70,fix隐藏；scrollTop>70，fix显示
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        console.log(scroll);
+        if (scroll > 70) {
+            $(".scroll").fadeIn(300)
+        }
+        else {
+            $(".scroll").fadeOut(300)
+        }
+    })
+    $(".scroll").click(function () {
+        $("html,body").animate({ scrollTop: 0 }, 1000)
+    })
+</script>
+
+</html>

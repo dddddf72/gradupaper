@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-search": "../../vant/dist/search/index",
+    "van-checkbox": "../../vant/dist/checkbox/index",
+    "van-icon": "../../vant/dist/icon/index"
+  }
+}

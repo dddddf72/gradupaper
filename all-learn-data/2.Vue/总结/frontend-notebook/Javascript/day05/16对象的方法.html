@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 函数可以作为对象的方法
+        var obj = {
+            name:"zhang",
+            sayName:function(){
+                console.log(this.name);
+            }
+        }
+        // 在方法中,谁执行方法,this就指向谁
+        obj.sayName();
+    </script>
+</body>
+</html>

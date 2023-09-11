@@ -1,0 +1,22 @@
+.bgcontent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.icon{
+  position: absolute;
+  top: 5rpx;
+  right: 30rpx;
+}
+.icon image{
+  width: 36rpx;
+  height: 36rpx;
+}
+v-item{
+  position: relative;
+  font-size: 28rpx;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+}

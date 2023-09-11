@@ -1,0 +1,17 @@
+{
+  "name": "wechatproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://gitee.com/september-sst/wechatproject.git",
+  "author": "13125006127 <771276847@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0",
+    "koa2-cors": "^2.0.6",
+    "mongoose": "^5.11.18",
+    "require-directory": "^2.1.1"
+  }
+}

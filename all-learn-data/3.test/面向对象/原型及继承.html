@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 继承
+        // JS的继承是基于原型的继承
+        // toString();
+        // 为什么能用toString ,因为数组的原型上有字符串toString()
+        // 为什么有push(),unshift()这些方法，因为数组原型上有
+        
+        // 
+        var arr = [1,2,3];
+        console.log(arr)
+        console.log(arr.toString())
+
+        console.log(Array.prototype)//数组的原型对象
+        // 原型的特点
+        // 1.obj._proto_可以找到它的原型对象
+        // 数组的方法都是挂载在原型上的
+        // 数组的原型就是(Array.prototype)
+        console.log(arr._proto_) //通过_proto_可以查看原型
+        console.log(Array.prototype==arr._proto_)//true
+
+        console.log(Function.prototype)
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 作用：将对象通用的方法挂载在原型上
+        // 需求：当使用say这个方法时，输出自己的名字
+        function Student(name,age){
+                this.name = name ;
+                this.age = age ;
+            }
+        //    sayname
+            Student.prototype.sayName =function(){
+                console.log(this.name)
+            }
+            var s = new Student("cheng",20)
+            console.log(s)
+    </script>
+</body>
+</html>

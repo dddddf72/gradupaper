@@ -1,0 +1,37 @@
+
+<view wx:for="{{lists}}" wx:key="index">
+<v-title title="{{item.title}}" keyword="{{index}}" iconUrl="{{item.iconUrl}}"></v-title>
+<view class="container">
+<v-item wx:for="{{item.res}}" wx:key="id" wx:for-item="value" music="{{value}}"></v-item>
+</view>
+</view>
+
+
+
+<!-- <v-head wx:for="{{head}}" data="{{item}}">
+
+  <view wx:if="{{item.name=='热门歌曲'}}" slot="bgcontent" class="bgcontent">
+    <v-item wx:for="{{musics}}" data="{{item}}">
+      <view slot="icon" class="icon">
+          <image src="/images/p0.png"></image>
+          {{item.playCount}}
+      </view>
+    </v-item>
+  </view>
+  <view wx:elif="{{item.name=='最新音乐'}}" slot="bgcontent" class="bgcontent">
+    <v-item wx:for="{{albums}}" data="{{item}}">
+      <view slot="icon" class="icon">
+          <image src="/images/p0.png"></image>
+          {{item.playCount}}
+      </view>
+    </v-item>
+  </view>
+  <view wx:elif="{{item.name=='主播电台'}}" slot="bgcontent" class="bgcontent">
+    <v-item wx:for="{{result}}" data="{{item}}">
+      <view slot="icon" class="icon">
+          <image src="/images/p0.png"></image>
+          {{item.playCount}}
+      </view>
+    </v-item>
+  </view>
+</v-head> -->

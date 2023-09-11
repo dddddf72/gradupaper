@@ -1,0 +1,15 @@
+.hot {
+  color: #888;
+  font-size: 24rpx;
+}
+page {
+  padding: 5rpx;
+}
+.van-button {
+  width: 150rpx !important;
+  height: 50rpx !important;
+}
+.result {
+  text-align: center;
+  padding: 5rpx;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        知识点:异步
+        面试题: promise和定时器执行顺序的问题:
+         promise会优先于定时器去执行
+
+    -->
+    <script>
+        console.log("3");
+        setTimeout(() => {
+            console.log(2)
+        });
+        Promise.resolve().then(()=>{
+            console.log(1)
+        })
+        
+    </script>
+</body>
+</html>

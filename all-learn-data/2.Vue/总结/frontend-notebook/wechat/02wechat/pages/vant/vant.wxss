@@ -1,0 +1,10 @@
+/* pages/vant/vant.wxss */
+van-card{
+    position: relative;
+}
+van-checkbox{
+    position: absolute;
+    left:0;
+    top:50%;
+    transform: translateY(-50%);
+}

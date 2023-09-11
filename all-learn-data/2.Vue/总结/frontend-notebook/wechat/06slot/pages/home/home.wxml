@@ -1,0 +1,10 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+    <v-item wx:for="{{playlists}}"
+    movie="true"
+    data="{{item}}"
+    wx:key="id">
+       <view slot="rating">9.6</view>
+     </v-item>
+</view>
+

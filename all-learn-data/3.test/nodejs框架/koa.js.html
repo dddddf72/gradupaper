@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 在代码层面表示成同步,异步任务终极解决方法，promise,async,await
+        var a = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                console.log("http1")
+            }, 1000);
+        })
+
+        var b = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                console.log("http2")
+            }, 6000); /* await方法会等待两个定时器中最长的秒数读完才开始执行，即内部为异步先执行完毕，
+                      得到http2和http1，再按规定顺序同步输出http1,http2 */
+        })
+// 直接then为异步执行，先http2，再http1
+            // a.then(res=>{
+            //     console.log(res)
+            // })
+
+            // b.then(res=>{
+            //     console.log(res)
+            // })
+
+// 解决方法，await关键字使执行代码卡顿，待前一个Promise执行完毕后再执行下一个Promise,await后面必须跟promise
+            async function go(){
+                var res = await a;
+                var sum = await b;
+                console.log(res)
+                console.log(sum)
+            }
+            go();
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* .parent{
+            width: 100%;
+            height: 100%;
+            background: url(centerright1.jpg) no-repeat #58a;
+            
+            background-position: right 20px bottom 10px;
+        } */
+        .parent{
+            width: 100%;
+            height: 100%;
+            background: url(centerright1.jpg) no-repeat #58a;
+            
+            background-position:calc(100% - 20px) calc(100% - 10px);
+        }
+        /* .parent{
+            margin:10px 20px;
+            padding: 20px;
+            width: 1000px;
+            height: 1000px;
+            background: url(centerright1.jpg) no-repeat #58a;
+            background-origin:content-box;
+        }
+         */
+    </style>
+</head>
+<body>
+    <div class="parent">
+    </div>
+</body>
+</html>

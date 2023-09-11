@@ -1,0 +1,18 @@
+function finishNum(arr){
+    console.log(arr.constructor)
+    if(arr.constructor=="Array"){   //wxs不支持isArray，instanceof来判断数组，
+        //constructor可以判断数组，获取的是一个字符串，
+        // 获取已完成的数量
+        var res = arr.filter(function(item){
+            return item.state==true
+        })
+        return res.length;
+    }
+
+}
+function handlekey(value) {
+
+}
+module.exports = {
+    finishNum: finishNum
+    };

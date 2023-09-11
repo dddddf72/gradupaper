@@ -1,0 +1,12 @@
+.current{
+    font-size: 40rpx;
+    font-weight: bolder;
+}
+.item{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #333;
+    margin:10rpx 10rpx;
+}

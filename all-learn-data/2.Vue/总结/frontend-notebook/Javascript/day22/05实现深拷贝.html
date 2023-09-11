@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 什么是深拷贝,什么是浅拷贝 */
+        /* 遇到复杂类型(array+object)如何实现深拷贝 */
+        // var arr = [{name:[{"name":"wu"}]},{name:"zhang"},{name:"li"}];
+        var obj = {name:{name:"cheng"}};
+        function deepClone(obj){
+            /* 1.能够识别数组和对象了 */
+                let result;
+                if(typeof obj=="number" || obj == null || typeof obj=="boolean"||typeof obj=="string"){
+                    return obj;
+                }
+                if(obj instanceof Array || typeof obj == "object"){
+                    /* 2.对拷贝的值作初始值得设定 */
+                    if(obj instanceof Array){
+                        result = [];
+                    }else if(typeof obj =="object"){
+                        result = {};
+                    }
+                    /* 3.需要将obj克隆到result中 */
+                    for(let key in obj){
+                        result[key] = deepClone(obj[key]);
+                    }
+                    return result;
+                }
+        }
+        var res = deepClone(obj);
+        console.log(res)
+        /* 
+        result = {name:deepClone({name:"cheng"})}
+        result  = {name:{name:deepClone("cheng")}}
+        result = {name:{name:"cheng"}}
+         */
+        console.log(typeof "fd")
+    </script>
+</body>
+</html>

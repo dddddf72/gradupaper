@@ -1,0 +1,3 @@
+/top250
+/in_theaters
+/coming_soon

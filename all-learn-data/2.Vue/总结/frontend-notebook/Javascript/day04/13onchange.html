@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height:2000px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="input">
+    <script>
+        // 当输入框的内容发生改变的时候,触发
+        var input = document.getElementById("input");
+        input.onchange =  function(){
+            console.log("hello world")
+        }
+        // onresize窗口大小改变的时候,会触发
+        window.onresize =  function(){
+            console.log(1)
+        }
+        // 窗口滚动的时候会触发
+        window.onscroll =  function(){
+            console.log(2)
+        }
+    </script>
+</body>
+</html>

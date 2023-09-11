@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <style>
+        #app{
+            width: 100px;
+            height: 100px;
+            margin: 200px;
+            margin-top: 1000px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="item">
+        <p></p>
+        
+    </div>
+    
+    <script>
+        // eq方法，eq(index)    eq()找到第几个元素
+        // not方法，不是哪一个,返回不符合标准的元素
+        // filter方法,返回含有某个类名的标签元素
+        
+        console.log($(".item").eq(0))
+        console.log($("div2").filter(".item"))
+        console.log($("div").not(".item"))
+
+    </script>
+</body>
+</html>

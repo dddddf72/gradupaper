@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div ref="test">{{msg}}</div>
+    </div>
+    <script>
+        // 在哪些生命周期中可以获取DOM，mounted
+        new Vue({
+            el:"#app",
+            data:{
+                msg:"good"
+            },
+            // 组件被创建之前
+            beforeCreate() {
+                console.log(this.$refs.test) //undefined
+            },
+            created() {
+                console.log(this.$refs.test)  //undefined
+            },
+            mounted() {
+                console.log(this.$refs.test)    //<div>good</div>
+            },
+            beforeMount() {
+                console.log(this.$refs.test) //undefined
+            },
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 继承 -->
+    <script>
+        class Person{
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            sayName(){
+                console.log(this.name)
+            }
+            
+        }
+        // extends延伸，扩展，继承
+        class Teacher extends Person{
+            constructor(name,age,skill){ //构造函数
+                super(name,age); //super(指代父类)关键字必须放在构造函数的第一行，作用：继承父类的属性;
+                this.skill = skill;
+            }
+            show(){
+               super.sayName(); //子类调用父类的方法super/this   this.sayName();
+            //    this.sayName();
+            }
+        }
+        var p = new Teacher("su",18,"js")
+        console.log(p)
+        p.sayName()     //
+        p.show();//未使用super时undifined,
+        
+    </script>
+</body>
+</html>

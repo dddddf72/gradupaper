@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* \转义字符 遇到一些特殊的字符需要处理,可以在前面加上转义字符  */
+        var str = "https://www.baidu.com"
+        var s = "http://www.baidu.com"
+        var reg = /(https|http):\/\/[w]{3}\.baidu\.com/;
+        // console.log(reg.test(s))
+        // 电话号码的正则
+        
+        /* 
+        18xxxxxx  11
+        13xxxx
+        17xxxx
+        15
+        14
+    第一位  1
+    第二位 [3-9]
+    \d{9}
+         */
+         /* 
+         bug:数值过多,超过我们界定的规则,还是true
+          */
+        //  var reg = /1[3-9]\d{9}/;
+        /* 严格匹配   ^reg$ */
+         var reg = /^1[3-9]\d{9}$/;
+         var str = "13971181102";
+         console.log(reg.test(str))
+    </script>
+</body>
+</html>

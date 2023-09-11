@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [1,2,3,4];
+        var b = arr.some(item=>item>1)
+        var arr = [{city:"武汉",state:true},{city:"北京",state:true},{city:"武昌",state:true}]
+        var res = arr.filter(item=>item.city.includes("武"))
+            console.log(res)
+
+            var arr = [{city:"武汉",state:true,spell:"wuhan"},
+            {city:"北京",state:false,spell:"beijing"},
+            {city:"武昌",state:false,spell:"wuchang"}]
+            var keyword = "w";
+            var res = arr.filter(item=>{
+                if(item.city.includes(keyword)|| item.spell.includes(keyword)){
+                    return item   //返回满足某个条件的项
+                }
+            })
+    </script>
+</body>
+</html>

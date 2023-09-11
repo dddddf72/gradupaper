@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <ul></ul>
+        <script>
+            //声明inputs，用于存输入值
+            var inputs = document.getElementsByTagName("input");
+        //声明uls,用于显示传入的值
+        var uls = document.getElementsByTagName("ul");
+        //声明空数组，用于传值
+        var arr = [];
+        //对输入框创建键盘事件
+        inputs[0].onkeydown = function(){
+          //判断回车键状态
+          if(event.keyCode==13){
+            //若回车键按下则判断输入值是否存在于数组，是否为空
+            if(arr.indexOf(this.value) == -1 && this.value != ""){
+              //满足条件则使用数组push方法存入数组
+              arr.push(this.value);
+              //创建用于显示的元素节点
+              var li = document.createElement("li");
+              //将数组中的值赋值给创建的元素节点
+                 li.innerHTML = this.value;
+              //使用append方法将元素节点添加到父节点后面
+              uls[0].append(li);
+            }
+          }
+        }
+    </script>
+</body>
+</html>

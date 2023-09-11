@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>机考示例6</title>
+</head>
+<body>
+    <!-- 字符串方法示例 -->
+    <input type="text" id="txt">
+    <script>
+      var data = [
+        {name:"qweer",age:10},
+        {name:"asdf",age:10},
+        {name:"xzcv",age:10}
+      ]
+      var txt = document.getElementById("txt");
+      txt.onkeydown =function(){
+        if(event.keyCode==13){
+          var value = this.value;
+          if(value){
+            var res = data.filter(item=>{
+                return item.name.includes(value);
+            })
+            res.map(item=>{
+                return item.name = item.name.slice(0,3)+"..."
+            })
+            console.log(res)
+          }
+        }
+      }
+    </script>
+</body>
+</html>

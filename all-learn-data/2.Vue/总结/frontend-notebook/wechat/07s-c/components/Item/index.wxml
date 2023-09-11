@@ -1,0 +1,4 @@
+<view class="item"  bind:tap="handleItem">
+    <image src="{{music.coverImgUrl}}"></image>
+    <view class="text">{{music.name}}</view>
+</view>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 逻辑运算时是将两边的值转换为boolean再运算 */
+        //  &&  逻辑与  只有两边为true,结果才为true
+        //  || 或       只要一边为true,结果就为true
+        //  !  取反
+        console.log(3>2 && 4>3);
+        console.log(3>2 && 4<3);  //true && false
+        console.log(3<2 && 4>3);  //false && true
+
+        console.log(16>17 || 15>10);//  false || true
+        console.log(16<17 || 15<10);//  true || false
+        console.log(!(3>4))  // !false
+    </script>
+</body>
+</html>

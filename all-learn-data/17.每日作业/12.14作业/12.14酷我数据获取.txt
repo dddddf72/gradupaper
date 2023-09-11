@@ -1,0 +1,15 @@
+1.请求百度的数据
+//1.设置地址
+const url = "http://www.baidu.com"
+//2.导入axios用于获取数据
+const axios = require("axios");
+//3.请求数据
+axios.get(url).then(res=>{
+console.log(res)
+})
+//4.终端输入node index.js
+
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+
+2.抓取酷我音乐的图片，音乐名字，播放量，结构[图片：”“，name:"",bofangliang:""]

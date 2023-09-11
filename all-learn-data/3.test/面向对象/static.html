@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 静态属性，静态方法
+        class Person{
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            static sayName(){ //静态方法属于类所独有的方法，实例化的对象无法获取，只能通过类名调用
+                console.log("name")
+            }
+        }
+            Person.sayName(); //name
+    </script>
+</body>
+</html>

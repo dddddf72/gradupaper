@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 定时器会有一个id值，记录它在内存中的位置，如果想清除定时器
+        只需要用clearIterval()方法就可以清除定时器了 */
+
+        var num = 10 ;
+        var id = setInterval(() => {
+            num --;
+            console.log(num)
+            if(num==6){
+                clearInterval(id)
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

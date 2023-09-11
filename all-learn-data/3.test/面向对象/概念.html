@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 对象  某一类的实例    类就是抽象的对象
+        类 学生 抽象概念：就是对某一个类具体实例（对象）的抽象 -->
+        <!-- javascript 新建一个类使用构造函数 
+        Student 类  ； name , age 是Student类的属性
+            this指的是实例化的对象
+        -->
+        <script>
+            // 新建的Student类
+            function Student(name,age){
+                this.name = name ;
+                this.age = age ;
+            }
+            var chen = new Student("陈文",18);
+            var zhang = new Student("张三",18)
+            var df = new Student("丁芳",18);
+            var st = new Student("苏",18);
+            console.log(df)
+            console.log(st)
+            console.log(zhang)
+            console.log(chen)
+
+        </script>
+</body>
+</html>

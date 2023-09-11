@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="checkbox" v-model="myState">
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                state:true
+            },
+            computed:{
+                // 进入页面走get页面，获取data中的值
+                // 触发set函数后，再次触发get，取得data中的值
+                myState:{
+                    get(){
+                        console.log("state")
+                     return this.state
+                    },
+                    set(value){
+                        console.log(value)
+                        this.state = value
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

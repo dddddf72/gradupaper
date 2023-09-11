@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        es5
+        class
+        需求:新建一个类
+     -->
+     <script>
+         /* 
+         构造函数特点:
+         1.函数名大写
+         2.使用this关键字添加属性
+         3.使用new关键字去实例化对象
+         4.this指向实例化的对象
+          */
+         function Person(name,age){
+             this.name =name;
+             this.age = age;
+         }
+         var p = new Person("cheng",18);
+         console.log(p)
+     </script>
+</body>
+</html>

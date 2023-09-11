@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var arr = [1,2,3];
+        // var res = arr.map((item)=>{
+        //     return item*2
+        // })
+        // 数组的每一项是基础(简单)的数据类型，不会改变数组原来的结构
+        // // console.log(arr);   //输出为1，2，3 ，不改变数组原有的结构
+        // // console.log(res);   //输出为2，4，6
+
+        var arr = [1,2,3];
+        
+        var res = arr.map(item=>{
+            return item*3;
+            
+        })
+        // console.log(arr);    //输出为[1,2,3]
+        // console.log(res);    //输出为[3,6,9]
+        // 数组的每一项是复杂类型(对象),对象是复杂(引用)类型
+        // 执行map方法会改变原来的数据结构
+        var  obj = [{name:"li",age:10},{name:"zhang",age:11}];
+        var result = obj.map(item=>{
+            return item.age=0;
+        })
+        console.log(result) //输出为Array(2)  值为{0：0   1：0 length:2}
+        console.log(obj)    //对象为复杂类型，执行map改变了对象Obj的数据结构
+                            //输出为Array(2)   值为{0:{name:"li",age:0}  1:{name:"zhang",age:0} length:2}
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+    <!-- js中事件，onclick  ;JQ中不支持内联事件-->
+    <div id="app" click="handlejq" onclick="handleClick()"></div>
+    <script>
+        function handleClick(){
+            console.log("hello world")
+        }
+        // JQ中的事件，click，使用前先导入
+        $("#app").click(function(){
+            console.log("hello world")
+        })
+        // 小程序中事件：bindtap|bind:tap
+        // vue事件v-on:click(旧的语法)，新语法@click(尽量新语法)
+    </script>
+</body>
+</html>

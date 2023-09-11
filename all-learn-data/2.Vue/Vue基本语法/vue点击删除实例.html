@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!-- vue在模板中可以给事件传参 -->
+    <div id="app"  >
+        <!-- <div v-for="(item,index) of arr" @click="handleclick(item.name)"></div> -->
+        <div v-for="(item,index) of arr" @click="handleclick(index)">
+            {{item.name}}{{index}}
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                arr:[
+                    {name:"html",id:1001},
+                    {name:"css",id:1002},
+                    {name:"javascript",id:1003}
+                ]
+            },
+            methods:{
+                handleclick(index){
+                    // handleclick(id){
+                    // console.log(id)
+                    // var lists = this.arr.filter(item=>item.id!=id);
+                    // console.log(lists)
+                    console.log(index)
+                    this.arr.splice(index,1)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+    <v-item wx:for="{{playlists}}"
+    data="{{item}}"
+     wx:key="id"></v-item>
+</view>
+

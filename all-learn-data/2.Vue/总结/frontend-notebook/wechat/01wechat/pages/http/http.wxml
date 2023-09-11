@@ -1,0 +1,9 @@
+<!--pages/http/http.wxml-->
+<view class="item" wx:for="{{albums}}" 
+wx:key="id" data-id="{{item.id}}"
+bindtap="handleToggle"
+>
+    <view>{{item.name}}</view>
+    <image bindtap="handleClick"  data-id="{{item.id}}" 
+    src="{{playStates[item.id]?'/images/play.png':'/images/pause.png'}}"></image>
+</view>

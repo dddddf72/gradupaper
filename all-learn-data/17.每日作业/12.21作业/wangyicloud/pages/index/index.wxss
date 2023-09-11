@@ -1,0 +1,61 @@
+.searchbar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    background-color: #333;
+    padding: 15px;
+    position: relative;
+}
+
+.searchtext{
+    
+    width: 160px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding-left: 20px;
+}
+.searchbtn{
+    font-size: 15px;
+    border-radius: 20px; 
+}
+.fdj{
+    position: absolute;
+    top: 25px;
+    left: 16px;
+    width:20px;
+    height:20px;
+}
+.content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.xuhao{
+    margin: 50px 0 0 5px;
+}
+.imgpic{
+    width: 50px;
+    height: 50px;
+    margin: 50px 0 0 5px;
+}
+.zhuanji{
+    display: block;
+    font-size: 15px;
+}
+.artist{
+    display: block;
+    font-size: 15px;
+}
+.zhuanar{
+    margin: 50px 0 0 15px;
+}
+.music{
+    position: absolute;
+    right: 15px;
+    top: 50px;
+    width: 50px;
+    height: 50px;
+}

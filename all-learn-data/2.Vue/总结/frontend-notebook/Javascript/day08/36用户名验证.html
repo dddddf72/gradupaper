@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="请输入用户名" id="email">
+
+    <script>
+        var email = document.getElementById("email");
+        email.onkeyup = function(event){
+            if(event.keyCode == 13){
+                var value = this.value.trim();
+                var reg = /^[a-zA-Z]{1,8}$/
+                console.log(reg.test(value))
+            }
+        }
+        /* 
+            用户名只能是字母,大小不限,不能超过8个字符
+
+            var reg = /^[a-zA-Z]{1,8}$/
+         */
+         /* 
+         1.电话号码验证
+         2.验证码验证(4)
+         3.密码验证
+         4.邮箱验证
+         5.用户名验证
+          */
+    </script>
+</body>
+</html>

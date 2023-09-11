@@ -1,0 +1,8 @@
+<view class="title"> 
+    <view>
+        <image src="{{iconUrl}}"></image><text>{{title}}</text>
+    </view>
+    <button class="btn" type="default" 
+    bind:tap="jumpMore"
+    size="mini">更多</button>
+</view>

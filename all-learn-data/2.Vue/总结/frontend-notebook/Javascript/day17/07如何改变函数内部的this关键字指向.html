@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 如何改变this关键字的指向call,apply,bind -->
+    <script>
+        var name = "张三"
+        function show(){
+            console.log(this.name)
+        }
+        /* 函数正常调用的时候this指向window */
+        function go(){
+            var name = "李四"
+            show();
+        }
+        window.go();
+        /* 函数要有对象去调用,事件也是需要对象去执行的 */
+    </script>
+</body>
+</html>

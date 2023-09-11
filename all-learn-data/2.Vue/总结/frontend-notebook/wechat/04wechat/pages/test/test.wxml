@@ -1,0 +1,9 @@
+<!--pages/test/test.wxml-->
+<input type="text" bind:confirm="onConfirm"></input>
+<view wx:for="{{arr}}" wx:key="id">
+    <checkbox>
+        {{item.name}}
+    </checkbox>
+    
+</view>
+<!-- wx:key 给元素唯一的标识符,便于页面渲染和解析 -->

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 在arr中添加的功能  doAdd()-->
+        name:<input type="text" v-model="newItem.name">
+        id:<input type="text" v-model="newItem.id">
+        <button @click="doAdd">添加</button>
+        <div v-for="item of arr" >
+            {{item.name}}
+        </div>
+    </div>
+    <script>
+        new Vue({
+        el:"#app",
+        data:{
+            newItem:{
+                name:"",
+                id:""
+            },
+            arr:[
+                {name:"vue",id:1001},
+                {name:"html",id:1002},
+                {name:"css",id:1003}
+            ]
+        },
+        methods:{
+            doAdd(){
+                var res = {...this.newItem}
+                this.arr.push(res)
+            }
+        }
+    })
+    </script>
+</body>
+</html>

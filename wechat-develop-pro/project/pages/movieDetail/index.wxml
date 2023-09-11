@@ -1,0 +1,51 @@
+<!--pages/movie-detail/movie-detail.wxml-->
+<view class="zong" wx:for="{{result}}" wx:key="item">
+        <view class="parent">
+          <image class="bg" src="{{item.pic}}"></image>
+          <view class="blur">
+              <view class="name">{{item.title}}</view>
+              <view class="top2">
+                <text>{{item.labels[1]}}</text> ·
+                <text>{{item.labels[0]}}</text>
+              </view>
+              <view class="top3">
+                <text class="shuzi shuzi1">{{item.evaluate}}</text>
+                <text class="huise huise1">人喜欢</text>
+                <text class="shuzi shuzi2">{{item.evaluate}}</text>
+                <text class="huise huise2">条评论</text>
+              </view>
+          </view>
+        </view>
+        <view class="box2">
+          <text class="title">{{item.title}}</text>
+          <view>
+            <text class="pf">评分</text>
+
+            <text class="score">{{item.rating}}</text>
+          </view>
+
+
+
+          <view class="box3">
+            <text class="dy">年份 {{item.labels[0]}}</text>
+            <text class="yr">国家</text>
+            <view class="Ed"><text>{{item.labels[1]}}</text></view>
+            <text class="type">类型</text><text class="jq">{{item.labels[2]}}</text>
+          </view>
+        </view>
+        <view class="box4">
+          <text class="jj">剧情简介</text>
+          <text class="content1">movies.briefOne</text>
+          <text class="content2">movies.briefTwo</text>
+        </view>
+        <view class="box5">
+          <text class="member">影人</text>
+          <image class="" src=""></image>
+        </view>
+        <image class="pic1" src="{{item.pic}}"></image>
+    </view>
+
+      <image class="collect" data-title="{{title}}" bindtap="handleChange"  src="{{result[0].collected?'../../images/icons/collection.png':'../../images/icons/collection-anti.png'}}" ></image>
+      <image class="share" src="../../images/icons/share.png"></image>
+
+

@@ -1,0 +1,7 @@
+<input type="text" bind:input="onConfirm"></input>
+<view wx:for="{{arr}}">
+    <checkbox>
+        {{item.name}}
+    </checkbox>
+    
+</view>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 备选字符集，特点：多选一
+        var str = "上海，上天，上哪里去";
+        // 需求，遇到上海，上天，就替换成*号
+        var reg = /上[海天]/g;
+        console.log(str.replace(reg,"*"))
+    </script>
+</body>
+</html>

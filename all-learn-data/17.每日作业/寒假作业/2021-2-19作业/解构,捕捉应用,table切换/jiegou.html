@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 需求改造：需求arr = [{name:"xx",skill:"xx"},{name:"xx",skill:"xx"}] -->
+    <script>
+        var obj = [
+            {name:"cheng",age:20,skill:"vue"},
+            {name:"df",age:22,skill:"js"},
+            {name:"st",age:25,skill:"css"},
+        ]
+        var arr = []
+        for(var i = 0 ;i<obj.length;i++){
+            var {name,skill} = obj[i]
+            arr.push({
+                name,skill
+            })
+        }
+        console.log(arr)
+        </script>
+</body>
+</html>

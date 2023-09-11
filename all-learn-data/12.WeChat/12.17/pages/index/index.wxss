@@ -1,0 +1,11 @@
+.container{
+    color:red
+}
+input{
+    padding-left: 20px;
+    border: 1px solid #333;
+}
+.music{
+    width: 200px;
+    height: 200px;
+}

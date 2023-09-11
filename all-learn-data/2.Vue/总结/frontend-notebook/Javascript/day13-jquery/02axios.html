@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <script>
+        // axios是一个http的请求库
+        var url ="http://192.168.4.18:3000/search?keywords=你";
+        // axios.get(url).then(res=>{
+        //     console.log(res)
+        // })
+        axios.get("http://192.168.4.18:3000/search",{
+            params:{
+                keywords:"你"
+            }
+        }).then(res=>{
+            console.log(res)
+        })
+    </script>
+</body>
+</html>

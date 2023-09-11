@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="number" v-model.number="price">
+        <input type="number" v-model.number="count">
+        {{sum}}
+        <!-- 不建议在视图层进行数据计算 -->
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                price:3,
+                count:10
+            },
+            computed:{  //data中的值改变时触发sum函数
+                sum(){
+                    return this.price*this.count
+                }
+            }
+        })
+    </script>
+</body>
+</html>

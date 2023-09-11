@@ -1,0 +1,827 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+.hot-content img{
+    width:100px;
+    height: 100px;
+}
+/* <!-- 导航nav start --> */
+.nav {
+    height: 70px;
+    line-height: 70px;
+    box-sizing: border-box;
+    background: #242424;
+    border-bottom: 1px solid #000;
+}
+
+.nav ul {
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav ul li a {
+    color: #ccc;
+    padding: 0 19px;
+}
+
+.nav ul li:not(:last-child):hover a {
+    color: #fff;
+}
+
+.nav ul li .create {
+    padding: 5px 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+.search {
+    margin-left: 50px;
+    position: relative;
+}
+
+.search i {
+    position: absolute;
+    left: 6px;
+    top: 1px;
+}
+
+.nav ul li input {
+    width: 158px;
+    height: 32px;
+    text-indent: 2em;
+    border-radius: 15px;
+    outline: none;
+    font-size: 12px;
+}
+
+.nav ul .create:hover {
+    border: 1px solid #fff;
+}
+
+.nav ul li img {
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+/* <!-- 导航nav end --> */
+/* <!-- 目录nav-item start --> */
+.nav-item {
+    height: 34px;
+    box-sizing: border-box;
+    background-color: #C20C0C;
+    border-bottom: 1px solid #a40011;
+    font-size: 12px;
+}
+
+.nav-item ul {
+    width: 744px;
+    margin: 0 auto;
+    height: 34px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 305px;
+    visibility: visible;
+}
+
+.nav-item ul li:nth-child(1) {
+    padding-left: 10px;
+}
+
+.nav-item ul li a {
+    color: #fff;
+}
+
+.nav-item ul li {
+    height: 20px;
+    line-height: 21px;
+    padding: 0 13px;
+}
+
+.current {
+    position: relative;
+    background-color: #9B0909;
+    border-radius: 20px;
+}
+.current .sanjiao{
+    position: absolute;
+    top: -21px;
+    left: 17px;
+    width: 0px;
+    height: 0px;
+    border-top: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #9B0909;
+    
+}
+/* hover有问题 */
+/* <!-- 目录nav-item end --> */
+/* 轮播lunbo start */
+.content-big .content {
+    cursor: pointer;
+    position: relative;
+    width: 982px;
+    height: 285px;
+    margin-left: auto;
+    margin-right: auto;
+    /* overflow: hidden; */
+    /* border:1px solid #333; */
+}
+
+.content-big .content .right img {
+    position: absolute;
+    top: -2px;
+    z-index: 20;
+    right: -1px;
+    width: 253px;
+    height: 288px;
+}
+
+.content-big #list {
+    position: absolute;
+    z-index: 11;
+    border: none;
+}
+
+.content-big #list img {
+    width: 730px;
+    height: 285px;
+}
+
+.content-big .content-big {
+    height: 285px;
+}
+
+.content-big #listOut img {
+    position: absolute;
+    width: 1600px;
+    height: 170px;
+    top: 100px;
+    filter: blur(50px);
+    overflow: hidden;
+    z-index: -1;
+}
+
+.content-big #list img,
+#prev,
+#next,
+#btns {
+    position: absolute;
+}
+
+.content-big #list img:not(:first-child) {
+    display: none;
+}
+
+.content-big #prev,
+#next {
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    width: 40px;
+    height: 70px;
+    background: url("../images/icon-slides.png");
+    border: none;
+    outline: none;
+}
+
+.content-big #prev i,
+#next i {
+    color: #fff;
+    font-size: 34px;
+}
+
+.content-big #prev {
+    left: -70px;
+    background-position-x: -86px
+}
+
+.content-big #prev:hover {
+    background-position: 0;
+}
+
+.content-big #next:hover {
+    background-position-x: -43px;
+}
+
+.content-big #next {
+    right: -70px;
+    background-position-x: -125px;
+}
+
+.content-big #btns {
+    z-index: 101;
+    transform: translateX(-50%);
+    bottom: 20px;
+    left: 37%;
+}
+
+.content-big #btns .current {
+    background: orangered;
+}
+
+.content-big #btns>span {
+    cursor: pointer;
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: rgba(44, 44, 44, .3);
+    margin: -15px 10px;
+}
+
+/* lunbo end */
+/* 中间内容 start */
+.wrap-big {
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+.wrap {
+    position: relative;
+    width: 982px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.wrap .hot {
+    padding: 20px 20px 40px;
+}
+
+.wrap .hot ul {
+    overflow: hidden;
+    width: 692px;
+    height: 35px;
+    border-bottom: 2px solid rgb(196, 26, 25);
+}
+
+.wrap .hot span {
+    border-right: 1px solid #ccc;
+    padding-left: 15px;
+}
+
+.wrap .hot ul li {
+    float: left;
+    margin: 2px 8px;
+}
+
+.wrap .hot ul li i {
+    color: rgb(196, 26, 25);
+}
+
+.wrap .hot ul li a {
+    color: rgb(102, 102, 102);
+    font-size: 12px;
+}
+
+.wrap .hot ul li:nth-child(1) a {
+    color: #000;
+    font-size: 18px;
+}
+
+.wrap .hot ul .more {
+    float: right;
+    margin-right: 0px;
+}
+
+.hot-content {
+    position: relative;
+    width: 729px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+}
+em{
+    font-style: normal;
+}
+.hot-content>div{
+    position: relative;
+}
+.opcity{
+    position: absolute;
+    bottom: 49px;
+    left: 0px;
+    width: 140px;
+    height: 27px;
+    line-height: 27px;
+    color: #fff;
+    background-color: #999;
+    opacity: .6;
+    padding: 0 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.opcity .icon-bofang1{
+    float: right;
+}
+.hot-content>div {
+    width: 140px;
+    font-size: 14px;
+}
+
+.hot-content .hot-content-one {
+    margin-left: -41px;
+}
+
+.wrap a {
+    color: #000;
+}
+
+.hot-content .hot-content-one p a:hover {
+    text-decoration: underline;
+}
+
+/* 个性化推荐 start */
+.wrap .recommend {
+    padding: 20px 20px 40px;
+}
+
+.wrap .recommend-content {
+    width: 729px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.recommend-content>div {
+    width: 140px;
+    font-size: 14px;
+    position: relative;
+}
+.recommend-content>div .opcity{
+    position: absolute;
+    left: 0px;
+    bottom: 89px;
+}
+.recommend-content .recommend-content-one {
+    margin-left: -41px;
+}
+
+.recommend-content>div p a {
+    color: #000;
+    padding-top: 5px;
+}
+
+.recommend-content p:last-child {
+    color: #999;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.wrap .recommend ul {
+    width: 692px;
+    height: 35px;
+    border-bottom: 2px solid rgb(196, 26, 25);
+}
+
+/* 新碟上架 start */
+.wrap .putaway,
+.list {
+    padding: 20px 20px 40px;
+}
+.wrap .putaway ul,
+.list ul {
+    overflow: hidden;
+    width: 692px;
+    height: 35px;
+    border-bottom: 2px solid rgb(196, 26, 25);
+}
+
+.wrap .putaway ul li,
+.list ul li {
+    float: left;
+    margin: 2px 8px;
+}
+.wrap .putaway ul .more,
+.list ul .more {
+    float: right;
+    margin-right: 0px;
+}
+
+.wrap .putaway ul li i,
+.list ul li i {
+    color: rgb(196, 26, 25);
+}
+.putaway-content{
+    box-sizing: border-box;
+    height: 184px;
+    width: 676px;
+    margin-top: 20px;
+    padding-left: 16px;
+    padding-top: 20px;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.putaway-content-one{
+    width: 120px;
+    height: 120px;
+    font-size: 12px;
+    margin-top: -25px;
+    margin-left: 10px;
+}
+/* 榜单 start */
+.list .list-content {
+    height: 492px;
+    width: 689px;
+    margin-top: 20px;
+    padding-left: 1px;
+    border: 1px solid#ccc;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.list .list-content>div{
+    width: 229px;
+    border-right: 1px solid #ccc;
+    position: absolute;
+    z-index: 1;
+}
+.list .list-content>div:nth-child(1){
+    left: 21px;
+}
+.list .list-content>div:nth-child(2){
+    left: 251px;
+}
+.list .list-content>div:nth-child(3){
+    left: 482px;
+    border-right: none;
+    /* width: 230px; */
+}
+.list .list-content-one .list-content-one-top {
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0 20px 19px;
+    /* margin-bottom: 20px; */
+    margin-right: -4px;
+    background-color: rgb(244, 244, 244);
+}
+
+.list .list-content-one .list-content-one-top .right {
+    float: left;
+    width: 116px;
+    margin: -95px 0 0 110px;
+    
+}
+.list .list-content-one .list-content-one-top img {
+    float: left;
+    box-shadow: 2px 2px 3px -1px #000;
+}
+
+.list-content-one .list-content-one-bottom ol li {
+    overflow: hidden;
+    width: 229px;
+    margin-left: 0px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 13px;
+}
+
+.list-content-one .list-content-one-bottom ol li span {
+    float: left;
+    padding-left: 35px;
+}
+
+.list-content-one .list-content-one-bottom ol li a {
+    float: right;
+    margin-right: 115px;
+}
+
+.list-content-one .list-content-one-bottom ol li:last-child a {
+    margin-right: 20px;
+    font-size: 12px;
+}
+
+.list-content-one .list-content-one-bottom ol li:nth-child(even) {
+    background-color: rgb(244, 244, 244);
+
+}
+
+.list-content-one .list-content-one-bottom ol li:nth-child(odd) {
+    background-color: rgb(232, 232, 232);
+}
+
+/* wrap-right 右边start */
+.wrap a:hover {
+    text-decoration: underline;
+}
+
+.wrap .wrap-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 250px;
+    height: 1543px;
+    border-left: 1px solid #ccc;
+}
+
+/* wrap-right-one */
+.wrap-right-one {
+    background: #f5f5f5;
+}
+
+.wrap-right-one .top {
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.wrap-right-one .top .top-left {
+    border: 1px solid #ccc;
+    padding-left: 2px;
+    padding-top: 2px;
+    float: left;
+    width: 82px;
+    height: 82px;
+}
+
+.wrap-right-one .top img {
+    width: 80px;
+    height: 80px;
+}
+
+.wrap-right-one .top .top-right {
+    float: left;
+    margin-left: 110px;
+    margin-top: -100px;
+    padding-top: 3px;
+}
+
+.wrap-right-one .top .lv a {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 0px 8px;
+    color: #ccc;
+}
+
+.wrap-right-one .top .top-right button {
+    margin-top: 5px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: rgb(59, 138, 213);
+    color: #fff;
+    outline: none;
+    border: none;
+    box-shadow: 1px 1px 2px 0px #000;
+}
+
+.wrap-right-one .bottom {
+    padding: 20px;
+    padding-top: 0;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.wrap-right-one .bottom a {
+    display: inline-block;
+    width: 26px;
+    height: 39px;
+    padding: 5px 10px;
+}
+
+.wrap-right-one .bottom a>span:last-child {
+    font-size: 12px;
+}
+
+.wrap-right-one .bottom a:nth-child(2) {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 0 15px;
+}
+
+/* 入住歌手 */
+.wrap-right-two {
+    border-top: 1px solid #ccc;
+    padding: 20px;
+}
+
+.wrap-right-two .singer-top {
+    overflow: hidden;
+    width: 210px;
+    border-bottom: 1px solid #ccc;
+}
+
+.wrap-right-two .singer-top span {
+    float: left;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.wrap-right-two .singer-top a {
+    float: right;
+    font-size: 14px;
+    padding-bottom: 2px;
+}
+
+.wrap-right-two .singer-content {
+    margin-top: 20px;
+}
+
+.wrap-right-two .singer-content .singer-content-one {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    width: 210px;
+    height: 62px;
+}
+
+.wrap-right-two .singer-content .singer-content-one img {
+    float: left;
+    margin-right: 14px;
+}
+
+.wrap-right-two .singer-content .singer-content-one h4,
+p {
+    float: left;
+    padding: 3px 2px;
+}
+
+.wrap-right-two .singer-content .singer-content-one p {
+    font-size: 12px;
+}
+
+.wrap-right-two .singer-content button {
+    margin-top: 10px;
+    margin-left: 0px;
+    border-radius: 4px;
+    width: 210px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 5px 0;
+}
+
+/* 热门主播 */
+.wrap-right-three {
+    padding: 24px;
+}
+
+.wrap-right-three .anchor {
+    width: 210px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+
+.wrap-right-three .anchor-content-one {
+    overflow: hidden;
+    padding-top: 18px;
+    height: 50px;
+}
+
+.wrap-right-three .anchor-content-one img {
+    float: left;
+    vertical-align: middle;
+}
+
+.wrap-right-three .anchor-content-one p {
+    float: left;
+    padding-top: 0;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+/* wrap-right 右边end */
+/* 中间内容 end */
+/* footer start */
+.footer {
+    border-top: 1px solid #ccc;
+    font-size: 12px;
+    background-color: #f2f2f2;
+    height: 172px;
+}
+
+.footer-content {
+    position: relative;
+    width: 982px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.footer-content .footer-left {
+    float: left;
+    width: 520px;
+    padding-top: 15px;
+    line-height: 24px;
+}
+
+.footer-content .footer-left .link {
+    margin-left: 4px;
+}
+
+.footer-content .footer-left .fourth img {
+    width: 14px;
+    height: 14px;
+    padding: 0 5px;
+    vertical-align: middle;
+}
+
+.footer-content a {
+    color: #999;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-content .footer-left span {
+    padding: 0 5px;
+    color: #999;
+}
+
+/* 雪碧图start */
+.footer-right {
+    float: right;
+    width: 420px;
+    margin-top: 50px;
+}
+
+.footer-right>li {
+    padding: 0 15px;
+}
+
+.footer-right-wrap {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.footer-right-wrap a {
+    position: absolute;
+    width: 50px;
+    height: 45px;
+    border-radius: 50%;
+    background: url(../images/foot_enter_new.png) no-repeat;
+    top: 50%;
+    ;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: 110px 552px;
+    margin: 0 auto;
+}
+
+.footer-right-wrap .studio {
+    background-position: -63px -456.5px;
+}
+
+.footer-right-wrap .user {
+    background-position: -63px -101px;
+}
+
+.footer-right-wrap .single-musician {
+    background-position: 0 0;
+}
+
+.footer-right-wrap .admire {
+    background-position: -60px -50px;
+}
+
+.footer-right-wrap .vedio {
+    background-position: 0 -101px;
+}
+
+.footer-right-wrap span {
+    position: absolute;
+    top: 53px;
+}
+
+/* 固定定位 start */
+.scroll {
+    position: fixed;
+    right: 200px;
+    bottom: 170px;
+    width: 44px;
+    height: 44px;
+}

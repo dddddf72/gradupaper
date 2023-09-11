@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" id="psw" placeholder="请输入6位密码">
+    <script>
+        var psw = document.getElementById("psw")
+        psw.onkeyup=function(){
+            if(event.keyCode==13){
+                var value=this.value.trim();
+                var reg=/^[\d]{6}$/
+                console.log(reg.test(value))
+            }
+        }
+    </script>
+</body>
+</html>

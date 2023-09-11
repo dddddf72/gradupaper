@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="like">通过好评数排序</button>
+    <button id="price">通过价格排序</button>
+    <script>
+        var like = document.getElementById("like");
+        var sales = [
+            { name: "张三", like: 60, distance: 1000, price: 10 },
+            { name: "张三", like: 30, distance: 100, price: 40 },
+            { name: "张三", like: 20, distance: 500, price: 6 },
+        ]
+        /* 升序 */
+        function addOrder(arr, value) {
+            if (Array.isArray(arr)) {
+                var res = arr.sort((a, b) => {
+                    return a[value] - b[value];
+                })
+                return res;
+            }else{
+                return null;
+            }
+
+        }
+        like.onclick = function () {
+            console.log(addOrder(sales, "like"))
+        }
+        price.onclick = function () {
+            console.log(addOrder(sales, "price"))
+        }
+
+
+    </script>
+</body>
+
+</html>

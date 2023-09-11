@@ -1,0 +1,18 @@
+.item{
+    width: 200rpx;
+}
+.item image{
+    width: 200rpx;
+    height: 270rpx;
+}
+.item .star{
+    width: 20rpx;
+    height: 20rpx;
+}
+.star{
+    display: flex;
+}
+.star image{
+    width: 50rpx;
+    height: 50rpx;
+}

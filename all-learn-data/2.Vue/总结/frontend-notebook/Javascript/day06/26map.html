@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [1,2,3];
+        /* 
+        1.数组的每一项是基础(简单)类型,执行map不会改变数组原来的结构
+        2.数组的每一项是复杂类型{object},那么执行map方法会改变原来的数据结构
+         */
+        var res = arr.map(item=>{
+            return item*3;
+        })
+        console.log(arr);
+        console.log(res);
+
+
+        var obj = [{name:"li",age:10},{age:"zhang",age:11}];
+        var result  = obj.map(item=>{
+            return item.age = 0;
+        })
+        console.log(result);
+        console.log(obj)
+    </script>
+</body>
+</html>

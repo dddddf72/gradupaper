@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="item">hello world</div>
+        <div>div</div>
+    </div>
+    <!-- find  获取父元素下的子元素-->
+    <script>
+        var item = $("#app").find('.item');
+        var i =  $("#app div").filter(".item");
+        console.log(i)
+        debugger
+        console.log(item)
+    </script>
+</body>
+</html>

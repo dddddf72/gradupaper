@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt">
+    <script>
+        var arr = [
+            {name:"你是谁",id:1102},
+            {name:"圈住你",id:1102},
+            {name:"hello",id:1102},
+            {name:"怪你",id:1102},
+            {name:"world",id:1102}
+        ]
+        // 1.回车获取关键字
+        // 2.使用关键字对数据进行查询得到新的数组
+        // 3.在控制台输出新的数组
+        // 4.得到的数组，字符长度超过3位，以点结尾slice
+        var txt = document.getElementById("txt");
+        txt.onkeydown = function(event){
+            if(event.keyCode==13){
+                var content = this.value;
+                //去重复和空值
+                if(content){
+                    // console.log(content);
+                    var res = arr.filter(item=>{
+                    return item.name.includes(content);
+            })
+                // for(var i in res){
+                //     var str =res.join();
+                res.map(item=>{
+                    if(item.name.length>3){
+                      return    item.name = item.name.slice(0,3)+"..."
+                    }
+                    
+                    // return item["name"]=(item.name.length>3)? item.name.slice
+                })
+                console.log(res);
+                }
+
+                }
+               
+            }
+           
+    </script>
+</body>
+</html>

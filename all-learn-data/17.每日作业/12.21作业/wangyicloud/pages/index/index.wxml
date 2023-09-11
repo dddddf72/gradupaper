@@ -1,0 +1,18 @@
+<form bind:submit="handleSubmit">
+<view class="searchbar">
+   <input type="text" bindinput="bindinput" class="searchtext" value="" name="keywords"  placeholder="成都"></input>
+    <button class="searchbtn" form-type="submit" style="width:80px;height:40px;padding:0;line-height:40px;margin:0 15px;display:line-block">搜索</button>
+</view>
+</form>
+
+<image src="../../images/放大镜.png" class="fdj"></image>
+
+<view class="content" wx:for="{{result}}" wx:key="item">
+    <text class="xuhao">{{index+1}}</text>
+    <image class="imgpic" src="{{item.picUrl}}"></image>
+    <view class="zhuanar">
+    <text class="zhuanji">{{item.name}}</text>
+    <text class="artist">{{item.artist.name}}</text>
+    </view>
+    <view><image data-id="{{item.id}}" bindtap="handleMusic" class="music" src="{{playStates[item.id]?'/images/play.png':'/images/pause.png'}}"></image></view>
+</view>

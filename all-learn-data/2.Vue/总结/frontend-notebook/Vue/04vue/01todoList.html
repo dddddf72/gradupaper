@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <script>
+        var lists =[{name:"html",state:false}]
+        /* localStorage  特点:只能存简单的值类型 */
+        var res = JSON.stringify(lists);
+        localStorage.setItem("todo","good");
+        var result = localStorage.getItem("todo");
+        var reg = /^[{\[].+[}\]]$/
+        /* 
+        {...}
+        [...]
+         */
+        console.log(reg.test(res));
+    </script>
+</body>
+</html>

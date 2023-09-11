@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="app">
+        导演: 弗兰克·德拉邦特 Frank Darabont&nbsp;&nbsp;&nbsp;主演: 蒂姆·罗宾斯 Tim Robbins /...<br>
+        1994&nbsp;/&nbsp;美国&nbsp;/&nbsp;犯罪 剧情
+    </p>
+    <script>
+        // var arr = [1994,"美国","犯罪 剧情"]
+        /* 1.获取内容,去除字符串前后尾的空格 */
+        var txt = document.getElementById("app").innerHTML.trim();
+        /* 2. 通过<br>标签分割字符串为数组,得到数组最后一项,去除前后位空格
+           3. 通过/分割字符为数组
+        */
+        var arr = txt.split("<br>")[1].trim().split("/");
+        /* 4.去除数组中每一项 &nbsp; */
+        var reg = /&nbsp;/g
+        var res = arr.map(item=>item= item.replace(reg,""));
+        console.log(res)
+        
+    </script>
+</body>
+</html>

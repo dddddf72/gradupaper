@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        栈数据结构的特点:后进先出  例子水杯,谷仓,米袋就是栈的数据结构
+        1.push
+        2.pop  //将栈顶的数据出栈
+        3.peek 获取栈顶的数据
+        4.isEmpty判断栈是否为空
+        5.size返回栈的长度
+         */
+        /* location路由 是以栈的数据结构去保存路由的 */
+        class Stack{
+            constructor(){
+                this.items = [];
+            }
+            push(value){
+                this.items.push(value)
+            }
+            pop(){
+                return this.items.pop();
+            }
+            peek(){
+                return this.items[this.items.length-1]
+            }
+            isEmpty(){
+                return this.items.length==0;
+            }
+            size(){
+                return this.items.length;
+            }
+        }
+        var s = new Stack();
+        s.push(8);
+        s.push(9);
+        console.log(s.isEmpty())
+    </script>
+</body>
+</html>

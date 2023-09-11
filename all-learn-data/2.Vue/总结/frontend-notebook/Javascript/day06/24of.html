@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* for-of  for in */
+        var arr = [1,2,3];
+        for(var i of arr){
+            // console.log(i)
+        }
+
+        // map  可以改变数组每一个项,得到一个新的值
+        var res = arr.map(item=>{
+           return item*2
+        })
+        console.log(arr);
+        console.log(res);
+    </script>
+</body>
+</html>

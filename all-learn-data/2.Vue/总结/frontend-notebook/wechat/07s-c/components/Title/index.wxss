@@ -1,0 +1,14 @@
+.title{
+    line-height: 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title image{
+    width:30rpx;
+    height: 30rpx;
+}
+.btn{
+    margin:0 !important;
+    color:#999 !important;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+   <script>
+        var p = "<p>hello world</p>";
+        var http = "你的名字"
+        //字符串拼串，直接修改元素内容
+        var p = `<p>${http}</p>`;
+        $("#app").append(p) //在div后面添加p标签，内容为你的名字
+        document.getElementsByTagName("body")[0].append(p)//输出为<p>你的名字</p>
+   </script>
+        
+</body>
+</html>

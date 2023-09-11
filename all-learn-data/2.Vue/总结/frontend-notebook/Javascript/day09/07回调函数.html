@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 回调函数:就是将函数作为参数,传递给另一个函数
+        场景:一般在异步调用中使用
+         */
+         /* 
+         作用:
+         1.将函数内部的值返回到外部
+         2.取代了return语句
+          */
+        var show= function(res){
+            console.log(res);
+        }
+        function go(callback){
+            var a = 10;
+            callback(a);
+        }
+        go(show);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+       ++放前面先自增,后运算
+       ++放后面先运算,再自增
+        */
+        var a = 10;
+        a++;   //a=11
+        b = ++a + 2;  //a=12  b = 14
+        c = ++b + a++ + 4; // b =15  c= 31 a =13
+        console.log(a);  // 13
+        console.log(b);  // 15
+        console.log(c);
+    </script>
+</body>
+
+</html>

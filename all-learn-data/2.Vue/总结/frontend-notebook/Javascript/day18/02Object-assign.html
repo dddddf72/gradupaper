@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Object.assign可以在原型上添加多个属性 */
+         class Person{
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            sayName(){
+                console.log(this.name);
+            }
+            
+        }
+        Object.assign(Person.prototype,{
+            sayAge(){
+                console.log(this.age)
+            },
+            show(){
+                console.log("show")
+            }
+        })
+        var p = new Person("cheng",18);
+        console.log(p.constructor ==  Person)
+    </script>
+</body>
+</html>

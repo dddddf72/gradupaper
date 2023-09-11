@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* set--类数组对象,但是里面的值不重复
+        ...  展开语法也使用Set对象
+         */
+         var arr = [1,2,1,4,5,6,4];
+        var s = new Set(arr);
+        console.log(s)
+        console.log([...s]);
+    </script>
+</body>
+</html>

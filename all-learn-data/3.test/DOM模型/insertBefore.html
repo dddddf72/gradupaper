@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="app">
+        <li>html</li>
+        <!-- 在此处添加vue -->
+        <li id="js">javascript</li>
+
+    </ul>
+    <script>
+         var app =document.getElementById("app");
+         var js= document.getElementById("js");
+        var li = document.createElement("li");
+        li.innerHTML="vue";
+        app.insertBefore(li,js);
+    </script>
+</body>
+</html>

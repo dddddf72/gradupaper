@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+        .parent div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .html{
+            background-color: red;
+            z-index: 99;
+        }
+        .css{
+            background-color: yellow;
+        }
+        li{
+            cursor: pointer;
+        }
+        .current{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="current">html</li>
+        <li>css</li>
+    </ul>
+    <div class="parent">
+        <div class="html">html</div>
+        <div class="css">css</div>
+    </div>
+    <script>
+        //声明lis存所有需要点击的li
+        var lis = document.getElementsByTagName("li");
+        //声明divs存所有需要切换的div
+        var divs = document.querySelectorAll(".parent div");
+        //循环遍历lis
+        for( let i = 0 ; i<lis.length ; i++ ){
+            //给lis自定义下标,作用于div切换
+            lis[i].index=i;
+            //给所有li设置点击函数
+            lis[i].onclick=function(){
+                //循环遍历所有li,删除li具有的current类
+                for( let i = 0 ; i<lis.length ; i ++ ){
+                    lis[i].classList.remove("current");
+                }
+                //向当前点击的li添加current类
+                this.classList.add("current");
+                //循环遍历所有div，将所有div设置为隐藏状态
+                for( let i = 0 ; i<divs.length ; i++ ){
+                    divs[i].style.display="none"
+                }
+                //li和div数量相同，其对应下标相同，顾使用对应下标显示当前点击的li所对应的div
+                divs[i].style.display = "block"
+            }
+        }
+    </script>
+</body>
+</html>

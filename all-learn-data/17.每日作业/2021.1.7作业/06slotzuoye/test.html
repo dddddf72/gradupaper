@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var lists = {
+        //     newMusic:{
+        //         title:"最新歌曲",
+        //         iconUrl:"/images/zuixin.png",
+        //         res:[]
+        //     },
+        //     hotMusic:{
+        //         title:"热门音乐",
+        //         iconUrl:"/images/remen.png",
+        //         res:[]
+        //     },
+        //     dj:{
+        //         title:"主播电台",
+        //         iconUrl:"/images/zhubo.png",
+        //         res:[]
+        //     }
+        // }
+        //
+
+        function muti(num){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                resolve(num*num)
+            },1000)
+            })
+        }
+        // var arr = [2,3,4];
+        // (async()=>{
+        //     arr.forEach(async(item)=>{      //forEach只能处理同步的代码，是一个同步的循环
+        //         var res = await muti(item)
+        //         console.log(res)
+        //     })
+        // })();
+
+        var arr= [2,3,4];
+
+        (async()=>{
+            for(let value of arr){
+                let res = await muti(value)
+                console.log(res)
+            }
+        })();
+
+
+
+    </script>
+</body>
+</html>

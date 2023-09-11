@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 函数在对象中作为方法的语法，下为三种
+        // 保持语法风格的统一
+        var obj = {
+            name : "zhang",
+            // 下为es6的新写法
+            sayname(){
+                console.log(this.name)
+            },
+            sayage:()=>{
+                console.log(18)
+            },
+            sayskill:function(){
+                console.log("javascript")
+            }
+        }
+    </script>
+</body>
+</html>

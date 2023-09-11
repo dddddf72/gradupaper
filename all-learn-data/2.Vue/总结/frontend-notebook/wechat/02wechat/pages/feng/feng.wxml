@@ -1,0 +1,7 @@
+<view class="container">
+    <view class="item" wx:for="{{playlists}}">
+        <image src="{{item.coverImgUrl}}"></image>
+        <view class="name">{{item.name}}</view>
+    </view>
+</view>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .current{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        add();  addClass();
+        remove();  removeClass();
+     -->
+    <p id="app">hello world</p>
+    <button id="btn">移除class</button>
+    <script>
+        var app = document.getElementById("app");
+        var btn =  document.getElementById("btn");
+        app.onclick = function(){
+            this.classList.add("current")
+        }
+        btn.onclick =  function(){
+            app.classList.remove("current")
+        }
+    </script>
+
+</body>
+</html>

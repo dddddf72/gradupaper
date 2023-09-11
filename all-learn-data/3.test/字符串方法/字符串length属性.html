@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = "hello";
+        console.log(str.length)
+        
+var s = "故事的结果，心上人";
+
+function handleStr(value){
+    if(typeof value =="string"){
+        if(value.length>5){
+          return value.slice(0,5)+"..."
+        }
+        return value;
+    }else{
+      return null;
+    }
+}
+console.log(handleStr(s));
+    </script>
+</body>
+</html>

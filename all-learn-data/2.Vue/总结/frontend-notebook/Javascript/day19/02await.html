@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* await   阻塞线程  会从异步函数中跳出来,优先执行同步代码 */
+        async function show(){
+            console.log(1);
+            var res = await 100;
+            console.log(res);
+        }
+        show();
+        console.log(2);
+        setTimeout(() => {
+            console.log(3)
+        }, 1000);
+        /* 
+        1
+        2
+        100
+        3
+         */
+    </script>
+</body>
+</html>

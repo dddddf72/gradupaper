@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.增加 push
+        //声明数组arr
+        var arr = [1,2,3,4];
+        // 声明数组b
+        var b = [2,3,4];
+        // 将5加到数组arr中
+        arr.push(5)
+        //输出数组arr
+        // console.log(arr); //输出为 [1,2,3,4,5]
+        //尝试将arr数组添加到b数组中
+        b.push(arr);
+        console.log(b); //输出为 [2,3,4,Array[5]]  Array[5]中为[1,2,3,4,5] 因为此时arr数组中使用了push(5)
+        
+        // 需求【1，2，3，4，5，6，7】
+        //往arr数组中推入多个值
+        arr.push(5,6,7) 
+        console.log(arr) //输出为[1,2,3,4,5,5,6,7]  
+        // 总结push 不能拼接两个数组  push特点；可以添加多个值，不能拼接数组
+    </script>
+</body>
+</html>

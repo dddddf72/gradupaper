@@ -1,0 +1,11 @@
+<view class="out">
+<view wx:for="{{data}}">
+<image
+src="{{item.coverImgUrl}}">
+</image>
+<text>
+{{item.name}}
+</text>
+</view>
+</view>
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>机考示例4</title>
+</head>
+<body>
+    <!-- 数组内容求和 -->
+        <script>
+          // 方法1
+          var a = [1,2,3,4];
+          var sum = 0 ; 
+          for(var i = 0 ; i < a.length ; i++){
+              sum = sum+a[i];
+          }
+          console.log(sum)
+          // 方法2
+          console.log(a.reduce((a,b)=>{
+            return a+b;
+          }))
+        </script>
+</body>
+</html>

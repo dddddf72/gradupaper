@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <script>
+        var     arr = [];
+        var input = document.getElementById("input");
+        input.onkeyup =function(){
+        if(event.keyCode==13){
+            arr.push(this.value)
+            console.log(arr)
+        }
+       
+    }
+    // ^\s+  
+    var str = "   hello world   ";
+    // var reg = /^\s+/;   //替换开头的空格
+    var reg = /^\s+ | \s+$/g ; //替换开头的空格和结尾的空格全局替换
+    console.log(str)
+    console.log(str.replace(reg,""))
+    </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+sst-september.work //主域名
+www.sst-september.work      
+aaa.sst-september.work
+bbb.sst-september.work
+//www.aaa. 子域名
+//https,http协议
+域名组成：//协议，子域名，主域名，端口号，请求的资源为你教案

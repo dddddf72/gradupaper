@@ -1,0 +1,9 @@
+<view wx:for="{{result}}">
+	<image class="avatorurl" src="{{item.avatorUrl}}"></image>
+</view>
+<image
+ bindtap="clickplay"
+ class="play"
+ src="{{playstate[result.id]?'/images/play.png':'/images/pause.png'}}"
+></image>
+

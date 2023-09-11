@@ -1,0 +1,5 @@
+const Koa = require('koa')
+const app = new Koa()
+const initManage = require('./config')
+initManage(app)
+app.listen(4000)

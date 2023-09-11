@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr =  [2,53,674,12]
+        var num = arr[0]
+        for(let i =0;i<arr.length;i++){
+            if(num<arr[i]){
+                num = arr[i]
+            }
+        }
+        console.log(num)
+        console.log(Math.max(...arr))
+
+        var str = [1,2,3,4]
+        var num = 0 ;
+        for(let i =0;i<str.length;i++){
+            num = num+str[i]
+        }
+        console.log(num)
+        console.log(str.reduce((a,b)=>{return a+b}))
+    </script>
+</body>
+</html>

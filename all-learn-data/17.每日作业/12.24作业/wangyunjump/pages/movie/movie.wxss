@@ -1,0 +1,26 @@
+.movieout{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,250rpx);
+    padding:25rpx 0;
+    justify-items: center;
+    align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.content image{
+    width: 200rpx;
+    height: 300rpx;
+}
+.contenttxt{
+  display: flex;
+}
+.contenttxt image{
+    
+    width: 20rpx;
+    height: 20rpx;
+}
+.raiting{
+    margin-left: 20rpx;
+}

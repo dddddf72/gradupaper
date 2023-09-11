@@ -1,0 +1,3 @@
+<view class="container">
+  <v-item wx:for="{{book}}" wx:key="item" data="{{item}}"></v-item>
+</view>

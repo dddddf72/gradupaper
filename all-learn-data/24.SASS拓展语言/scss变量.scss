@@ -1,0 +1,12 @@
+// scss-css关系类似于ts-js
+$primaryColor:"#ff2d51";
+div{
+    color:$primaryColor;
+}
+div{
+    color:red;
+    p{
+        width: 100px;
+        height: 100px;
+    }
+}

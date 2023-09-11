@@ -1,0 +1,7 @@
+1.使用promise ,async ,await    jqAJ改造网易云首页的两个HTTP请求
+/banner
+/cat=华语
+
+2.  23个题的概念弄清楚，并写段代码表达
+
+3.数组方法，字符串方法

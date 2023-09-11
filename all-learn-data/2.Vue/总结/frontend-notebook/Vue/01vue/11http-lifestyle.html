@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+    <script>
+        /* vue-ui框架 */
+        /* created,mounted,updated,destoryed */
+        new Vue({
+            el:"#app",
+            data:{
+                movies:[]
+            },
+            mounted(){
+               $.ajax({
+                   url:"http://192.168.4.20:8000/top250"
+               }).then(res=>{
+                   console.log(res.result)
+               })
+            }
+        })
+    </script>
+</body>
+</html>

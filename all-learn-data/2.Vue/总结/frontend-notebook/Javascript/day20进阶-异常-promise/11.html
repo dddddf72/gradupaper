@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        then,catch
+        1.得到的结果都是Promise
+        2.正常情况状态都是resolved,如果遇到错误状态变成rejected
+         */
+        var p = Promise.reject(100).catch(res=>{
+            console.log(res)
+        })
+        p.catch(()=>{
+            console.log(200)
+        }).then(()=>{
+            console.log(300)
+            throw "err"
+        }).catch(()=>{
+            console.log(400);
+
+        }).then(()=>{
+            console.log(500)
+        })
+        //  100  300  400 500
+    </script>
+</body>
+</html>

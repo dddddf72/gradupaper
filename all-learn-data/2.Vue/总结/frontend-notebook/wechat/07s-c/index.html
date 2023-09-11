@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="timer">3</div>
+    <script>
+        var num = 3;
+        function show(){
+            setTimeout(()=>{
+                num--;
+                if(num>=0){
+                    console.log(num)
+                    document.getElementById("timer").innerHTML = num;
+                    show();
+                }
+            },1000)
+        }
+        show()
+        // 2
+        //1
+        //0
+    </script>
+</body>
+
+</html>

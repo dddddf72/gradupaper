@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="app">
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
+    <script>
+        // childNodes--包含所有的子节点(不管文本还是元素都包含)
+        // children  --只会获取子节点
+        var app =  document.getElementById("app");
+        var childs = app.childNodes;
+        var children = app.children;
+        console.log(childs)
+        console.log(children)
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+1-1 选择题
+1、在css选择器中，优先级排序正确的是( D )
+A、id选择器>标签选择器>类选择器
+B、标签选择器>类选择器>id选择器
+C、类选择器>标签选择器>id选择器
+D、id选择器>类选择器>标签选择器
+2、下列定义的 css 中，哪个权重是最低的？（ C ）
+A、#game .name
+B、#game .name span
+C、#game div
+D、#game div.name
+3、问一份标准的HTML文档有哪几个必须的HTML标签？（ABCD ）多选题
+A、<html>
+B、<head>
+C、<title>
+D、<body>
+4、JavaScript中window对象的子对象不包含以下哪个对象？（D ）
+A. document   B. screen   C. history   D. message
+5、var arr = [];typeof arr 的结果是（ C ）
+A、array
+B、function
+C、object
+D、undefined
+6、以下js操作Array的方法中不能添加元素的是：（ B ）
+A、push
+B、pop
+C、unshift
+D、splice
+7、下列哪些会返回false（ ABC ）
+A、null
+B、undefined
+C、0
+D、"0"
+8、js数组的方法中，哪些方法不能改变自身数组（ B ）
+A、splice
+B、concat
+C、sort
+D、pop
+1-2  简答题
+1、简述web标准以及w3c规范
+标签字母要小写
+标签要闭合
+标签不能随意嵌套
+尽量使用外链CSS样式表和js脚本，结构、表现和行为层分离
+2、js中有哪些事件
+鼠标事件：
+    onClick(鼠标单击)，ondbclick(鼠标双击)，
+    onmousedown(鼠标按下未抬起)，onmouseup(鼠标抬起)，
+    onmousemove(鼠标移动)，onmouseover(鼠标移入)，onmouseout(鼠标移出)，
+    onmouseenter(鼠标移入)，onmouseleave(鼠标移出)
+    onmouseover与onmouseenter的区别：前者若有子级元素，它会把事件传递给子级元素,而后者不会。
+键盘事件：
+    onkeydown(键盘按下，键盘未抬起事件会一直触发)
+    onkeyup(键盘抬起)
+    onkeypress(键盘按下数字键货子母键触发，功能键除外(上下左右，ctrl，shift，alt))
+焦点事件：
+    onfocus(有焦点的元素获取到焦点时触发，用tab键也会触发这个事件)
+    onblur(有焦点的元素失去焦点时触发)
+输入框有关的: 
+        onchange(输入框内容改变时触发）  
+        onsubmit(事件在表单提交时触发)
+窗口有关的: 
+        onresize (窗口大小改变的时候触发)
+    onscroll (窗口滚动时触发)
+    onload  (页面在加载完毕之后才会触发)
+3、数组常用的方法有哪些
+增加：push  unshift concat splice
+删除：pop shift splice
+修改：splice
+查询：arr[index]  indexOf slice  includes
+遍历：forEach  of  map  some  evey findIndex find filter
+其他方法：join sort reverse reduce
+4、什么是声明提前
+JS在执行代码时，会将所有用var声明的变量，放置在作用域的顶层集中创建，赋值会留在原地
+5、js有哪几种情况为false
+NaN,"",undefined,0,null
+6、字符串常用的方法有哪些
+增加: concat
+查询：slice substr substring charAt includes indexOf search match
+其他方法： split replace trim 
+1-3 代码题
+var a = true;
+var c = true-"13"+"false";
+console.log(c)  // -12false
+function go(x,y){
+  console.log(x+y)
+}
+go(1);   // NaN
+var name = "window";
+var obj = {
+  name:"chengchao",
+  age:18,
+  sayName(){
+    console.log(this.name);
+  }
+}
+obj.sayName();   // chengchao

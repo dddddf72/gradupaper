@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易云音乐11.12</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2149345_pfnsapvsjr.css">
+    <script src="lib/jquery-3.2.1.js"></script>
+    <style>
+        .icon-jiantou{
+            color: red;
+            font-size: 14px;
+        }
+
+       #volet_clos {
+        top: 755px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        } 
+
+    .volet {
+        
+        width: 250px;
+        padding: 10px;
+        background:linear-gradient(to bottom,rgb(55,55,55),rgb(35,35,35));
+         color: #fff;
+         width: 100%;
+         }
+    /* 初始定位 */
+    .volet {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        /* 应为705px */
+        transition: all .5s ease-in;
+        }   
+
+        /* #volet a.fermer {
+            display: none;
+            } */
+
+    /* #volet:hover a.fermer {
+        display: block;
+        }
+    #volet:hover a.ouvrir {
+        display: none;
+        } */
+
+
+        /* 设置弹出到哪个位置 */
+    #volet_clos:hover .volet {
+        left: 0px;
+        top: -56px;
+        }
+
+
+    .volet a.ouvrir,.volet a.fermer{
+        position: absolute;
+        right: 0;
+        top: -42px;
+        padding: 10px 25px;
+        background: #555; 
+        color: #fff; 
+        text-decoration: none;
+        text-align: center;
+        width: 120px;
+          }
+
+          .current{
+              top: -56px;
+          }
+
+          .icon-yduixiayiqu{
+            margin-left: 10px;
+            font-size: 25px;
+            color: gray;
+            cursor: pointer;
+          }
+
+          .icon-yduixiayiqu:hover{
+              /* border-radius: 50%; */
+                color: #fff;
+                filter: blur(.5px);
+          }
+
+          .icon-yduishangyiqu{
+            font-size: 25px;
+            color: gray;
+            cursor: pointer;
+          }
+
+          .icon-yduishangyiqu:hover{
+            /* border-radius: 50%; */
+                color: #fff;
+                filter: blur(.5px);
+          }
+
+          #bofang{
+            cursor: pointer;
+              margin-left: 10px;
+            font-size: 25px;
+            color: #fff;
+          }
+
+          #bofang:hover{
+              color: #fff;
+            filter: blur(.5px);
+          }
+
+          .volet-center{
+              position: relative;
+              width: 1000px;
+              height: 40px;
+              line-height: 40px;
+              margin-left: auto;
+              margin-right: auto;
+              
+          }
+
+          .yinle{
+              overflow: hidden;
+              cursor: pointer;
+              position: absolute;
+              top: 50%;
+              left: 120px;
+              transform: translate(0,-50%);
+              display: inline-block;
+              width: 40px;
+              height: 40px;
+              background: url(images/音乐.png) no-repeat;
+              background-size: cover;
+              border: 2px solid #000000;
+              border-radius: 3px;
+            padding-top: 5px;
+          }
+
+          .yinle img{
+            display: inline-block;
+            position: absolute;
+            top: -17px;
+            left: -22px;
+            transform: rotate(29deg);
+          }
+
+          .icon-wenjianjia{
+            cursor: pointer;
+              margin-left: 600px;
+            font-size: 25px;
+            color: gray;
+          }
+
+          .icon-wenjianjia:hover{
+            color: #fff;
+            filter: blur(.5px);
+          }
+
+          .icon-fenxiang{
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 25px;
+            color: gray;
+          }
+
+          .icon-fenxiang:hover{
+            color: #fff;
+            filter: blur(.5px);
+          }
+
+          .icon-laba{
+            cursor: pointer;
+              margin-left: 40px;
+            font-size: 25px;
+            color: gray;
+            cursor: pointer;
+          }
+
+          .icon-laba:hover{
+            color: #fff;
+            filter: blur(.5px);
+          }
+
+          .icon-xunhuan{
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 25px;
+            color: gray;
+          }
+
+          .icon-xunhuan:hover{
+            color: #fff;
+            filter: blur(.5px);
+          }
+
+          
+
+          .icon-wj-bflb:hover{
+            color: #fff;
+            filter: blur(.5px);
+          }
+
+          .musicplaycircle{
+              display: inline-block;
+              position: relative;
+              width: 18px;
+              height: 18px;
+              border-radius: 50%;
+              background-color: #fff;
+              bottom: -10px;
+              left: 60px;
+              z-index: 2;
+          }
+
+          .musicplaycircle:hover{
+              color: #ffffff;
+              box-shadow: 0 0 5px rgb(255, 255, 255);
+          }
+
+          .musicplaycirclein{
+            display: inline-block;
+              position: absolute;
+              border-radius: 50%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%);
+              width: 8px;
+              height: 8px;
+              background-color: rgb(194, 12, 12);
+          }
+          .musicplaytip{
+            position: absolute;
+            bottom: 5px;
+            left: 181px;
+            width: 400px;
+            height: 9px;
+            background-color: #000000;
+            border-bottom: 1px solid gray;
+            border-radius: 4px;
+          }
+
+          .musictime{
+            position: absolute;
+            display: inline-block;
+            left: 590px;
+            bottom: -10px;
+            font-size: 10px;
+            color: gray;
+          }
+
+          .icon-wj-bflb{
+              width: 30px;
+              height: 40px;
+              /* border: 1px solid red; */
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 25px;
+            color: gray;
+            /* background-color: red; */
+            z-index: 2;
+            transform: rotate(-180deg);
+          }
+
+          .wj-bflb-tip{
+              display: inline-block;
+              position: absolute;
+              width: 40px;
+              height: 18px;
+              background-color: #333;
+              box-shadow: 0 0 5px rgb(0,0,0) inset;
+              text-align: center;
+              line-height: 18px;
+              font-size: 10px;
+              color: gray;
+              border-top-right-radius: 20px;
+              border-bottom-right-radius: 20px;
+              top: 51%;
+              right: 3px;
+              transform: translate(0,-50%);
+          }
+
+    </style>
+</head>
+<body>
+    <div class="Blackbanner">
+
+        <div class="Blackbanner-center">
+
+            <div id="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+
+            <div class="Blackbanner-center-item">
+                <a href="#" class="currentbg" id="itemone">发现音乐</a>
+                <a href="#" class="currentbg1" id="itemtwo">我的音乐</a>
+                <a href="#" class="currentbg1" id="itemthree">朋友</a>
+                <a href="#" class="currentbg1" id="itemfour">商城</a>
+                <a href="#" class="currentbg1" id="itemfive">音乐人</a>
+                <a href="#" class="currentbg1" id="itemsix">下载客户端</a>
+                <div class="hot">HOT</div>
+                <div class="triangleone"></div>
+                <div class="triangletwo"></div>
+                <div class="trianglethree"></div>
+                <div class="trianglefour"></div>
+            </div>
+
+            <div class="Blackbanner-center-login">
+                <input type="text" placeholder="音乐/视频/电台/用户" style="height: 40px;outline: none;border-radius: 20px;padding-left: 36px;border: none;">
+                <input type="button" id="glass" style="position: absolute;left: 10px;top: 34px;">
+                <input type="button" id="chuangzuozhe" value="创作者中心">
+                <a href="#" id="bannerlogin">登录</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="bannerTip">
+
+        <div class="bannerTip-center">
+        <a href="#" class="bannerTipcurrent">推荐</a>
+        <a href="#">排行榜</a>
+        <a href="#">歌单</a>
+        <a href="#">主播电台</a>
+        <a href="#">歌手</a>
+        <a href="#">新碟上架</a>
+        </div>
+
+    </div>
+
+
+    <!-- 轮播图开始 -->
+    <div class="contentOut">
+        
+        <!-- <div id="listOut">
+            <img src="images/lb1.jpg" alt="">
+            <img src="images/lb2.jpg" alt="">
+            <img src="images/lb3.jpg" alt="">
+            <img src="images/lb4.jpg" alt="">
+            <img src="images/lb5.jpg" alt="">
+            <img src="images/lb6.jpg" alt="">
+            <img src="images/lb7.jpg" alt="">
+            <img src="images/lb8.jpg" alt="">
+            <img src="images/lb9.jpg" alt="">
+            <img src="images/lb10.jpg" alt="">
+        </div> -->
+
+    <div class="content">
+        <div class="download">
+            <img src="images/download.png" alt="" style="height: 301px;width: 259px;">
+        </div>
+        <div id="list">
+            <img src="images/lb1.jpg" alt="">
+            <img src="images/lb2.jpg" alt="">
+            <img src="images/lb3.jpg" alt="">
+            <img src="images/lb4.jpg" alt="">
+            <img src="images/lb5.jpg" alt="">
+            <img src="images/lb6.jpg" alt="">
+            <img src="images/lb7.jpg" alt="">
+            <img src="images/lb8.jpg" alt="">
+            <img src="images/lb9.jpg" alt="">
+            <img src="images/lb10.jpg" alt="">
+        </div>
+        <button id="prev"></button>
+        <button id="next"></button>
+        <div id="btns">
+            <span class="current"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+        <div class="box1">
+            <div class="lb1"></div>
+            <div class="lb2"></div>
+            <div class="lb3"></div>
+            <div class="lb4"></div>
+            <div class="lb5"></div>
+            <div class="lb6"></div>
+            <div class="lb7"></div>
+            <div class="lb8"></div>
+            <div class="lb9"></div>
+            <div class="lb10"></div>
+        </div>
+
+</div>
+    <!-- 轮播图结束    详细内容开始-->
+<div class="BigContent">
+
+    <div class="BigContent-center">
+
+        <div class="BigContent-center-left">
+
+            <div class="BigContent-center-left-content">
+
+            <div id="circle">
+
+                <div id="circle2"></div>
+
+            </div>
+
+            <div class="command" style="margin-left: -20px;">
+            <a href="" style="font-size: larger;color: #000000;" id="special">热门推荐</a>
+            <a href="">华语</a> <span>|</span>
+            <a href="">流行</a> <span>|</span>
+            <a href="">摇滚</a> <span>|</span>
+            <a href="">民谣</a> <span>|</span>
+            <a href="">电子</a> 
+        </div>
+
+        <div style="margin-left: 250px;font-size: 13px;" class="moreone">
+            <a href="" id="moreone" style="text-decoration: none;color: gray;margin-left: 0px;" >更多</a>
+        </div>
+
+            <div class="jiantou">
+
+                <div class="jiantou2">
+
+                </div>
+
+                <div class ="triangle"> </div> 
+
+            </div>
+
+        </div>
+
+<hr style="width: 725px;height: 1px;margin-left: auto;margin-right: auto;border: 1px solid rgb(194, 12, 12);background-color: rgb(194, 12, 12);">
+        
+        <div class="BigContent-center-left-PicFirst">
+
+            <div>
+                <img src="images/white.bmp" alt="" style="opacity: .3;width:150px;height:300px;;border-bottom-right-radius: 100%;">
+                <div id="PicFirstbanner">
+                    <span class="iconfont icon-erjiheadphones31" style="color: rgb(196, 196, 196);font-size: 12px;"> 127万</span>
+                    <a id="PicFirstmusic" class="iconfont icon-bofang" style="position: absolute;top: 0;right: 10px;color: rgb(196, 196, 196);cursor: pointer;"></a>
+                </div>
+            </div>
+            <div>
+                <img src="images/white.bmp" alt="" style="opacity: .3;width:150px;height:300px;;border-bottom-right-radius: 100%;">
+                <div id="PicFirstbanner">
+                    <span class="iconfont icon-erjiheadphones31" style="color: rgb(196, 196, 196);font-size: 12px;"> 127万</span>
+                    <a id="PicFirstmusic1" class="iconfont icon-bofang" style="position: absolute;top: 0;right: 10px;color: rgb(196, 196, 196);cursor: pointer;"></a>
+                </div>
+            </div>
+            <div>
+                <img src="images/white.bmp" alt="" style="opacity: .3;width:150px;height:300px;;border-bottom-right-radius: 100%;">
+                <div id="PicFirstbanner">
+                    <span class="iconfont icon-erjiheadphones31" style="color: rgb(196, 196, 196);font-size: 12px;"> 127万</span>
+                    <a id="PicFirstmusic2" class="iconfont icon-bofang" style="position: absolute;top: 0;right: 10px;color: rgb(196, 196, 196);cursor: pointer;"></a>
+                </div>
+            </div>
+            <div>
+                <img src="images/white.bmp" alt="" style="opacity: .3;width:150px;height:300px;;border-bottom-right-radius: 100%;">
+                <div id="PicFirstbanner">
+                    <span class="iconfont icon-erjiheadphones31" style="color: rgb(196, 196, 196);font-size: 12px;"> 127万</span>
+                    <a id="PicFirstmusic3" class="iconfont icon-bofang" style="position: absolute;top: 0;right: 10px;color: rgb(196, 196, 196);cursor: pointer;"></a>
+                </div>
+            </div>
+            <span id="left-PicFirst-Word">万物皆有裂痕，生活的答案不止是完美</span>
+            <span id="left-PicFirst-Word">万物皆有裂痕，生活的答案不止是完美</span>
+            <span id="left-PicFirst-Word">万物皆有裂痕，生活的答案不止是完美</span>
+            <span id="left-PicFirst-Word">万物皆有裂痕，生活的答案不止是完美</span>
+            <div style="margin-top: 50px;">
+                <img src="images/white.bmp" alt="" style="opacity: .3;width:150px;height:300px;;border-bottom-right-radius: 100%;">
+                <div id="PicFirstbanner">
+                    <span class="iconfont icon-erjiheadphones31" style="color: rgb(196, 196, 196);font-size: 12px;"> 127万</span>
+                    <a id="PicFirstmusic4" class="iconfont icon-bofang" style="position: absolute;top: 0;right: 10px;color: rgb(196, 196, 196);cursor: pointer;"></a>
+                </div>
+            </div>
+            <div style="margin-top: 50px;">
+                <img src="images/white.bmp" alt="" style="opacity: .3;width:150px;height:300px;;border-bottom-right-radius: 100%;">
+                <div id="PicFirstbanner">
+                    <span class="iconfont icon-erjiheadphones31" style="color: rgb(196, 196, 196);font-size: 12px;"> 127万</span>
+                    <a id="PicFirstmusic5" class="iconfont icon-bofang" style="position: absolute;top: 0;right: 10px;color: rgb(196, 196, 196);cursor: pointer;"></a>
+                </div>
+            </div>
+            <div style="margin-top: 50px;">
+                <img src="images/white.bmp" alt="" style="opacity: .3;width:150px;height:300px;;border-bottom-right-radius: 100%;">
+                <div id="PicFirstbanner">
+                    <span class="iconfont icon-erjiheadphones31" style="color: rgb(196, 196, 196);font-size: 12px;"> 127万</span>
+                    <a id="PicFirstmusic6" class="iconfont icon-bofang" style="position: absolute;top: 0;right: 10px;color: rgb(196, 196, 196);cursor: pointer;"></a>
+                </div>
+            </div>
+            <div style="margin-top: 50px;">
+                <img src="images/white.bmp" alt="" style="opacity: .3;width:150px;height:300px;;border-bottom-right-radius: 100%;">
+                <div id="PicFirstbanner">
+                    <span class="iconfont icon-erjiheadphones31" style="color: rgb(196, 196, 196);font-size: 12px;"> 127万</span>
+                    <a id="PicFirstmusic7" class="iconfont icon-bofang" style="position: absolute;top: 0;right: 10px;color: rgb(196, 196, 196);cursor: pointer;"></a>
+                </div>
+            </div>
+            <span id="left-PicFirst-Word">万物皆有裂痕，生活的答案不止是完美</span>
+            <span id="left-PicFirst-Word">万物皆有裂痕，生活的答案不止是完美</span>
+            <span id="left-PicFirst-Word">万物皆有裂痕，生活的答案不止是完美</span>
+            <span id="left-PicFirst-Word">万物皆有裂痕，生活的答案不止是完美</span>
+        </div>
+
+        <div class="BigContent-center-left-content">
+
+            <div id="circle">
+
+                <div id="circle2"></div>
+
+            </div>
+
+            <div class="command" style="margin-left: -20px;">
+            <a href="" style="font-size: larger;color: #000000;" id="special">新碟上架</a>
+        </div>
+
+        <div style="margin-left: 250px;font-size: 13px;" class="moreone">
+            <a href="">更多</a>
+        </div>
+
+            <div class="jiantou">
+
+                <div class="jiantou2">
+
+                </div>
+
+                <div class ="triangle"> </div> 
+
+            </div>
+
+        </div>
+
+        <hr style="width: 725px;height: 1px;margin-left: auto;margin-right: auto;border: .5px solid rgb(194, 12, 12);background-color: rgb(194, 12, 12);">
+
+        <!-- 新碟上架开始 -->
+        <div class="lonely">
+            <div class="five">
+                <div class="box4">
+                    <div class="five1">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five2">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five3">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">lonely</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five4">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five5">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five1">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five2">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five3">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five4">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five5">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five1">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five2">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five3">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five4">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five5">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five1">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five2">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five3">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five4">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                    <div class="five5">
+                        <div class="blur2"><a href="#">
+                                <div class="bofang"></div>
+                            </a></div>
+                        <div class="smallbox">
+                            <p><a href="#">Eason Chan</a></p>
+                            <p style="color: #666;"><a href="#">Chan Yick Shun...</a></p>
+                        </div>
+                    </div>
+                </div>
+                <span class="lt"></span>
+                <span class="gt"></span>
+            </div>
+        </div>
+
+
+<!-- 新碟上架结束 -->
+        <div class="left-content-second"></div>
+
+        <div class="BigContent-center-left-content">
+
+            <div id="circle">
+
+                <div id="circle2"></div>
+
+            </div>
+
+            <div class="command" style="margin-left: -20px;">
+            <a href="" style="font-size: larger;color: #000000;" id="special">榜单</a>
+            <!-- <a href="">华语</a> <span>|</span>
+            <a href="">流行</a> <span>|</span>
+            <a href="">摇滚</a> <span>|</span>
+            <a href="">民谣</a> <span>|</span>
+            <a href="">电子</a>  -->
+        </div>
+
+        <div style="margin-left: 250px;font-size: 13px;" class="moreone">
+            <a href="" style="text-decoration: none;color: gray;margin-left: 330px;">更多</a>
+        </div>
+
+            <div class="jiantou">
+
+                <div class="jiantou2">
+
+                </div>
+
+                <div class ="triangle"> </div> 
+
+            </div>
+
+        </div>
+        <hr style="width: 725px;height: 1px;margin-left: auto;margin-right: auto;border: .5px solid rgb(194, 12, 12);background-color: rgb(194, 12, 12);">
+        <div class="left-content-third">
+
+            <dl class="biaosheng">
+                <dt class="biaosheng-top">
+                    <img src="http://p2.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg" style="float:left;width: 100px;height: 100px;" alt="">
+                    <h5 style="float: left;margin-left: 10px;cursor: pointer;" >云音乐飙升榜</h5> 
+                        <p style="margin-top: 30px;color: gray;padding-left: 108px;font-weight: bold;">
+                            <span class="iconfont icon-bofang" style="font-size: 20px;margin-top: 20px;"></span>
+                            <span style="margin-left: 10px;font-size: 16px;" class="iconfont icon-wenjianjia"></span>
+                        </p>
+                </dt>
+                <dd class="biaosheng-center">
+                    <ol style="margin-top:20px">
+                        <li><span id="biaoshengone">1</span><a href="">天外来物</a></li>
+                        <li><span id="biaoshengone">2</span><a href="">天外来物</a></li>
+                        <li><span id="biaoshengone">3</span><a href="">天外来物</a></li>
+                        <li><span>4</span><a href="">天外来物</a></li>
+                        <li><span>5</span><a href="">天外来物</a></li>
+                        <li><span>6</span><a href="">天外来物</a></li>
+                        <li><span>7</span><a href="">天外来物</a></li>
+                        <li><span>8</span><a href="">天外来物</a></li>
+                        <li><span>9</span><a href="">天外来物</a></li>
+                        <li><span>10</span><a href="">天外来物</a></li>
+                    </ol>
+                    <div style="height: 40px;background-color:rgb(219, 219, 219) ;width:240px;line-height: 40px;">
+                    <a href="" style="margin-left: 150px;" id="checkall">查看全部></a></div>
+                </dd>
+            </dl>
+
+            <dl class="xinge">
+                <dt class="biaosheng-top">
+                    <img src="http://p2.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg" style="float:left;width: 100px;height: 100px;" alt="">
+                    <h5 style="float: left;margin-left: 10px;cursor: pointer;">云音乐飙升榜</h5>
+                        <p style="margin-top: 30px;color: gray;padding-left: 108px;font-weight: bold;">
+                            <span class="iconfont icon-bofang" style="font-size: 20px;margin-top: 20px;"></span>
+                            <span style="margin-left: 10px;font-size: 16px;" class="iconfont icon-wenjianjia"></span>
+                        </p>
+                </dt>
+                <dd class="biaosheng-center">
+                    <ol style="margin-top:20px">
+                        <li><span id="biaoshengone">1</span><a href="">天外来物</a></li>
+                        <li><span id="biaoshengone">2</span><a href="">天外来物</a></li>
+                        <li><span id="biaoshengone">3</span><a href="">天外来物</a></li>
+                        <li><span>4</span><a href="">天外来物</a></li>
+                        <li><span>5</span><a href="">天外来物</a></li>
+                        <li><span>6</span><a href="">天外来物</a></li>
+                        <li><span>7</span><a href="">天外来物</a></li>
+                        <li><span>8</span><a href="">天外来物</a></li>
+                        <li><span>9</span><a href="">天外来物</a></li>
+                        <li><span>10</span><a href="">天外来物</a></li>
+                    </ol>
+                    <div style="height: 40px;background-color:rgb(219, 219, 219) ;width:240px;line-height: 40px;">
+                    <a href="" style="margin-left: 150px;" id="checkall">查看全部></a></div>
+                </dd>
+            </dl>
+
+            <dl class="yuanchuang">
+                <dt class="biaosheng-top">
+                    <img src="http://p2.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg" style="float:left;width: 100px;height: 100px;" alt="">
+                    <h5 style="float: left;margin-left: 10px;cursor: pointer;">云音乐飙升榜</h5>
+                        <p style="margin-top: 30px;color: gray;padding-left: 108px;font-weight: bold;">
+                            <span class="iconfont icon-bofang" style="font-size: 20px;margin-top: 20px;"></span>
+                            <span style="margin-left: 10px;font-size: 16px;" class="iconfont icon-wenjianjia"></span>
+                        </p>
+                </dt>
+                <dd class="biaosheng-center">
+                    <ol style="margin-top:20px">
+                        <li><span id="biaoshengone">1</span><a href="">天外来物</a></li>
+                        <li><span id="biaoshengone">2</span><a href="">天外来物</a></li>
+                        <li><span id="biaoshengone">3</span><a href="">天外来物</a></li>
+                        <li><span>4</span><a href="">天外来物</a></li>
+                        <li><span>5</span><a href="">天外来物</a></li>
+                        <li><span>6</span><a href="">天外来物</a></li>
+                        <li><span>7</span><a href="">天外来物</a></li>
+                        <li><span>8</span><a href="">天外来物</a></li>
+                        <li><span>9</span><a href="">天外来物</a></li>
+                        <li><span>10</span><a href="">天外来物</a></li>
+                    </ol>
+                    <div style="height: 40px;background-color:rgb(219, 219, 219) ;width:240px;line-height: 40px;">
+                    <a href="" style="margin-left: 150px;" id="checkall">查看全部></a></div>
+                </dd>
+            </dl>
+
+        </div>
+
+
+</div>
+
+        <div class="BigContent-center-right">
+            <div class="Content-right-top">
+                <p style="font-size: 12px;padding:10px 20px 10px">登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
+                <input type="button" value="用户登录" id="userlogin">
+            </div>
+
+            <div class="Content-right-center">
+                <span><b>入驻歌手</b></span>
+                <a href="#" id="checkall">查看全部></a>
+                <hr style="width: 226px;height: .5px;border: .5px solid gray;margin-top: 15px;background-color: gray;">
+                <div class="right-center-Big">
+                    <div><img src="images/centerright1.jpg" alt=""><h3>张惠妹aMEI</h3><p>台湾歌手张惠妹</p></div>
+                    <div><img src="images/centerright2.jpg" alt=""><h3>Find乐团</h3><p>独立音乐人</p></div>
+                    <div><img src="images/centerright3.jpg" alt=""><h3>萬曉利</h3><p>民谣歌手、中国现...</p></div>
+                    <div><img src="images/centerright4.jpg" alt=""><h3>音乐人赵雷</h3><p>民谣歌手</p></div>
+                    <div><img src="images/centerright5.jpg" alt=""><h3>王三溥</h3><p>音乐人</p></div>
+                    <input type="button" value="申请成为网易音乐人">
+                </div>
+            </div>
+            
+            <div class="Content-right-bottom">
+                <span><b>热门主播</b></span>
+                <hr style="width: 226px;height: .5px;border: .5px solid gray;margin-top: 15px;background-color: gray;">
+
+                <div class="right-bottom-Big">
+                    
+                    <div><img src="images/rightbottom1.jpg" alt=""><h6 id="footername">陈立<span class="iconfont icon-v" style="font-size: 8px;color: red;display: inline-block;margin-left: 5px;"></span></h6><h6 style="margin-top: 5px;color: gray;">心理学家、美食家陈立教授</h6></div>
+                    <div><img src="images/rightbottom2.jpg" alt=""><h6 id="footername">DJ艳秋<span class="iconfont icon-v" style="font-size: 8px;color: red;display: inline-block;margin-left: 5px;"></span></h6><h6 style="margin-top: 5px;color: gray;">著名音乐节目主持人</h6></div>
+                    <div><img src="images/rightbottom3.jpg" alt=""><h6 id="footername">国家大剧院古典音乐频道<span class="iconfont icon-v" style="font-size: 8px;color: red;display: inline-block;margin-left: 5px;"></span></h6><h6 style="margin-top: 5px;color: gray;">国家大剧院古典音乐官方</h6></div>
+                    <div><img src="images/rightbottom4.jpg" alt=""><h6 id="footername">谢谢收听<span class="iconfont icon-v" style="font-size: 8px;color: red;display: inline-block;margin-left: 5px;"></span></h6><h6 style="margin-top: 5px;color: gray;">南京电台主持人王馨</h6></div>
+                    <div><img src="images/rightbottom5.jpg" alt=""><h6 id="footername">DJ晓苏<span class="iconfont icon-v" style="font-size: 8px;color: red;display: inline-block;margin-left: 5px;"></span></h6><h6 style="margin-top: 5px;color: gray;">独立DJ,CRI环球旅游广播...</h6></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="footer">
+
+    <div class="footer-center">
+
+        <div class="footer-center-left">
+            <p><a href="#">服务条款</a> | <a href="#"> 隐私政策</a> | <a href="#">儿童隐私政策</a> | <a href="#"> 版权投诉指引</a> | <a href="#">意见反馈</a> |</p>
+            <p>网易公司版权所有©1997-2020杭州乐读科技有限公司运营：<span id="clickone" style="display:inline;">浙网文[2018]3506-263号</span></p>
+            <p>违法和不良信息举报电话：0571-89853516 举报邮箱：<span id="clickone" style="display:inline;">ncm5990@163.com</span></p>
+            <p>粤B2-20090191-18工业和信息化部备案管理系统网站 <span id="clickone" ><span id="PICfooter"></span>浙公网安备 33010902002564号</span></p>
+        </div>
+        
+        <div class="footer-center-right">
+            
+                <img src="images/footer1.png" alt="">
+                <img src="images/footer2.png" alt="">
+                <img src="images/footer3.png" alt="">
+                <img src="images/footer4.png" alt="">
+                <img src="images/footer5.png" alt="">
+            
+        </div>
+
+        
+
+    </div>
+
+    <div id="volet_clos">
+    <div class="volet">
+        <div class="volet-center">
+        <span class="iconfont icon-yduishangyiqu"></span>
+        <span class="iconfont icon-bofang" id="bofang" ></span>
+        <span class="iconfont icon-yduixiayiqu"></span>
+        <span class="yinle"><img src="images/white.bmp" style="opacity: .3;width:45px;height:70px;;border-bottom-right-radius: 100%;" alt=""></span>
+        <span class="musicplaycircle"><span class="musicplaycirclein"></span></span>
+        <span class="musicplaytip"></span>
+        <span class="musictime"><span style="color: rgb(173, 173, 173);">00:00</span> / 00:00</span>
+        <span class="iconfont icon-wenjianjia"></span>
+        <span class="iconfont icon-fenxiang"></span>
+        <span class="iconfont icon-laba"></span>
+        <span class="iconfont icon-xunhuan"></span>
+        <span class="iconfont icon-wj-bflb"></span>
+        <span class="wj-bflb-tip">0</span>
+    </div>
+
+        <a href=".volet"  aria-hidden="true" class="ouvrir iconfont icon-jiesuo" style="font-size: 20px;"></a>
+        <a href="#volet_clos" aria-hidden="true" class="fermer iconfont icon-jiesuo" style="font-size: 20px;"></a>
+        
+    </div>
+</div>
+
+</div>
+
+<div class="Top iconfont icon-top" style="font-size: 25px;text-align: center;line-height: 48px;">
+
+</div>
+
+
+
+
+
+
+    <!-- 轮播图开始 -->
+<script>
+        var index = 0 ;
+        $("#next").click(function(){
+            index++;
+	if(index>9){
+		index=0;
+}
+            // console.log(index)
+            animate(index);
+        })
+	
+	$("#prev").click(function(){
+            index--;
+            if(index<0){
+	    index=9;
+        }
+    animate(index);
+        })
+
+        $("#btns span").click(function(){
+            index = $(this).index();  
+            animate(index);
+        })
+
+        function animate(index){
+            $("#list img").eq(index).fadeIn().siblings().fadeOut();
+            $("#btns span").eq(index).addClass("current").siblings().removeClass();
+
+            // $("#listOut img").eq(index).fadeIn().siblings().fadeOut();
+            $(".box1 div").eq(index).fadeIn().siblings().fadeOut();
+            // $("#btns span").eq(index).addClass("current").siblings().removeClass()
+
+        }
+        var timeID=setInterval(function(){ $("#next").click(); },2800);
+        // 轮播图结束
+            
+                // $(".Blackbanner-center-item a").click(function(){
+                //     $(this).addClass("currentbg").removeClass("currentbg1").siblings().removeClass("currentbg").addClass("currentbg1");
+                // })
+            
+                $("#itemone").click(function(){
+                    $(".triangleone").show();
+                    $(".triangletwo").hide();
+                    $(".trianglethree").hide();
+                    $(".trianglefour").hide();
+                    $(".bannerTip").show();
+
+                })
+
+                $("#itemtwo").click(function(){
+                    $(".triangleone").hide();
+                    $(".triangletwo").show();
+                    $(".trianglethree").hide();
+                    $(".trianglefour").hide();
+                    $(".bannerTip").hide();
+                })
+
+                $("#itemthree").click(function(){
+                    $(".triangleone").hide();
+                    $(".triangletwo").hide();
+                    $(".trianglethree").show();
+                    $(".trianglefour").hide();
+                    $(".bannerTip").hide();
+                })
+
+                $("#itemfour").click(function(){
+                    
+                    $(".bannerTip").hide();
+                })
+
+                $("#itemfive").click(function(){
+                    
+                    $(".bannerTip").hide();
+                })
+
+                $("#itemsix").click(function(){
+                    $(".triangleone").hide();
+                    $(".triangletwo").hide();
+                    $(".trianglethree").hide();
+                    $(".trianglefour").show();
+                    $(".bannerTip").hide();
+                })
+
+                $(".bannerTip a").click(function(){
+                    $(this).addClass("bannerTipcurrent").siblings().removeClass("bannerTipcurrent");
+                })
+
+                $("#PicFirstmusic").mouseover(function(){
+                    $(this).css("color","white");
+                })
+                $("#PicFirstmusic").mouseout(function(){
+                    $(this).css("color","rgb(196,196,196)");
+                })
+
+                $("#PicFirstmusic1").mouseover(function(){
+                    $(this).css("color","white");
+                })
+                $("#PicFirstmusic1").mouseout(function(){
+                    $(this).css("color","rgb(196,196,196)");
+                })
+
+                $("#PicFirstmusic2").mouseover(function(){
+                    $(this).css("color","white");
+                })
+                $("#PicFirstmusic2").mouseout(function(){
+                    $(this).css("color","rgb(196,196,196)");
+                })
+
+                $("#PicFirstmusic3").mouseover(function(){
+                    $(this).css("color","white");
+                })
+                $("#PicFirstmusic3").mouseout(function(){
+                    $(this).css("color","rgb(196,196,196)");
+                })
+
+                $("#PicFirstmusic4").mouseover(function(){
+                    $(this).css("color","white");
+                })
+                $("#PicFirstmusic4").mouseout(function(){
+                    $(this).css("color","rgb(196,196,196)");
+                })
+
+                $("#PicFirstmusic5").mouseover(function(){
+                    $(this).css("color","white");
+                })
+                $("#PicFirstmusic5").mouseout(function(){
+                    $(this).css("color","rgb(196,196,196)");
+                })
+
+                $("#PicFirstmusic6").mouseover(function(){
+                    $(this).css("color","white");
+                })
+                $("#PicFirstmusic6").mouseout(function(){
+                    $(this).css("color","rgb(196,196,196)");
+                })
+
+                $("#PicFirstmusic7").mouseover(function(){
+                    $(this).css("color","white");
+                })
+                $("#PicFirstmusic7").mouseout(function(){
+                    $(this).css("color","rgb(196,196,196)");
+                })
+        
+                $(window).scroll(function () {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop > 100) {
+                $(".Top").show(300)
+                } 
+            else {
+                $(".Top").hide(300)
+            }
+        })
+       
+        $(".Top").click(function(){
+            $("html").animate({scrollTop:0})
+        })
+
+        $(".icon-jiesuo").click(function(){
+            $(".icon-jiesuo").toggleClass("icon-suo")
+            $(".volet").toggleClass("current")
+                })
+
+    </script>
+
+<script>
+    $(function () {
+        var timer;
+        var index = 0;
+        $(".gt").click(function () {
+
+            if (!$(".box4").is(":animated")) {
+                index++;
+                if (index > 9) {
+                    index = 0;
+                }
+                showBtn();
+                animate(-646);
+            }
+
+        })
+        $(".lt").click(function () {
+            if (!$(".box4").is(":animated")) {
+                index--;
+                if (index < 0) {
+                    index = 9;
+                }
+                showBtn();
+                animate(646)
+            }
+
+        })
+
+        function animate(offset) {
+            var newLeft = $(".box4").position().left + offset
+            $(".box4").animate({ left: newLeft + "px" }, 1000, function () {
+                if (newLeft < -1292) {
+                    $(".box4").css({ left: "-646px" })
+                }
+                if (newLeft > -646) {
+                    $(".box4").css({ left: "-1292px" })
+                }
+            })
+        }
+
+        function showBtn() {
+            // $("#btns>span").eq(index).addClass("current").siblings().removeClass("current");
+
+        }
+        $("#btns>span").click(function (){
+            var offset = ($(this).index() - index) * -646;
+            console.log(offset);
+            index = $(this).index();
+            showBtn();
+            animate(offset);
+        })
+
+    })
+
+</script>
+    
+</body>
+</html>

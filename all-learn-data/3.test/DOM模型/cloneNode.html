@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="one">hello world</div>
+    </div>
+    <script>
+        //cloneNode(true)
+        var app = document.getElementById("app");
+        var one = document.getElementsByClassName("one")[0];
+        var test = one.cloneNode(true);
+        // console.log(test);
+        app.appendChild(test,app);
+    </script>
+</body>
+</html>

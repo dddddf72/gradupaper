@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // some  返回boolean 只有数组中一项满足条件,就输出true
+        //every  返回boolean 只有数组中m每一项满足某个条件,就输出true
+        var arr = [1,2,3,4];
+        var res = arr.some(item=>{
+            return item>2;
+        })
+        var b = arr.every(item=>item>2);
+        console.log(res)
+        console.log(b);
+    </script>
+</body>
+</html>

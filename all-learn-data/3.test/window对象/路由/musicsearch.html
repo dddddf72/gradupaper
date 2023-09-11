@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>search</div>
+    <script>
+        // console.log(location.search.split("=")[1]);
+        // 传值，value值位于location的search属性。通过.的方式获取，再对获取的字符串进行切割
+        // 获得16进制值
+        var keyword = location.search.split("=")[1];
+        // 16进制转中文
+        // 使用decodeURIComponent方法转换成中文
+        var c = decodeURIComponent(keyword);
+        console.log(c)
+        
+    </script>
+</body>
+</html>

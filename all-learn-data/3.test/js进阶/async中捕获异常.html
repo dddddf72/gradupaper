@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (async()=>{
+            var p = Promise.reject("err");
+
+            try{
+                let res = await p;
+                console.log(res)
+            }catch(err){
+                console.log(err)
+            }
+        })();
+        // 在async-await中可以使用try,catch语句捕获异常
+        // Promise.reject("err").catch()
+    </script>
+</body>
+</html>

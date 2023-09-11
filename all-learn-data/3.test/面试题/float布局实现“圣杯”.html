@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            min-width: 550px;
+        }
+        .parent{
+           display: grid;
+           grid-template-columns:100px 1fr 200px ;
+        }
+        .parent div{
+            border: 1px solid #333;
+        }
+        
+    </style>
+</head>
+<body>
+<!-- 内填充之后开始计算 -->
+    <div class="parent">
+        <div class="left">left</div>
+        <div class="center">center</div>
+        <div class="right">right</div>
+    </div>
+</body>
+</html>

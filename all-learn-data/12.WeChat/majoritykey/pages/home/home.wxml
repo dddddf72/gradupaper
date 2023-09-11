@@ -1,0 +1,12 @@
+home
+<view class="container">
+	<v-item
+	movie="true"
+	 wx:for="{{playlists}}"
+	 wx:key="id"
+	 data="{{item}}"
+	>
+<view slot="rating">9.6</view>
+</v-item>
+</view>
+

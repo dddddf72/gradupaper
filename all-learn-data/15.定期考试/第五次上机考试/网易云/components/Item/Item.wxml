@@ -1,0 +1,5 @@
+<view class="content" bindtap="jumpplaylist">
+	<image class="mupic" src="{{music.coverImgUrl}}"></image>
+	<text>{{music.name}}</text>
+</view>
+

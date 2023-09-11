@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        1.promise的三种状态
+        2.状态之间的切换
+        3.then的返回值
+     -->
+    <script>
+        /* 
+        then之后的返回值的状态 resolved,如果遇到错误,状态会变成reject
+        Tips:  then只能触发promise-->resolved的状态
+         */
+        var p = Promise.resolve(100).then((res) => {
+            console.log(res)
+            throw "err"
+        })
+        p.then(()=>{
+            console.log(200)
+        })
+    </script>
+</body>
+
+</html>

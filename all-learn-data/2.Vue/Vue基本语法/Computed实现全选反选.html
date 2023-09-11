@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-for="item of lists" :key="item.name">
+            <input type="checkbox" v-model="item.state">{{item.name}}
+        </div>
+        <div>
+            <input type="checkbox" v-model="sum">全选/反选
+        </div>
+    </div>
+    <!-- watch,computed -->
+    <script>
+        new Vue({
+            el:"#app",
+            data(){
+                return {
+                    lists:[
+                        {name:"css",state:false},
+                        {name:"html",state:false},
+                        {name:"js",state:false},
+                    ],
+                    quan:""
+                }
+            },
+            computed:{
+                sum:{
+                    get(){
+                        return this.lists.every(item=>item.state)
+                    },
+                    set(value){
+                        this.lists.forEach(item=>{
+                            item.state=value;
+                        })
+                    }
+                },
+                readyItems(){
+                    var res =  this.lists.filter(item=>item.state==true)
+                    return  res.length;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

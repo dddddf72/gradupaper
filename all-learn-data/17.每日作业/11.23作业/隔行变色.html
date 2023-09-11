@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/jquery-3.2.1.js"></script>
+    <style>
+        /* odd奇  1 */
+        /* li:nth-child(odd){
+            color:red;
+        } */
+</style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        var a = $("ul>li");
+        // $("ul li").css("height","20px");
+        // $("li:odd").css("background-color","red");
+        $("ul>li:nth-child(odd)").css("background-color","deeppink");
+        $("ul>li:nth-child(even)").css("background-color","skyblue");
+        console.log(a)
+    </script>
+</body>
+</html>

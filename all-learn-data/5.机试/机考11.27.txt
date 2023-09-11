@@ -1,0 +1,36 @@
+```
+原生javascript
+1.实现todoList(去重的todoList)
+2.实现tab切换
+```
+
+```
+3. var arr = [10,22,14,4];
+# 取最大值 (写两种方法)
+# 求和(写两种方法)
+4. var obj  = [{name:"cheng",count:30},{name:"li",count:12},{name:"zhang",count:14}]
+# 根据count值升序
+# 根据count值降序
+5.数据处理
+var obj =[
+    {
+        "isSelected": true,
+        "name": "纸上行舟",
+        "count": 3,
+        "id": "0001"
+    },
+    {
+        "isSelected": true,
+        "name": "我可能得抑郁症了！舟",
+        "count": 2,
+        "id": "0002"
+    },
+    {
+        "isSelected": true,
+        "name": "绕日飞行",
+        "count" : 4,
+        "id": "0003"
+    }
+]
+var obj = [{id:xxx,name:xxx},{id:xxx,name:xxx},{id:xxx,name:xxx}]
+```

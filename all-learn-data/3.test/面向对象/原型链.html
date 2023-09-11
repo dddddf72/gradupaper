@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // toString
+        var arr = [1,2,3];
+        // console.log(arr.__proto__.__proto__==Object.prototype)
+        // valueOf在数组上没有，但是数组能调用valueOf的方法，
+        // valueOf在原型的对象上OBJ
+        console.log(arr.valueOf())
+        // console.log(arr.valueOf())
+
+        var str = "str";
+        console.log(str.__proto__)
+    </script>
+</body>
+</html>

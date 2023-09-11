@@ -1,0 +1,10 @@
+<!-- <view>
+    <slot name="icon"></slot>
+    <image class="bg" src="{{data.picUrl}}"></image>
+    <text class="text">{{data.name}}</text>
+</view> -->
+<view class="content">
+    <!-- <slot name="icon"></slot> -->
+    <image class="bg" src="{{music.coverImgUrl}}" bind:tap="handleItem"></image>
+    <text class="text">{{music.name}}</text>
+</view>

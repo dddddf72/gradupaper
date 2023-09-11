@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(1);
+        setTimeout(() => {
+            // 加载资源请求耗时长，因此优先处理底下的输出
+            console.log("http") 
+        }, 1000)
+        console.log(2)
+        // 输出顺序为1，2，http
+    </script>
+</body>
+</html>

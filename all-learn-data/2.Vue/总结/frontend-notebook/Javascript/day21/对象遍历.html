@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* for in  遍历对象 */
+        var obj = {
+            1001:false,
+            1002:false,
+            1003:false
+        }
+        /* . 只能读取具体的属性值
+          []  读取变量要通过中括号的方式读取
+         */
+        /* 将1003的值改为true */
+        for(var key in obj){
+           if(key ==1003){
+               obj[key] = true
+           }
+        }
+        console.log(obj)
+    </script>
+</body>
+</html>

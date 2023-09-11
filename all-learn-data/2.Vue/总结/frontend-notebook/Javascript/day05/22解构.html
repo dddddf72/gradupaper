@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 解构
+        1.左边读取的字段,右手边必须有
+        2.读取的是右边的一个层级
+         */
+        var obj = {
+            name: "lisi", age: 18, skill: "vue", 
+            s: {
+                sex: "male"
+            }
+        };
+        // var name = obj.name;
+        // var age = obj.age;
+        // var skill = obj.skill;
+        var { name,s} = obj;
+        console.log(name)
+        console.log(s.sex)
+    </script>
+</body>
+
+</html>

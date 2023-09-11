@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>机考示例5</title>
+</head>
+<body>
+  <!-- 数据处理
+
+var obj = [{id:xxx,name:xxx},{id:xxx,name:xxx},{id:xxx,name:xxx}] -->
+<script>
+var obj =[
+    {
+        "isSelected": true,
+        "name": "纸上行舟",
+        "count": 3,
+        "id": "0001"
+    },
+    {
+        "isSelected": true,
+        "name": "我可能得抑郁症了！舟",
+        "count": 2,
+        "id": "0002"
+    },
+    {
+        "isSelected": true,
+        "name": "绕日飞行",
+        "count" : 4,
+        "id": "0003"
+    }
+]
+var arr = [];
+    var res = obj.map(item=>{
+      var {id,name} = item;
+        arr.push({id,name})
+    })
+    console.log(arr)
+
+</script>
+</body>
+</html>

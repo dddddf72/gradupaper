@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+            resolve(1)
+        }, 2000);
+        })
+
+        var b = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+            resolve(2)
+        }, 1000);
+        })
+
+        async function go(){
+            var one = await a;
+            console.log(one)
+            var two = await b;
+            console.log(two)
+        }
+        go();
+
+        
+    </script>
+</body>
+</html>

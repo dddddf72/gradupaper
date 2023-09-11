@@ -1,0 +1,11 @@
+function handletitle(value) {
+    if (value.length > 6) {
+        value = value.slice(0, 6) + "..."
+    }
+    return value;
+}
+
+module.exports = {
+    handletitle: handletitle
+
+}

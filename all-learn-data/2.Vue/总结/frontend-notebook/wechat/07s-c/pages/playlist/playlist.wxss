@@ -1,0 +1,25 @@
+/* pages/playlist/playlist.wxss */
+.poster{
+    margin:0 10rpx;
+    width:150rpx;
+    height: 150rpx;
+}
+.play{
+    width:80rpx;
+    height: 80rpx;
+}
+.item{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
+    align-items: center;
+    padding:50rpx;
+}
+.title{
+    font-size: 35rpx;
+    font-weight: bolder;
+}
+.index{
+    color:#ff2d51;
+    font-size: 30rpx;
+    font-weight: bolder;
+}

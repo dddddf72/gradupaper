@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise状态的切换</title>
+</head>
+<body>
+    <script>
+        /* pending-->resolved */
+        var p = new Promise((resolve,reject)=>[
+            setTimeout(()=>{
+                resolve(100)
+            })
+        ])
+        console.log(p);
+        setTimeout(()=>{
+            console.log(p)
+        })
+    </script>
+</body>
+</html>

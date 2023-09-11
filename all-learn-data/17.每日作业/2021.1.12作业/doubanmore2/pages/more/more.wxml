@@ -1,0 +1,8 @@
+<view>
+    <view class="container">
+    <v-item wx:for="{{movie}}" 
+    movie="{{item}}" 
+    wx:key="id">
+    </v-item>
+    </view>
+</view>

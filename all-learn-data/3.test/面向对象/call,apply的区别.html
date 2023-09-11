@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name = "window"
+        var zhang = {
+            name:"zhang"
+        }
+        function show(a,b){
+            console.log(this.name)
+            console.log(a+b)
+        }
+        
+        // show(1,2)
+        // 应用场景：传递多个参数的情况：call依次传递，applay需要传递数组
+        // call可以直接传多个参数
+        show.call(zhang,2,3)
+        // applay传多个参数时，要传数组
+        show.apply(zhang,[2,3])
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for-in遍历对象
+        var obj = {
+            name:"cheng",
+            age:18,
+            skill:"js"
+        }
+        for(var item in obj){
+            // 对象的属性名是变量的时候,要通过[],的方式去读取
+            console.log(obj[item])
+        }
+    </script>
+</body>
+</html>

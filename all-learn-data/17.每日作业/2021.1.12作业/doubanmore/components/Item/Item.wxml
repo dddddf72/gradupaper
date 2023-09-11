@@ -1,0 +1,9 @@
+<view class="content">
+	<image></image>
+    <text></text>
+    <view class="ratstar">
+    <image class="star"></image>
+    <text>9.7</text>
+    </view>
+</view>
+

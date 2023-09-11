@@ -1,0 +1,13 @@
+index
+<view class="container">
+	<v-item class="content"
+	bind:Id="handleDelete"
+	 wx:for="{{playlists}}"
+	 wx:key="id"
+	 data="{{item}}"
+	>
+<view class="playcount" slot="playcount">11100</view>
+</v-item>
+</view>
+
+

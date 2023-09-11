@@ -1,0 +1,24 @@
+function handlename(value) {
+    if (value.length > 6) {
+        value = value.slice(0, 6) + "..."
+    }
+    return value
+
+}
+
+function handletime(value) {
+    if (value < 10) {
+        value = "0" + value
+    } else {
+        value = "" + value
+    }
+    return value
+}
+function handleDtime(time) {
+    var second = Math.floor(time / 1000);
+    var minute = handletime(Math.floor(second / 60));
+    var second = handletime(Math.floor(second % 60));
+    var sum = minute + ":" + second;
+    return sum;
+}
+module.exports = { handlename: handlename, handleDtime: handleDtime }

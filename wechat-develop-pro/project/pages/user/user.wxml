@@ -1,0 +1,30 @@
+<view>
+    <van-button wx:if="{{!isAuth}}" type="info"  open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+        授权登录</van-button>
+</view>
+<view wx:if="{{isAuth}}">
+    <van-image
+    round
+    width="5rem"
+    height="5rem"
+    src="{{logo}}"
+/>
+    <text>{{username}}</text>
+    <van-tabs active="getCollect" bind:change="onChange">
+        <van-tab title="收藏夹" name='getCollect'>
+            <!-- <view class="flex_grid"> -->
+                <v-movie wx:for="{{movies}}"
+                wx:key="_id"
+                 data="{{item}}"></v-movie>
+            <!-- </view> -->
+        </van-tab>
+
+        <van-tab title="历史记录" name='getHistory'>
+            <!-- <view class="flex_grid"> -->
+                <v-movie wx:for="{{movies}}"
+                wx:key="_id"
+                 data="{{item}}"></v-movie>
+            <!-- </view> -->
+        </van-tab>
+    </van-tabs>
+</view>

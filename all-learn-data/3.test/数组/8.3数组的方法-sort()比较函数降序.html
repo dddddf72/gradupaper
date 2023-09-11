@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //需求：[14,7,4,3,1]
+        // 升序算法
+        // 声明创建数组arr
+        var arr = [4,7,1,3,14]; 
+     
+        /* 原理示意：
+        使用sort()方法的比较函数,应当包含两个参数a,b用于比较
+        格式为 数组名.sort((a,b)=>{return b-a})    !!!!!!注意此处为b-a，降序与升序的不同之处
+        当a-b的时候(即前一个值a大于后一个值b的时候)，
+        将b所对应的值串放到a对应的值串前面，
+        然后继续比较a和下一个值串
+        a-b<0时候，将a对应值串放在b对应值串的前面
+        a-b等于0时，不变 */
+
+        // 声明创建变量res,arr数组使用sort((a,b)=>{return b-a})比较函数方法
+        var res = arr.sort((a,b)=>{
+            // 返回比较后的结果，存储在变量res中
+            return b-a;
+        })
+        //输出变量res
+        console.log(res)    //输出为 [14,7,4,3,1]
+    </script>
+</body>
+</html>

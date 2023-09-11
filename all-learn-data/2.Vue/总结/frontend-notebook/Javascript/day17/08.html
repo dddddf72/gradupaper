@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* call  可以改变函数内部this关键字的指向 funName.call(obj) */
+        /* applay  funName.applay(obj) */
+        var name = "王五";
+        var obj = {
+            name:"李四"
+        }
+        function go(){
+            console.log(this.name)
+        }
+        go();
+        go.call(obj);
+        go.apply(obj);
+    </script>
+</body>
+</html>
